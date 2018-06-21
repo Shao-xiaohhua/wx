@@ -1,0 +1,15 @@
+<!--pages/record-detail/investigation-detail.wxml-->
+<view class='list-for' wx:for="{{listArr}}" wx:key="{{index}}" wx:if="{{ts === ''}}">
+  <view class='md-detail-title'>{{item.name}}</view>
+  <view class='md-detail-list'>
+    <view class='list clearfix' wx:for="{{item.list}}" wx:for-item="itemIner" wx:for-index="indexIner" wx:key="indexIner">
+      <view class='name pull-left'>{{itemIner.title}}</view>
+      <view class='content {{itemIner.css}} pull-left'>{{itemIner.content}}</view>
+      <view class='border'></view>
+    </view>
+  </view>
+</view>
+<view class='momark' wx:if="{{ts !== ''}}">{{ts}}</view>
+<view class='button-box clearfix' style='display:{{allowEdit}}'>
+    <button class='n' bindtap='edit'>继续办案</button>
+</view>

@@ -1,0 +1,109 @@
+/* pages/my-message-detail/my-message-detail.wxss */
+.message-detail-my {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20rpx;
+  background: #fff;
+}
+.message-detail-my .title {
+  position: relative;
+  width: 100%;
+  height: 97rpx;
+  padding-left: 100rpx;
+  line-height: 97rpx;
+}
+.message-detail-my .title .pic {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 30rpx;
+  margin: auto;
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  display: block;
+  background-size: cover;
+}
+.message-detail-my .title .pic image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.message-detail-my .title .name {
+  font-size: 16px;
+  color: #333;
+}
+.message-detail-my .content {
+  width: 100%;
+  height: auto;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  padding-bottom: 30rpx;
+  font-size: 18px;
+}
+.message-detail-my .tag-time {
+  width: 100%;
+  height: auto;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  padding-bottom: 30rpx;
+  line-height: 100%;
+  font-size: 15px;
+}
+.message-detail-my .tag-time .tag {
+  margin-right: 15rpx;
+  color: #0e76bc;
+}
+.message-detail-my .tag-time .tag-wrap {
+  width: 480rpx;
+  height: auto;
+  line-height: 100%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.message-detail-my .tag-time .time {
+  color: #666666;
+}
+.message-reply {
+  position: relative;
+  width: 100%;
+  min-height: 150rpx;
+  padding-left: 157rpx;
+  padding-right: 24rpx;
+  background: #fff;
+}
+.message-reply .pic {
+  position: absolute;
+  left: 30rpx;
+  top: 30rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-size: cover;
+}
+.message-reply .name, .message-reply .time {
+  width: 100%;
+  height: auto;
+  line-height: 100%;
+}
+.message-reply .name {
+  padding-top: 40rpx;
+  font-size: 16px;
+  color: #333;
+}
+.message-reply .time {
+  padding: 20rpx 0 40rpx 0;
+  font-size: 13px;
+  color: #999;
+}
+.reply-content {
+  width: 100%;
+  height: auto;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  padding-bottom: 30rpx;
+  font-size: 15px;
+  color: #666666;
+  background: #fff;
+}

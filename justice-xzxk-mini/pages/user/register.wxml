@@ -1,0 +1,51 @@
+<!--pages/user/register.wxml-->
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<view class="shadowWrap {{shadowSwite?'active':''}}">
+  <view class='shadoClear'>
+    <text class='name'>{{msg}}</text>
+    <!-- <text class='prompt'>填写全部信息才可进行下一步</text> -->
+    <view class='clear-btn' bindtap='clearShadow'>我知道了</view>
+  </view>
+</view>
+<view class='top-link clearfix'>
+  <navigator bindtap='clearWXswite' url='login' class='pull-right'>已有账号，立即登录  <text class='iconfont icon-arrow'></text></navigator>
+</view>
+<view class='input-wrap'>
+  <view class="list clearfix {{phoneActive?'active':''}}" bindtap='clearPhone'>
+    <view class='icon-warp pull-left'>
+      <text class='iconfont icon-phone'></text>
+    </view>
+    <view class='inp-wrap pull-left'>
+      <input value='{{phoneNumber}}' bindinput='getphoneNumber' type='number' placeholder='请输入手机号码'></input>
+    </view>
+  </view>
+  <view class='list small clearfix pull-left'>
+    <view class='icon-warp pull-left'>
+      <text class='iconfont icon-code'></text>
+    </view>
+    <view class='inp-wrap pull-left'>
+      <input bindinput='getCoded' type='number' placeholder='请输入验证码'></input>
+    </view>
+  </view>
+  <view class="get-code {{codeSwite?'': 'active'}}" bindtap='getCode'>{{codeText}}</view>
+  <view class="list clearfix {{IdActive?'active':''}}" bindtap='clearID'>
+    <view class='icon-warp pull-left'>
+      <text class='iconfont icon-id'></text>
+    </view>
+    <view class='inp-wrap pull-left'>
+      <input value='{{ID}}' bindinput='getID' type='number' placeholder='请输入身份证号码'></input>
+    </view>
+  </view>
+  <view class='list clearfix'>
+    <view class='icon-warp pull-left'>
+      <text class='iconfont icon-new-password'></text>
+    </view>
+    <view class='inp-wrap pull-left'>
+      <input bindinput='getPassWord' type='password' placeholder='请设置密码'></input>
+    </view>
+  </view>
+  <view class='list login clearfix' bindtap='getReg'>
+    立即注册
+  </view>
+</view>
+

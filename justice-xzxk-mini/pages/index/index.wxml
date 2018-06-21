@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<!--banner  -->
+<view class='index-banner'>
+  <image src='../../images/index_banner.png'></image>
+</view>
+<!--链接  -->
+<view class='link-wrap clearfix'>
+  <view class='link-box {{item.color}}' wx:for="{{linkArr}}" wx:key="{{index}}">
+    <navigator url='{{item.url}}'>
+      <text class='iconfont {{item.icon}}'></text>
+      <view class='name'>{{item.name}}</view>
+    </navigator>
+    <view class='border-right'></view>
+    <view class='border-bottom'></view>
+  </view>
+</view>
+<!--主要按钮  -->
+<view class='index-btn-wrap'>
+  <navigator url='../apply/setp-one' style='background: #5297fd' bindtap='toClear'>我要申请</navigator>
+  <navigator url='../appointment/list' style='background: #ff753f'>我要预约</navigator>
+</view>

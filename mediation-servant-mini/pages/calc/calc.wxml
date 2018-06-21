@@ -1,0 +1,15 @@
+<!--pages/calc/calc.wxml-->
+<view class='feedback-list-wrap'>
+  <form>
+    <view class='list {{item.error}} clearfix' wx:for="{{inputArr}}" wx:key="{{index}}">
+      <view class='tp'>{{item.name}}</view>
+      <input placeholder="{{item.ip}}"/>
+      <view class='border'></view>
+      <view class='arrow' wx:if="{{item.arrow}}"></view>
+      <text class='y' wx:if="{{item.y}}">{{item.y}}</text>
+      <text class='text-error'>输入有误，请输入正确数字</text>  
+      <navigator url='{{item.linkUrl}}' wx:if="{{item.link}}"></navigator>
+    </view>
+    <button form-type="submit" class='feed-done' bindtap='cares'>计算</button>  
+  </form>
+</view>

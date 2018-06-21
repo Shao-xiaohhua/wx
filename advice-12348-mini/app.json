@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/hotline",
+    "pages/my/my",
+    "pages/my/feedback",
+    "pages/message/category",
+    "pages/message/message",
+    "pages/index/rating",
+    "pages/index/message",
+    "pages/validate/validate",
+    "pages/expert/expert",
+    "pages/index/category",
+    "pages/collection/show",
+    "pages/logs/logs",
+    "pages/collection/collection",
+    "pages/record/record",
+    "pages/xecontent/xecontent"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "12348上海法网",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#00cc99",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon_advice.png",
+        "selectedIconPath": "images/icon_advice_fill.png",
+        "text": "咨询"
+      },
+      {
+        "pagePath": "pages/collection/collection",
+        "iconPath": "images/icon_typical.png",
+        "selectedIconPath": "images/icon_typical_fill.png",
+        "text": "动态"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/icon_my.png",
+        "selectedIconPath": "images/icon_my_fill.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  },
+  "debug": true
+}

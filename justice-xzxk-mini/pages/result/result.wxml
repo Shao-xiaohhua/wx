@@ -1,0 +1,21 @@
+<!--pages/result/result.wxml-->
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<!-- <view class='query-wrap'>
+  <view class='query clearfix'>
+    <input type='text' class='pull-left' placeholder='请输入关键词搜索' bindblur='getSearch'></input>
+    <view class='icon-warp pull-right'>
+      <text class='iconfont icon-icon-search'></text>
+    </view>
+  </view>
+</view> -->
+<view class='list-warp'>
+  <view class='list' wx:for="{{lsitArr}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap='getNext' data-id="{{item.id}}">
+    <view class='title'>
+      {{item.title}}
+    </view>
+    <view class='type'>类别：{{item.businessTypeDisplay}}</view>
+    <view class='type'>文号：{{item.caseNumber}}</view>
+    <view class='type'>发布时间：{{item.dateCreated}}</view>
+  </view>
+</view>
+

@@ -1,0 +1,48 @@
+<!--pages/appointment/appointment.wxml-->
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<view class="shadowWrap {{shadowSwite?'active':''}}">
+  <view class='shadoClear'>
+    <text class='prompt'>{{tsCont}}</text>
+    <view class='clear-btn' bindtap='clearShadow'>我知道了</view>
+  </view>
+</view>
+<view class='app-wrap'>
+  <view class='core-title'>
+    <text class='name'>我要预约</text>
+  </view>
+  <view class='list-box'>
+    <view class="input-list {{item.error?'error':''}} clearfix" wx:for="{{listArr.baseFields}}" wx:key="{{index}}" wx:if="{{listArr.baseFields.length}}">
+      <view class='input-name pull-left'>{{item.displayName}}</view>
+      <view class='input-wrap pull-right'>
+        <input bindfocus='inputClear' bindinput='inputVal' data-parent="baseFields" data-index="{{index}}" value="{{item.val}}" name="{{item.name}}" type='text' placeholder="请输入{{item.displayName}}" placeholder-class="item-error" wx:if="{{item.type === 'text'}}"></input>
+        <input bindfocus='inputClear' bindinput='inputVal' data-parent="baseFields" data-index="{{index}}" value="{{item.val}}" name="{{item.name}}" type='number' placeholder="请输入{{item.displayName}}" placeholder-class="item-error" wx:if="{{item.type === 'number'}}"></input>
+        <picker name="{{item.name}}" data-parent="baseFields" data-index="{{index}}" wx:if="{{item.type === 'date'}}" mode="date" value="{{item.date}}" start="1990-09-01" end="2050-09-01" bindchange="bindDateChange">
+          <view class="picker">
+            {{item.date}}
+          </view>
+        </picker>
+        <picker name="{{item.name}}" data-parent="baseFields" data-index="{{index}}" wx:if="{{item.type === 'select'}}" bindchange="bindPickerChange" value="{{item.enList[item.count]}}" range="{{item.cnList}}">
+          <view class="picker">
+            {{item.cnList[item.count]}}
+          </view>
+        </picker>
+        <!-- <picker name="{{item.name}}" data-parent="baseFields" data-index="{{index}}" wx:if="{{item.type === 'time'}}" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+          <view class="picker">
+            {{item.time}}
+          </view>
+        </picker> -->
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}"
+        name="{{item.name}}" data-parent="baseFields" data-index="{{index}}" wx:if="{{item.type === 'time'}}"
+        bindchange="bindTimeChange">
+          <view class="picker">
+            {{timeArr}}
+          </view>
+        </picker>
+      </view>
+      <view class='border-bottom'></view>
+    </view>
+  </view>
+</view>
+<view class='btn-box' bindtap='getNext'>
+  <view class='btn'>确定预约</view>
+</view>

@@ -1,0 +1,62 @@
+<!--pages/apply/setp-three.wxml-->
+<view class='setp-wrap clearfix'>
+<!--顶部setp  -->
+  <scroll-view scroll-x style="width: 100%" scroll-into-view="{{scrollId}}">
+    <view class='slwp' style='width:1400rpx'>
+      <view bindtap='getStorNav' id="{{item.id}}" class="scroll-item {{item.dq?'dq':''}}" wx:for="{{setpArr}}" wx:key="{{index}}">
+        <navigator url='{{item.url}}' open-type="redirect">
+          <view class="number {{item.pass?'pass':''}}">{{index + 1}}</view>
+          <view class="number {{item.pass?'':'pass'}}"><text class='iconfont icon-right'></text></view>
+          <view class='name'>{{item.name}}</view>
+          <view class='border-center'></view>
+        </navigator>
+      </view>
+    </view>
+  </scroll-view>
+  <!--内容区  -->
+  <view class='padding-wrap clearfix'>
+    <view class='child-wrap'>
+    <!--title  -->
+      <view class='title'>
+        <view class='name'>
+          <text>阅读须知</text>
+          <view class='title-line left'></view>
+          <view class='title-line right'></view>
+        </view>
+      </view>
+      <!--content  -->
+      <view class='content-wrap' style='padding-top: 0;'>
+        <view class='pd-wrap'>
+          <view class='text-content'>
+            <view class='content'>
+              一、受理范围：本栏目受理个人和法人在天水市秦安县政务服务网办理行政审批和服务事项过程中有关法规、政策、程序等问题的咨询。
+            </view>
+            <view>
+              二、办理时限：一般咨询件将在5个工作日内办结；情况复杂的，将适当延长办理期限，最多不得超过10个工作日。
+            </view>
+            <view>
+              三、答复效力：本栏目答复的意见只是一般性指导意见 ，不具有法定效力。
+            </view>
+            <view>
+              四、其他要求。
+            </view>
+          </view>
+        </view>
+        <!--按钮  -->
+        <view class='lable-wrap'>
+          <checkbox-group bindchange="checkboxChange">
+            <label class="checkbox">
+              <checkbox value="我已阅读，并同意该须知" checked="{{false}}"/>我已阅读，并同意该须知
+            </label>
+            </checkbox-group>
+        </view>
+        <view class='next-btn-wrap' style='padding-top: 60rpx;'>
+          <view class="child-btn {{nextSwite?'active':''}}" bindtap='gotNext'>下一步</view>
+        </view>
+        <!-- <view class='login-link-wrap' wx:if="{{loginLink}}">
+          <navigator url=''>已有账号，立即登录 <text class='iconfont icon-arrow'></text></navigator>
+        </view> -->
+      </view>
+    </view>
+  </view>
+</view>

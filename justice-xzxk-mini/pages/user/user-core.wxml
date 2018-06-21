@@ -1,0 +1,30 @@
+<!--pages/user/user-core.wxml-->
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<view class='core-title'>
+  <text class='name'>个人信息</text>
+</view>
+<view class='message-list-wrap'>
+  <view class='list clearfix' 
+    wx:for="{{getMechanism}}" 
+    wx:key="{{index}}"
+    data-url="{{item.url}}"
+    bindtap='getNext'
+    >
+    <text class='name pull-left'>{{item.name}}</text>
+    <input type='text' value="{{item.cont}}" class='pull-right' placeholder='' wx:if="{{!item.imgUrl}}"></input>
+    <view class='img-wrap pull-right' wx:if="{{item.imgUrl}}" bindtap='headImg'>
+      <image src='{{item.imgUrl}}'></image>
+      <view class='input-filed'>
+        <text class='iconfont icon-huabanfuben'></text>
+      </view>
+    </view>
+    <!-- <text class='iconfont icon-arrow pull-right' wx:if="{{!item.imgUrl}}"></text> -->
+    <view class='border-bottom'></view>
+  </view>
+</view>
+<!-- <view class='user-btn'>
+  确认修改
+</view> -->
+<view class='user-btn active' bindtap='getOut'>
+  退出账号
+</view>

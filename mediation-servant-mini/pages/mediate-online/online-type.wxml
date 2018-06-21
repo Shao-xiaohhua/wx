@@ -1,0 +1,14 @@
+<!--pages/mediate-online/online-type.wxml-->
+<view class='lnkage-choice-wrap clearfix' wx:for="{{hyArr}}" wx:key="{{index}}" wx:for-item="itA" wx:for-index="idx">
+    <view class='title'>{{itA.title}}</view>
+    <view class='label-tag-wrap' wx:for="{{itA.labelArr}}" wx:key="{{index}}" data-index="{{index}}" bindtap='cl' data-tp="{{idx}}" data-id='{{item.id}}'>
+        <label class='{{item.active}}'>
+            <checkbox checked="{{item.check}}"></checkbox>
+            {{item.name}}
+        </label>
+    </view>
+    <view class='button-box clearfix'>
+        <button class='r' bindtap="toFirstPage">重新录入</button>
+        <button class='n' bindtap='goNext'>完成</button>
+    </view>
+</view>

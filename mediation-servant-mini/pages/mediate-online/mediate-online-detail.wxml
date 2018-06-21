@@ -1,0 +1,17 @@
+<!--pages/mediate-online/mediate-online-detail.wxml-->
+<view class='linkage-list-wrap'>
+    <view class='list-for' wx:for="{{listArr}}" wx:key="{{index}}">
+        <view class='md-detail-title'>{{item.name}}</view>
+        <view class='md-detail-list'>
+            <view class='list clearfix' wx:for="{{item.list}}" wx:for-item="itemIner" wx:for-index="indexIner" wx:key="indexIner">
+                <view class='name pull-left'>{{itemIner.title}}</view>
+                <view class='content {{itemIner.css}} pull-left'>{{itemIner.content}}</view>
+                <view class='border'></view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='choice-link clearfix'>
+    <navigator bindtap='call' class='tel'>电话沟通</navigator>
+    <!-- <navigator url='online-voice' class='reback'>反馈信息</navigator> -->
+</view>

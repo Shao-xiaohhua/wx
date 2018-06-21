@@ -1,0 +1,30 @@
+/* pages/feedbackDown/feedbackDown.wxss */
+.padding-wrap {
+  padding-top: 90rpx;
+  text-align: center;
+}
+.padding-wrap .icon-wrap {
+  width: 140rpx;
+  height: 140rpx;
+  line-height: 140rpx;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: #0e76bc;
+}
+.padding-wrap .icon-wrap text {
+  font-size: 88rpx;
+  color: #fff;
+}
+.padding-wrap .down {
+  margin-top: 50rpx;
+  line-height: 100%;
+  color: #333;
+  display: block;
+}
+.padding-wrap .thanks {
+  margin-top: 40rpx;
+  line-height: 100%;
+  font-size: 16px;
+  color: #999999;
+  display: block;
+}

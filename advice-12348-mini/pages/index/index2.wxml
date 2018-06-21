@@ -1,0 +1,134 @@
+<!--index.wxml-->
+<form bindsubmit="formSubmit" class="advice-form">
+    <view class="weui-cells__title">选择咨询类别</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view url="category" class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-typeWin="{{tWin}}" data-typeCode="{{tCode}}" bindtap="selectType">
+        <view class="weui-cell__bd">{{tName}}</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </view>
+    </view>
+    <view class="weui-cells__title">问题及背景情况</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder-class="advice-desc" bindinput="setCounter" maxlength="200" placeholder="请简述您想要咨询的问题。在线咨询服务时间为：工作日 09:00-17:00，非工作时段的咨询将自动转为留言咨询" style="height: 300rpx" name="content" value="{{content}}"/>
+          <view class="weui-textarea-counter">{{ counterNum }}/200</view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__title error" wx:if="errorinfo">{{errorinfo}}</view>
+    <button form-type="submit" class="submit-btn" type="primary" hover-class="active-state">发起咨询</button>
+</form>
+<view class="index-bg"></view>
+<view class="list-block">
+  <!-- <view class="dynamic" bindtap="toZxList">
+    <swiper class="dynamic-list" vertical="true" indcator-dots="false" autoplay="true" interval="8000">
+      <swiper-item class="item">
+        <view class="title"><text class="expert">张三</text>专家解决了一个<text class="type">婚姻家庭</text>问题</view>
+        <view class="updatetime">1分钟前</view>
+      </swiper-item>
+      <swiper-item class="item">
+        <view class="title"><text class="expert">李四</text>专家解决了一个<text class="type">遗嘱继承</text>问题</view>
+        <view class="updatetime">5分钟前</view>
+      </swiper-item>
+    </swiper>
+  </view> -->
+  <view class="dynamic" bindtap="toZxList">
+    <swiper class="dynamic-list" vertical="true" indcator-dots="false" autoplay="true" interval="4000">
+    <block wx:for="{{ dynamic }}" wx:key="item">
+      <swiper-item class="item">
+        <view class="title"><text class="expert">{{ item.name }}</text>专家解决了一个<text class="type">{{ item.type }}</text>问题</view>
+        <view class="updatetime">{{ item.updateTime }}</view>
+      </swiper-item>
+    </block>
+    </swiper>
+  </view>
+    <view class="da">
+    <view class="item" bindtap="toZxList">
+      <!-- <text class="iconfont icon-advice"></text> -->
+      <view class="num">{{ zxPrintCount }}<text class="unit">次</text></view>
+      <text class="desc">总计提供咨询数</text>
+    </view>
+    <view class="item" bindtap="toZjList">
+      <!-- <text class="iconfont icon-expert"></text> -->
+      <view class="num">{{ zjCount }}<text class="unit">人</text></view>
+      <text class="desc">平台在线专家数</text>
+    </view>
+  </view> 
+</view>
+<view class="copyright">由<text class="import">上海市司法局</text>为市民提供优质法律服务</view>
+
+<!--<view class="weui-tab">
+  <view class="weui-navbar">
+    <block wx:for="{{tabs}}" wx:key="*this">
+      <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+        <view class="weui-navbar__title">{{item}}</view>
+      </view>
+    </block>
+    <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+  </view>
+  <view class="weui-tab__panel">
+   
+    <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+      <form bindsubmit="formSubmit" >
+      <view class="weui-cells__title">选择咨询类别</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view url="category" class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-typeWin="{{tWin}}" data-typeCode="{{tCode}}" bindtap="selectType">
+          <view class="weui-cell__bd">{{tName}}</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+      </view>
+      <view class="weui-cells__title">问题及背景情况</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <textarea class="weui-textarea" bindinput="setCounter" maxlength="200" placeholder="请简述您想要咨询的问题。在线咨询服务时间为：工作日 09:00-17:00，非工作时段的咨询将自动转为留言咨询" style="height: 6em" name="content" value="{{content}}"/>
+            <view class="weui-textarea-counter">{{ counterNum }}/200</view>
+          </view>
+        </view>
+      </view>
+      <view class="weui-cells__title error">{{errorinfo}}</view>
+      <button form-type="submit" class="submit-btn" type="primary" hover-class="active-state">发起咨询</button>
+      </form>
+      <view class="list-block">
+        <view class="dynamic">
+          <swiper class="dynamic-list" vertical="true" indcator-dots="false" autoplay="true" interval="4000">
+          <block wx:for="{{ dynamic }}" wx:key="item">
+            <swiper-item class="item">
+              <view class="title"><text class="expert">{{ item.name }}</text>专家解决了一个<text class="type">{{ item.type }}</text>问题</view>
+              <view class="updatetime">{{ item.updateTime }}</view>
+            </swiper-item>
+          </block>
+          </swiper>
+        </view>
+        <view class="da">
+          <view class="item">
+            <text class="iconfont icon-advice"></text>
+            <text class="num">10000 +</text>
+            <text class="desc">优质咨询</text>
+          </view>
+          <view class="item">
+            <text class="iconfont icon-expert"></text>
+            <text class="num">3000 +</text>
+            <text class="desc">在线专家</text>
+          </view>
+        </view>
+      </view>
+      
+    </view>
+    
+    <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+      <view class="hotline-banner" bindtap="PhoneCall" data-phonenum="021-12348">
+        <image style="width: 100%; height: 264rpx;" mode="aspectFill" src="../../images/hotline_banner.png"></image>
+      </view>
+      <view class="hotline-list" bindtap="PhoneCall" data-phonenum="021-12348,1"> 
+        <view class="item"><text>按1 法律咨询</text></view>
+        <view class="item"><text>按2 行政审批办事及司法考试咨询</text></view>
+        <view class="item"><text>按3 公证咨询热线</text></view>
+        <view class="item"><text>按4 监狱管理局狱务公开</text></view>
+        <view class="item"><text>按5 戒毒局所务公开</text></view>
+      </view>
+      <view class="advice-info">法律热线咨询24小时为您服务，其他服务咨询时间为：工作日 09:00-17:00</view>
+    </view>
+  </view>
+</view>-->

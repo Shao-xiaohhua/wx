@@ -1,0 +1,36 @@
+/* pages/apply/setp-eight.wxss */
+.pd-wrap {
+  width: 100%;
+  height: auto;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}
+.setp-str {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 40rpx;
+  font-size: 15px;
+  color: #333;
+}
+.setp-list {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 40rpx;
+}
+.setp-list .list {
+  padding-top: 30rpx;
+  width: 100%;
+  height: auto;
+  padding-bottom: 15rpx;
+  line-height: 100%;
+  font-size: 15px;
+  color: #333;
+}
+.setp-list .list .content {
+  padding-left: 20rpx;
+}
+.color-text {
+  color: #ff753f;
+}

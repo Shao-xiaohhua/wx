@@ -1,0 +1,13 @@
+<!--pages/calc-gspc-list/calc-gspc-list.wxml-->
+<view class='lnkage-choice-wrap clearfix' wx:for="{{list}}" wx:key="{{index}}" wx:for-item="itA" wx:for-index="idx">
+    <view class='title'>{{itA.title}}</view>
+        <view class="label-tag-wrap {{item.active?'active':''}}" style='width:100%;' wx:for="{{itA.childs}}" wx:key="{{index}}" 
+            data-index="{{index}}" bindtap='onchange' data-pindex="{{idx}}" data-value='{{item.value}}' data-title='{{item.title}}'>
+            <label>
+                {{item.title}}
+            </label>
+        </view>
+    <view class='button-wrap clearfix'>
+        <button class='feed-done' class='next' bindtap='next' style='width:100%;'>确　定</button>
+    </view>
+</view>

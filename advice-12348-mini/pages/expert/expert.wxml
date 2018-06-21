@@ -1,0 +1,36 @@
+<!--expert.wxml-->
+<view class="media-list-block">
+  <view class="list-item" wx:for="{{ staff }}" wx:key="id">
+    <view class="avatar-wrap">
+      <image mode="aspectFill" class="avatar" src="{{ item.avatarUrl }}"></image>
+    </view>
+    <view class="info">
+      <view class="name">
+        <text>{{ item.name }}</text>
+        <text class="type bg_red" wx:if="{{ item.staffType === 'deb85cd4c8844d998593e691b54a8ffd'||item.staffType === '4cfedc9f9b834ccbb564c0a356a2dcb3'||item.staffType === '9f64419b2dc64ddcb0fd74d999153564'||item.staffType === 'c47351813a37420682503ae438dcce73'}}">律师</text>
+        <text class="type bg_blue" wx:elif="{{ item.staffType === '64ee1de160af46fc8198102d240d2486' }}">司法鉴定人</text>
+        <text class="type bg_orange" wx:elif="{{ item.staffType === '1508a29267d24954ba3c071289606998' }}">人民调解员</text>
+        <text class="type bg_teal" wx:elif="{{ item.staffType === '39d599d3ed4e44978a778119adbeca12' }}">公证员</text>
+        <text class="type" wx:else>未知</text>
+      </view>
+      <!--<view class="desc">
+        <text>专业领域:</text>
+        <block wx:for-items="{{item.tags}}" wx:for-item="tag">
+          <text class="tag">{{ tag }}</text>
+        </block>
+      </view>-->
+      <view class="desc">
+        <!--<text>执业机构:</text>-->
+        <text class="org">{{ item.org }}</text>
+      </view>
+    </view>
+  </view>
+  <view class="loading" wx:if="{{loading}}">
+    <ul class="spinners">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </view>
+  <view class="loadingMore" wx:if="{{loadingMore}}">加载中...</view>
+</view>

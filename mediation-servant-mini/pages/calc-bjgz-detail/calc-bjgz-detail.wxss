@@ -1,0 +1,113 @@
+/* pages/calc-bjgz-detail/calc-bjgz-detail.wxss */
+.calc-res-title {
+  width: 100%;
+  height: auto;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  background: #fff;
+}
+.calc-res-title .icon-wrap {
+  width: 100rpx;
+  height: auto;
+  font-size: 14px;
+  color: #999;
+  float: left;
+}
+.calc-res-title .text {
+  width: calc(100% - 100rpx);
+  height: auto;
+  font-size: 14px;
+  color: #999;
+  float: left;
+}
+.calc-res-title .icon-wrap .iconfont {
+  margin-right: 10rpx;
+  color: #4895ff;
+}
+.calc-res-list {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  background: #fff;
+}
+.calc-res-list .list {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 30rpx;
+  padding-top: 30rpx;
+  line-height: 100%;
+}
+.calc-res-list .list .name {
+  float: left;
+  font-size: 15px;
+  color: #333;
+}
+.calc-res-list .list .number {
+  float: right;
+  font-size: 15px;
+  color: #ff3333;
+}
+.calc-res-list .list .number.full {
+  font-weight: bolder;
+}
+.calc-res-list .list:last-child .border {
+  display: none;
+}
+.notes {
+  width: 100%;
+  height: auto;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  background: #fff;
+}
+.notes .title {
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+  line-height: 100%;
+  font-size: 15px;
+  color: #333;
+}
+.notes .content-box {
+  width: 100%;
+  height: auto;
+  padding: 20rpx 30rpx;
+  font-size: 15px;
+  color: #333;
+  background: #f6f9fd;
+  border-radius: 4px;
+}
+.notes .content-box navigator {
+  display: inline-block;
+  font-size: 15px;
+  color: #4895ff;
+}
+.notes .content-box navigator text {
+  color: #333;
+}
+.btn-box {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+.btn-box button {
+  width: 50%;
+  float: left;
+  border-radius: 0;
+  border: none;
+  outline: none;
+}
+.btn-box button.rep {
+  color: #fff;
+  background: #999999;
+}
+.btn-box button.back {
+  color: #fff;
+  background: #4895ff;
+}

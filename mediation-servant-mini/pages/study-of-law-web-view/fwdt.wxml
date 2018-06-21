@@ -1,0 +1,2 @@
+<!--pages/study-of-law-web-view/fwdt.wxml-->
+<web-view src="https://12348.justice.gov.cn/m/miniApps/index/index.jsp?category=lpa.Dynamic"></web-view>

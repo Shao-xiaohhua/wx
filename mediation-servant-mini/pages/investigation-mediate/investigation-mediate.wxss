@@ -1,0 +1,16 @@
+/* pages/investigation-mediate/investigation-mediate.wxss */
+page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/*搜索列表  */
+.search-list-wrap-parent {
+  width: 100%;
+  height: calc(100% - 238rpx);
+}
+.search-list-wrap-parent scroll-view {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

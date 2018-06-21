@@ -1,0 +1,64 @@
+/* pages/mediate-online/online-situation.wxss */
+page {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  background: #fff;
+}
+.on-line-stu {
+  width: 100%;
+  height: auto;
+}
+.on-line-stu .input-wrap {
+  width: 100%;
+  height: auto;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+}
+.on-line-stu .input-wrap .list {
+  width: 100%;
+  height: auto;
+}
+.on-line-stu .input-wrap .list .clearfix {
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 15px;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+  display: block;
+}
+.on-line-stu .input-wrap .list .name {
+  width: 170rpx;
+  height: 100%;
+}
+.on-line-stu .input-wrap .list .input-wrap {
+  width: calc(100% - 170rpx);
+  height: 100%;
+}
+.on-line-stu .input-wrap .list .input-wrap .input1 {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.on-line-stu .input-wrap .list .arrow {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  border-color: #333;
+}
+.btn-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  background: #4895ff;
+}

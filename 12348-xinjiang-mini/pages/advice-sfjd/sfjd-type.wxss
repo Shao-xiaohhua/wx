@@ -1,0 +1,4 @@
+/* pages/advice-sfjd/sfjd-type.wxss */
+page {
+  background: #fff;
+}

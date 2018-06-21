@@ -1,0 +1,57 @@
+/* pages/linkage-detail/linkage-detail.wxss */
+page {
+  padding-bottom: 80rpx;
+}
+/* .linkage-list-wrap {
+  width: 100%;
+  height: auto;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  margin-bottom: 20rpx; 
+  background: #fff;
+} */
+.linkage-list-wrap .list {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+  line-height: 100%;
+  font-size: 15px;
+  color: #333;
+}
+.linkage-list-wrap .list:last-child .border {
+  display: none;
+}
+.linkage-list-wrap .list .tp {
+  width: 160rpx;
+  float: left;
+}
+.linkage-list-wrap .list .ct {
+  width: calc(100% - 160rpx);
+  float: left;
+  color: #999;
+}
+.choice-link {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+.choice-link navigator {
+  width: 50%;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  line-height: 100%;
+  float: left;
+  text-align: center;
+}
+.choice-link .tel {
+  color: #fff;
+  background: #41d12e;
+}
+.choice-link .reback {
+  color: #fff;
+  background: #4895ff;
+}

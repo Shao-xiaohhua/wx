@@ -1,0 +1,4 @@
+/* pages/oral-applied/oral-applied.wxss */
+page {
+  padding-bottom: 150rpx;
+}

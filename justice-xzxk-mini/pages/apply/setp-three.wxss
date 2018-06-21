@@ -1,0 +1,31 @@
+/* pages/apply/setp-three.wxss */
+.pd-wrap {
+  width: 100%;
+  height: auto;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}
+.text-content {
+  width: 100%;
+  height: auto;
+  padding: 40rpx 30rpx;
+  line-height: 20px;
+  color: #333;
+  font-size: 15px;
+  background: #f2f7fe;
+}
+.lable-wrap {
+  width: 100%;
+  height: auto;
+  padding-top: 30rpx;
+  padding-left: 40rpx;
+}
+.lable-wrap .checkbox {
+  display: block;
+  color: #5297fd;
+}
+checkbox .wx-checkbox-input{
+   width: 18px;
+   height: 18px;
+   margin-top: -2px;
+}

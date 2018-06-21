@@ -1,0 +1,105 @@
+/* pages/myTabComponent/myTabComponent.wxss */
+.tab-wrap {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  box-shadow: 0 0 5px 1px #999;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.tab-wrap .tab-list {
+  position: relative;
+  width: calc(100% / 3);
+  height: auto;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  float: left;
+  border-bottom: 2px solid #fff;
+}
+.tab-wrap .tab-list .hid {
+  color: transparent;
+}
+.tab-wrap .tab-list navigator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.tab-wrap .tab-list .pas {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -15rpx;
+  width: 30rpx;
+  height: 30rpx;
+  text-align: center;
+  line-height: 30rpx;
+  margin: auto;
+  color: #fff;
+  border-radius: 50%;
+  background: #4895ff;
+  display: none;
+  z-index: 888;
+}
+.tab-wrap .tab-list.now {
+  color: #4895ff;
+  border-color: #4895ff;
+}
+.tab-wrap .tab-list.now.pass {
+  background: #ecf4ff;
+}
+.tab-wrap .tab-list.now.pass .pas {
+  display: block;
+}
+.tab-wrap .tab-list.now.pass .bg-right {
+  display: block;
+}
+.bg-right {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -15rpx;
+  margin: auto;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  background: #4895ff;
+  z-index: 888;
+  display: none;
+}
+.bg-right .bg-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.bg-right .bg-box::after {
+  position: absolute;
+  left: 8rpx;
+  top: 14rpx;
+  width: 8rpx;
+  height: 2px;
+  background: #fff;
+  content: "";
+   transform: rotate(45deg); 
+}
+.bg-right .bg-box::before {
+  position: absolute;
+  right: 6rpx;
+  top: 12rpx;
+  width: 15rpx;
+  height: 2px;
+  background: #fff;
+  content: "";
+  transform: rotate(-45deg);
+}

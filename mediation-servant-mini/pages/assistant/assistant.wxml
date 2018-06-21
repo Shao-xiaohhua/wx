@@ -1,0 +1,11 @@
+<!--pages/assistant/assistant.wxml-->
+<view class='ass-wrap clearfix' wx:for="{{assArr}}" wx:for-index="idx" wx:for-item="itn" wx:key="{{idx}}">
+  <view class='title'>{{itn.title}}</view>
+  <view class='link-wrap clearfix'>
+    <navigator url='{{item.url}}' wx:for="{{itn.list}}" wx:key="{{index}}">
+      <text class='iconfont {{item.icon}} {{item.color}}'></text>
+      <text class='name'>{{item.name}}</text>
+      <text class='nameTwo'>{{item.nameTwo}}</text>
+    </navigator>
+  </view>
+</view>

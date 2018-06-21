@@ -1,0 +1,32 @@
+<view class="weui-panel question">
+  <view class="weui-panel__hd">来自
+    <text class="username">{{proposeUsername}}</text>的问题
+    <view class='toChaRecord' wx:if="typeId=='b859f3f44ca64b7aa5e7d3019372b4e8'" bindtap='recordTap'>聊天记录</view>
+  </view>
+  <view class="weui-panel__bd">
+    <view class="weui-media-box weui-media-box_text">
+      <view class="weui-media-box__title weui-media-box__title_in-text">{{title}}</view>
+      <view class="weui-media-box__desc">{{desc}}</view>
+      <view class="info">
+        <view>
+          <image mode="aspectFit" class="icon" src="../../images/icon_category.png"></image>{{type}}</view>
+        <text>发起于：{{proposeTime}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="weui-cells__title" wx:if="{{status=='Done' || status=='Over'}}">问题回复</view>
+<view class="weui-cells" wx:if="{{status=='Done' || status=='Over'}}">
+  <view class="reply">
+    <view class="reply-author">
+      <image mode="aspectFill" class="avatar" src="../../images/s.png"></image>
+      <view class="info">
+        <view class="name">{{answerer}}</view>
+        <view class="desc">回复于 {{answerTime}}</view>
+      </view>
+    </view>
+    <view class="reply-content">
+      <text>{{answer}}</text>
+    </view>
+  </view>
+</view>

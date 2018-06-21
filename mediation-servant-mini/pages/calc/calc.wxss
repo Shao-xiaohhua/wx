@@ -1,0 +1,4 @@
+/* pages/calc/calc.wxss */
+page {
+  background: #fff;
+}

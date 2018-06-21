@@ -1,0 +1,29 @@
+<!--pages/user/user.wxml-->
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<navigator class='back-to-index' open-type='switchTab' url='../index/index'><text class='iconfont icon-arrow'></text>返回首页</navigator>  
+<view class="shadowWrap {{shadowSwite?'active':''}}">
+  <view class='closeSearch' bindtap='cloesJGswite'>
+    <view class='clearLine'></view>
+    <view class='clearLine active'></view>
+  </view>
+  <view class='shadoClear'>
+    <text class='name'>是否已注册</text>
+    <text class='prompt'>已注册可直接登录绑定微信</text>
+    <view class='clear-btn clearfix' bindtap='clearShadow'>
+      <view class='yes-btn pull-left' bindtap='gotoLonin'>已注册</view>
+      <view class='yes-btn pull-right active' bindtap='gotoReg'>未注册</view>
+    </view>
+  </view>
+</view>
+<view class='user-png'>
+  <image src='../../images/user_p.png' style='width: 100%; height: 100%'></image>
+</view>
+<view class='fed-text'>您还未登录，登录后可查看我的信息</view>
+<view class='link-warp clearfix'>
+  <navigator url='register' class='pull-left active' bindtap='clearWXswite'>注册</navigator>
+  <navigator url='login' class='pull-right' bindtap='clearWXswite'>登录</navigator>
+</view>
+<view class='wx-login' bindtap='login'>
+  <text class='iconfont icon-weixin'></text>
+  <text>微信登录</text>
+</view>

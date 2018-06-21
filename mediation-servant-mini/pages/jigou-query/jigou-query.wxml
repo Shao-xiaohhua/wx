@@ -1,0 +1,101 @@
+<!--pages/jigou-query/jigou-query.wxml-->
+<!--tab  -->
+<view class='tab-wrap-mediate clearfix'>
+  <view bindtap='tabCheck' data-index="{{index}}" class='tab {{item.active}}' wx:for="{{tabArr}}" wx:key="{{index}}" style="width:{{item.width}}">
+    {{item.name}}
+    <view class='triangle'></view>
+    <view class='borderx'></view>
+  </view>
+</view>
+<!--遮罩  -->
+<view class='shado-box' wx:if="{{shadoWhite}}">
+  <view class='content'>
+    <scroll-view scroll-y>
+    <view class='close-box' bindtap='mp'></view>
+    <!--机构类型  -->
+      <view class='tag-box clearfix' wx:if="{{morSwite}}">
+        <view class='tag' bindtap='getTypeID' data-id="{{item.id}}" data-index="{{index}}" wx:for="{{typeArr}}" wx:key="{{index}}">
+          <view class="content text-hinde {{item.active?'active': ''}}">{{item.name}}</view>
+        </view>
+        <!-- <view class='tag'>
+          <view class='content' hover-class="active">更多</view>
+        </view> -->
+      </view>
+      <!--所属区县  -->
+      <view class='tag-box clearfix' wx:if="{{stateSwite}}">
+        <view class='tag' bindtap='getZoneID' data-id="{{item.id}}" data-index="{{index}}" wx:for="{{ZoneArr}}" wx:key="{{index}}">
+          <view class="content text-hinde {{item.active?'active':''}}">{{item.name}}</view>
+        </view>
+        <!-- <view class='tag'>
+          <view class='content' hover-class="active">更多</view>
+        </view> -->
+      </view>
+      <!--案件时间  -->
+        <!-- <view class='tag-box time clearfix' wx:if="{{timeSwite && !timeMoreSwite}}">
+          <view class='tag' wx:for="{{timeArr}}" wx:key="{{index}}">
+            <view class='content text-hinde' hover-class="active">{{item.name}}</view>
+          </view>
+          <view class='tag timeMore'>
+            <view class='content' hover-class="active" bindtap='timeMore'>其他日期范围</view>
+          </view>
+        </view>  -->
+    </scroll-view>
+  </view>
+</view>
+<!--搜索  -->
+<view class='serach-wrap'>
+  <view class='serach-box'>
+    <input bindfocus='clearPage' bindblur="inputSearch" placeholder='输入搜索关键词' placeholder-class="placeholder"></input>
+    <text class='iconfont icon-search'></text>
+  </view>
+</view>
+<!--横向滚动条  -->
+<view class='transverse-box'>
+  <scroll-view scroll-x>
+    <view class='list-bot'>
+      <text wx:for="{{scrollArr}}" wx:key="{{index}}" bindtap='swClick' data-index="{{index}}" data-id="{{item.id}}" class="{{item.active?'active':''}}">{{item.name}}<text class='iconfont icon-sort'></text></text>
+    </view>
+  </scroll-view>
+</view>
+<!--下部滚动  -->
+<view class='search-list-wrap-parent'>
+  <loading hidden="{{hidden}}">加载中...</loading>
+  <scroll-view bindtouchend='addNew' scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" upper-threshold="0" lower-threshold="0">
+    <view class='search-child-list-wrap'>
+      <view class='PepCard' wx:for="{{contentList}}" wx:key="{{index}}" data-id="{{item.id}}">
+        <image wx:if="{{item.imageUrl}}" src='{{item.imageUrl}}'></image> 
+        <image wx:if="{{!item.imageUrl}}" src='../../images/default_binary.png'></image>
+        <navigator url='../list-detail-webView/list-detail-webView?id={{item.id}}&hrf=orgs'>
+          <view class='h3'>
+            <text class='p'>{{item.name}}</text>
+            <!-- <view class='time'>
+              <text class='i'>{{item.jy}}</text>
+              <text>年工作经验</text>
+            </view> -->
+          </view>
+          <view class='h3 no-bg'>
+            <text class='p'>执业证号：</text>
+            <text class='taglis'>暂无提供</text>
+          </view>
+          <view class='h4'>机构地址：{{item.org}}</view>
+        </navigator>
+        <view class='number-warp clearfix'>
+          <view class='numbers' style='width: 50%'>
+             <text class='number' wx-if="{{item.areaNum !== '&minus;'}}">{{item.areaNum}}</text>
+             <text class='number' wx-if="{{item.areaNum === '&minus;'}}">-</text> 
+            <text class='name'>{{item.areaName}}</text>
+          </view>
+          <view class='numbers' style='width: 50%'>
+            <text class='number' wx-if="{{item.goodRate !== '&minus;'}}">{{item.goodRate}}</text>
+            <text class='number' wx-if="{{item.goodRate === '&minus;'}}">-</text>
+            <text class='name'>好评率</text>
+          </view>
+          <!-- <view class='numbers'>
+            <text class='number'>{{item.gyzs}}</text>
+            <text class='name'>公益指数</text>
+          </view> -->
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

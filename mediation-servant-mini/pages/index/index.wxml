@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<view class='core-wrap'>
+  <view class='core-banner'>
+    <image class='banner-img' src='../../images/banner.png'></image>
+    <navigator open-type="reLaunch" class='core-user-id1' url="../core/core">
+      管理中心
+    </navigator>
+    <navigator open-type="reLaunch" class='core-user-id' url="../el-Id/el-Id">
+      电子身份证明
+      <view class='arrow'></view>
+    </navigator>
+    <view class='pic-box'>
+      <image bindtap="" class="userinfo-avatar" src="{{userInfo.avatar}}" background-size="cover"></image>
+    </view>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <view class='userinfo-number'>{{userInfo.org}}</view>
+    <view class='user-tag'>
+      <text class='iconfont icon-v'></text>
+      <text class='tag-type'>{{userInfo.peopleType}}</text>
+    </view>
+    <!--滚动播放  -->
+    <view class='swiper-wrap'>
+      <swiper 
+        indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" 
+        interval="{{interval}}" 
+        duration="{{duration}}" 
+        vertical="{{verticale}}">
+        <block wx:for="{{noticeArr}}" wx:key="{{index}}">
+          <swiper-item>
+            <text class='iconfont icon-horn'></text>
+             <navigator url='{{item.url}}'> 
+              <text>{{item.title}}</text>
+             </navigator> 
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <!--number  -->
+  <view class='server-number-box clearfix'>
+    <view class='list' wx:for="{{numberArr}}" wx:key="{{index}}">
+      <view class='number'>{{item.number}}</view>
+      <text>{{item.text}}</text>
+      <navigator url="{{item.url}}"></navigator>
+    </view>
+  </view>
+  <!--link  -->
+  <view class='server-link-wrap clearfix'>
+    <view class='list {{item.cl}}' wx:for="{{linkArr}}" wx:key="{{index}}">
+      <navigator url="{{item.url}}">
+        <view class='icon-wrap {{item.color}}'>
+          <text class='iconfont {{item.icon}}'></text>
+        </view>
+        {{item.name}}
+      </navigator>
+    </view>
+  </view>
+</view>

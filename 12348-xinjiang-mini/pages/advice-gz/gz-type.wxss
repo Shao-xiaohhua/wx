@@ -1,0 +1,4 @@
+/* pages/advice-gz/gz-type.wxss */
+page {
+  background: #fff;
+}

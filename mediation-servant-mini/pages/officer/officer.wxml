@@ -1,0 +1,40 @@
+<!--pages/officer/officer.wxml-->
+<view class='officer-tab-box clearfix'>
+  <view class='item' data-id="{{0}}" bindtap='tabItem'>法律法规</view>
+  <view class='item bordera' data-id="{{1}}" bindtap='tabItem'>裁判文书</view>
+</view>
+<view class='officer-list-wrap' wx:if="{{tabSwite[0].active}}">
+  <loading hidden="{{hidden}}">加载中...</loading>
+  <view class='list' wx:for="{{lawArr}}" wx:key="{{index}}">
+    <navigator url='../officer-detail/officer-detail?type=1&id={{item.id}}'>
+      <view class='title'>名称：{{item.name}}
+        <view class='border'></view>
+      </view>
+      <view class='content clearfix'>
+        <text class='name'>条款</text>
+        <text class='con-text'>{{item.tiaokuan}}</text>
+      </view>
+    </navigator>
+  </view>
+</view>
+<view class='officer-list-wrap' wx:if="{{tabSwite[1].active}}">
+  <view class='list' wx:for="{{caseArr}}" wx:key="{{index}}">
+    <navigator url='../officer-detail/officer-detail?type=2&id={{item.id}}'>
+      <view class='title'>{{item.title}}
+        <view class='border'></view>
+      </view>
+      <view class='content clearfix'>
+        <text class='name'>文书类型</text>
+        <text class='con-text'>{{item.type}}</text>
+      </view>
+      <view class='content clearfix'>
+        <text class='name'>法院</text>
+        <text class='con-text'>{{item.court}}</text>
+      </view>
+      <view class='content clearfix'>
+        <text class='name'>时间</text>
+        <text class='con-text'>{{item.time}}</text>
+      </view>
+    </navigator>
+  </view>
+</view>

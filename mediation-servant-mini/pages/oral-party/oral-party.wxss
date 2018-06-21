@@ -1,0 +1,7 @@
+/* pages/oral-party/oral-party.wxss */
+page {
+  padding-bottom: 150rpx;
+}
+.button-box .n {
+  width: 100%;
+}

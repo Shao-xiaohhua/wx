@@ -1,0 +1,8 @@
+@import "../../weui.wxss";
+/* feedback.wxss */
+.feedback-form .weui-textarea {
+  background-color: #fff;
+}
+.feedback-form .weui-cells:before {
+  display: none;
+}

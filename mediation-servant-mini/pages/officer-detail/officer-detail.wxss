@@ -1,0 +1,50 @@
+/* pages/officer-detail/officer-detail.wxss */
+.officer-detail-wrap {
+  width: 100%;
+  height: auto;
+  padding-top: 40rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+}
+.officer-detail-wrap .title {
+  padding-left: 112rpx;
+  padding-right: 112rpx;
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  font-weight: 600;
+}
+.officer-detail-wrap .text-number {
+  margin-top: 20rpx;
+  margin-bottom: 35rpx;
+  text-align: center;
+  font-size: 14px;
+  color: #999999;
+}
+.officer-detail-wrap .message-list {
+  width: 100%;
+  height: auto;
+  font-size: 15px;
+  line-height: 100%;
+}
+.officer-detail-wrap .message-list .list {
+  margin-bottom: 20rpx;
+}
+.officer-detail-wrap .message-list .head {
+  width: 150rpx;
+  height: auto;
+  color: #666;
+}
+.officer-detail-wrap .message-list .body {
+  max-width: calc(100% - 150rpx);
+  padding-left: 10rpx;
+  color: #999;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.officer-detail-wrap .content {
+  font-size: 15px;
+  color: #999;
+  text-indent:2em;
+}

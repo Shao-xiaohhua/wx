@@ -1,0 +1,2 @@
+<!--pages/query-web-view/query-web-view.wxml-->
+<web-view src="{{url}}"></web-view>

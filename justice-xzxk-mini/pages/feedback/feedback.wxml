@@ -1,0 +1,11 @@
+<!--pages/feedback/feedback.wxml-->
+<text class='iconfont icon-approval'></text>
+<view class='feed-name'>提交成功</view>
+<text class='content'>您的网上申请编码为：</text>
+<text class='number'>{{feddObj.onlineCaseNumber}}</text>
+<view class='content'>请保持您的手机畅通，接收核验通知。</view>
+<!-- <text class='number cont'>{{feddObj.stuffStr}}{{feddObj.stuffStr}}</text>
+<text class='content'>至下述地点</text>
+<view class='content'><text class='number'>{{feddObj.serviceCenterAddress}}</text>进行办理</view> -->
+<navigator open-type="reLaunch" url='../index/index' bindtap='clear'>返回首页</navigator>
+

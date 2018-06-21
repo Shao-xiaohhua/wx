@@ -1,0 +1,32 @@
+<!--pages/feedback/feedback.wxml-->
+<view class='feedback-list-wrap'>
+  <form bindsubmit='submitForm'>
+    <view class='list clearfix'>
+      <view class='tp'>案由</view>
+      <input placeholder="{{anyouTip}}"/>
+      <view class='border'></view>
+      <view class='arrow'></view>
+      <navigator url='../linkage-choice/linkage-choice?id=64bc0dfdb05948c4b2d51b3e7ccac3b0&name=案由'></navigator>
+    </view>
+    <view class='list clearfix'>
+      <view class='tp'>所在人群</view>
+      <input placeholder="{{suozairenqunTip}}"/>
+      <view class='border'></view>
+      <view class='arrow'></view>
+      <navigator url='../linkage-choice/linkage-choice?id=cc20455636ab4cec96aaef4a627886f4&name=所在人群'></navigator>
+    </view>
+    <view class='list clearfix'>
+      <view class='tp'>处置情况</view>
+      <input placeholder="{{chuzhiqingkuangTip}}"/>
+      <view class='border'></view>
+      <view class='arrow'></view>
+      <navigator url='../linkage-choice/linkage-choice?id=0b6b9992ff6e45e79cbb7378487da0cd&name=处置情况'></navigator>
+    </view>
+    <view class='list clearfix'>
+      <view class='tp at'>是否有调委会管辖</view>
+      <switch checked="{{isTiaoweihui}}" name="tiaoweihui" />
+      <view class='border'></view>
+    </view>
+    <button form-type="submit" class='feed-done'>完成</button>  
+  </form>
+</view>

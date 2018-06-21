@@ -1,0 +1,29 @@
+<!--pages/login/login.wxml-->
+<view class='login-banner'>
+    <image class='banner-img' src='../../images/SKY.png'></image>
+    <image class='logo' src='../../images/logo.png'></image>
+    <view class='login-box'>
+        <form bindsubmit="loginSubmit">
+            <view class='input-box clearfix'>
+                <text class='iconfont icon-id'></text>
+                <input placeholder="请输入您的账号" bindinput="setUserName" name="userName" />
+                <view class='border'></view>
+            </view>
+            <view class='input-box clearfix'>
+                <text class='iconfont icon-password'></text>
+                <input placeholder="请输入您的密码" password="true" bindinput="setAccess" name="access" />
+                <view class='border'></view>
+            </view>
+            <view class="input-box error" style="padding-top:15px;">{{error}}</view>
+            <button class='login-button' form-type="submit" hover-class="active"> 登录 </button>
+        </form>
+        <view class='login-link clearfix'>
+            <!--<navigator url=''  class='reg'>注册</navigator>
+            <navigator url=''  class='pass'>忘记密码？</navigator>-->
+        </view>
+    </view>
+</view>
+<!-- <view class='sfj-logo'>
+    <image class='banner-img' src='../../images/sfj_logo.png'></image>
+    <navigator url='../index/index'></navigator>
+</view> -->

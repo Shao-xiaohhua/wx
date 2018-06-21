@@ -1,0 +1,91 @@
+/* pages/hot-tel/hot-tel.wxss */
+.hot-banner {
+  position: relative;
+  width: 100%;
+  height: 300rpx;
+  background: #1788ce;
+}
+navigator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.phone-list-wrap {
+  width: 100%;
+  height: auto;
+  margin-top: 80rpx;
+  padding-left: 60rpx;
+  padding-right: 60rpx;
+}
+.phone-list-wrap .list {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 50rpx;
+}
+.phone-list-wrap .list .number {
+  width: 80rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #fff;
+  background: black;
+  border-radius: 50%;
+}
+.phone-list-wrap .list .content {
+  width: 509rpx;
+  padding: 40rpx 55rpx;
+  color: #fff;
+  background: black;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.phone-list-wrap .list .content .content-text {
+  line-height: 100%;
+}
+.phone-list-wrap .list .content .content-text.top {
+  padding-left: 0;
+  margin-bottom: 30rpx;
+}
+.phone-list-wrap .list .content .content-text.bottom {
+  padding-left: 50rpx;
+}
+.phone-list-wrap .list .border {
+  position: absolute;
+  left: 40rpx;
+  top: 97rpx;
+  width: 1px;
+  height: 130rpx;
+  border-left: 1px dashed black;
+}
+.phone-list-wrap .list.green .number {
+  background: #adce53;
+}
+.phone-list-wrap .list.green .content {
+  background: #adce53;
+}
+.phone-list-wrap .list.green .border {
+  border-color: #adce53;
+}
+.phone-list-wrap .list.blue .number {
+  background: #7ac7e9;
+}
+.phone-list-wrap .list.blue .content {
+  background: #7ac7e9;
+}
+.phone-list-wrap .list.blue .border {
+  border-color: #7ac7e9;
+}
+.phone-list-wrap .list.oragin .number {
+  background: #e86e2b;
+}
+.phone-list-wrap .list.oragin .content {
+  background: #e86e2b;
+}
+.phone-list-wrap .list.oragin .border {
+  border-color: #e86e2b;
+}

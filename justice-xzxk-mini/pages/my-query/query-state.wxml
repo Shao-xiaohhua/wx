@@ -1,0 +1,34 @@
+<!--pages/my-query/query-state.wxml-->
+<view class='state-title clearfix' bindtap='getViwe'>
+  <view class='icon-box pull-left'>
+    <image style='width:100%;height:100%;' src='../../images/state_icon.png'></image>
+  </view>
+  <view class='text-box pull-left'>{{titleText}}</view>
+  <view class='text-box sm pull-left'>查看审核决定书</view>
+</view>
+<view class='title-line'>
+  事项状态
+  <view class='lint-title-line'></view>
+  <view class='border-bottom'></view>
+</view>
+<view class='state-list-box'>
+  <view class="list {{item.now?'now':''}} {{item.pass?'pass':''}}" wx:for="{{listArr}}" wx:key="{{index}}">
+    <view class='circle'>
+      <text class='iconfont icon-right'></text>
+    </view>
+    <view class='line'></view>
+    <text class='name'>【{{item.phase}}】</text><text style='padding-left: 40rpx;'>{{item.organization}}</text>
+    <view class='time'>{{item.finshTime}}</view>
+  </view>
+</view>
+<view class='title-line'>
+  基本信息
+  <view class='lint-title-line'></view>
+  <view class='border-bottom'></view>
+</view>
+<view class='message-list-wrap'>
+  <view class='list clearfix' wx:for="{{getMechanism}}" wx:key="{{index}}">
+    <view class='name pull-left'>{{item.name}}</view>
+    <view class='cont pull-right'>{{item.cont}}</view>
+  </view>
+</view>

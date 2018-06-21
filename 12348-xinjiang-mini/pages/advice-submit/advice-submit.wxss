@@ -1,0 +1,41 @@
+/* pages/advice-submit/advice-submit.wxss */
+page {
+  background: #fff;
+}
+.advice-submit-pic {
+  width: 100%;
+  height: auto;
+}
+.advice-submit-pic .pic {
+  width: 150rpx;
+  height: 164rpx;
+  margin: 130rpx auto 0 auto;
+  display: block;
+  background-size: 100% 100%;
+}
+.advice-submit-pic .ts, .advice-submit-pic .time {
+  width: 100%;
+  height: auto;
+  line-height: 100%;
+  text-align: center;
+}
+.advice-submit-pic .ts {
+  margin-top: 50rpx;
+  font-size: 18px;
+  color: #333;
+}
+.advice-submit-pic .time {
+  margin-top: 40rpx;
+  font-size: 16px;
+  color: #999;
+}
+.advice-submit-pic .toIndex {
+  width: 218rpx;
+  height: 88rpx;
+  display: block;
+  text-align: center;
+  margin: 120rpx auto 0 auto;
+  line-height: 88rpx;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}

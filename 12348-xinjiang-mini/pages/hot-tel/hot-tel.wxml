@@ -1,0 +1,14 @@
+<!--pages/hot-tel/hot-tel.wxml-->
+<view class='hot-banner'>
+  <image bindtap='call' src='../../images/banner4.png' style='width: 100%; height: 100%; background-size: 100% 100%;'></image>
+</view>
+<view class='phone-list-wrap'>
+  <view class='list clearfix {{item.color}}' wx:for="{{listArr}}" wx:key="{{index}}">
+    <view class='number pull-left'>{{item.number}}</view>
+    <view class='content pull-right'>
+      <view class='content-text top'>{{item.fw1}}</view>
+      <view class='content-text bottom'>{{item.fw2}}</view>
+    </view>
+    <view class='border'></view>
+  </view>
+</view>

@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/advice-submit/advice-submit",
+    "pages/advice/advice",
+    "pages/advice/law-type",
+    "pages/my-message-detail/my-message-detail",
+    "pages/hot-tel/hot-tel",
+    "pages/feedbackDown/feedbackDown",
+    "pages/feedback/feedback",
+    "pages/my/my",
+    "pages/phone-number/phone-number",
+    "pages/logs/logs",
+    "pages/advice-gz/advice-gz",
+    "pages/advice-gz/gz-type",
+    "pages/advice-rmtj/advice-rmtj",
+    "pages/advice-rmtj/rmtj-type",
+    "pages/advice-sfjd/advice-sfjd",
+    "pages/advice-sfjd/sfjd-type",
+    "pages/advice-flyz/advice-flyz",
+    "pages/advice-flyz/flyz-type"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1788ce",
+    "navigationBarTitleText": "法律咨询",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#0e76bc",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon_news1_fill.png",
+        "selectedIconPath": "images/icon_news_fill.png",
+        "text": "咨询"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/icon_my1_fill.png",
+        "selectedIconPath": "images/icon_my_fill.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

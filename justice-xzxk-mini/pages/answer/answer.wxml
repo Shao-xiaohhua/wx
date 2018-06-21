@@ -1,0 +1,25 @@
+<!--pages/answer/answer.wxml-->
+<view class='list-wrap' hidden='{{ajaxSwite}}'>
+  <view class='list' wx:for="{{listArr}}" wx:key="{{index}}">
+    <view class='child-wrap'>
+      <navigator>
+        <view class='title'>
+          问
+        </view>
+        <view class='content'>
+          {{index + 1}}.{{item.question}}
+        </view>
+      </navigator>
+    </view>
+    <view class='child-wrap'>
+      <navigator>
+        <view class='title active'>
+          答
+        </view>
+        <view class='content active'>
+          {{item.answer}}
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

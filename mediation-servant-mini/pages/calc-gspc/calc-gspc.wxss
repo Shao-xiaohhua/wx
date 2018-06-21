@@ -1,0 +1,4 @@
+/* pages/calc-gspc/calc-gspc.wxss */
+page {
+  background: #fff;
+}

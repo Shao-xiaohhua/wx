@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "纠纷排查",
+  "usingComponents": {
+    "my-component-tab": "../myTabComponent/myTabComponent"
+  }
+}

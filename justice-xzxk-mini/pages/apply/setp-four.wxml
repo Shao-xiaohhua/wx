@@ -1,0 +1,56 @@
+<!--pages/apply/setp-four.wxml-->
+<view class='setp-wrap clearfix'>
+<!--顶部setp  -->
+  <scroll-view scroll-x style="width: 100%" scroll-into-view="{{scrollId}}">
+    <view class='slwp' style='width:1400rpx'>
+      <view bindtap='getStorNav' id="{{item.id}}" class="scroll-item {{item.dq?'dq':''}}" wx:for="{{setpArr}}" wx:key="{{index}}">
+        <navigator url='{{item.url}}' open-type="redirect">
+          <view class="number {{item.pass?'pass':''}}">{{index + 1}}</view>
+          <view class="number {{item.pass?'':'pass'}}"><text class='iconfont icon-right'></text></view>
+          <view class='name'>{{item.name}}</view>
+          <view class='border-center'></view>
+        </navigator>
+      </view>
+    </view>
+  </scroll-view>
+  <!--内容区  -->
+  <view class='padding-wrap clearfix'>
+    <view class='child-wrap'>
+    <!--title  -->
+      <view class='title'>
+        <view class='name'>
+          <text>请选择办理人</text>
+          <view class='title-line left'></view>
+          <view class='title-line right'></view>
+        </view>
+      </view>
+      <!--content  -->
+      <view class='content-wrap'>
+        <view class='type-choice'>
+          <view 
+            class="choice-item {{item.active?'active':''}}" 
+            wx:for="{{typeArr}}" 
+            wx:key="{{index}}"
+            data-index="{{index}}"
+            data-type="{{item.type}}"
+            bindtap='choiceType'
+            >
+            <view style='width: 100%;heigth: auto'>
+              <view class='icon-wrap'>
+                <text class='iconfont {{item.icon}}'></text>
+              </view>
+              <view class='name'>{{item.name}}</view>
+            </view>
+          </view>
+        </view>
+        <view class='next-btn-wrap'>
+          <view class='child-btn active' bindtap='getNext'>下一步</view>
+        </view>
+        <view class='login-link-wrap' wx:if="{{loginLink}}">
+          <navigator url=''>已有账号，立即登录 <text class='iconfont icon-arrow'></text></navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+

@@ -1,0 +1,4 @@
+/* pages/oral-tp/oral-tp.wxss */
+.lnkage-choice-wrap .title {
+  text-align: center;
+}

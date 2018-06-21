@@ -1,0 +1,2 @@
+<!--pages/study-of-law-web-view/jdwd.wxml-->
+<web-view src="https://12348.justice.gov.cn/m/miniApps/news/index.jsp?category=lpa.LegalServiceGuide"></web-view>

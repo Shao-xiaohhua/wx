@@ -1,0 +1,82 @@
+/* pages/oral-done/oral-done.wxss */
+.inv-done-number {
+  width: 100%;
+  height: auto;
+  margin-top: 20rpx;
+  background: #fff;
+}
+.inv-done-number .inner-box {
+  position: relative;
+  width: 50%;
+  height: auto;
+  padding-bottom: 30rpx;
+  padding-top: 35rpx;
+  float: left;
+  text-align: center;
+}
+.inv-done-number .inner-box navigator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.inv-done-number .inner-box .name {
+  margin-bottom: 30rpx;
+  font-size: 13px;
+  color: #999;
+  line-height: 100%;
+}
+.inv-done-number .inner-box .number {
+  width: 100%;
+  line-height: 100%;
+  font-size: 20px;
+  color: #4895ff;
+  font-weight: bold;
+}
+.number-list-wrap {
+  width: 100%;
+  height: auto;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  margin-top: 20rpx;
+  background: #fff;
+}
+.number-list {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  font-size: 15px;
+  color: #333;
+}
+.number-list:last-child .border {
+  display: none;
+}
+.number-list .number {
+  float: right;
+  color: #4895ff;
+}
+.number-list .number.cash {
+  color: #ff1b1b;
+}
+.button-box {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+.button-box button {
+  width: 50%;
+  float: left;
+  color: #fff;
+  border-radius: 0;
+}
+.button-box button.r {
+  background: #4895ff;
+}
+.button-box button.n {
+  background: #41d12e;
+}

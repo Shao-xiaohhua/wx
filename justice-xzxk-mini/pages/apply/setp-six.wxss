@@ -1,0 +1,172 @@
+/* pages/apply/setp-six.wxss */
+page {
+  position: relative;
+  width: 100%;
+}
+.shadowWrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  z-index: 888;
+  display: none;
+}
+.shadowWrap.active {
+  display: block;
+}
+.closeSearch {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+.closeSearch .clearLine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 30px;
+  height: 1px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+.closeSearch .clearLine.active {
+  transform: rotate(-45deg);
+}
+.shadoClear {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  padding-top: 57rpx;
+  padding-bottom: 50rpx;
+  width: 550rpx;
+  height: auto;
+  text-align: center;
+  border-radius: 4px;
+  background: #fff;
+}
+.shadoClear text {
+  width: 100%;
+  display: block;
+}
+.shadoClear .name {
+  font-size: 18px;
+  color: #333;
+}
+.shadoClear .prompt {
+  padding-top: 20rpx;
+  font-size: 15px;
+  color: #999;
+}
+.shadoClear .clear-btn {
+  margin-top: 40rpx;
+  padding: 30rpx 100rpx;
+  line-height: 100%;
+  font-size: 16px;
+  color: #fff;
+  display: inline-block;
+  background: #ff3f3f;
+  border-radius: 30px;
+}
+.setp-wrap {
+  position: relative;
+  width: 100%;
+}
+/* .setp-wrap.active {
+  height: 100%;
+  overflow: hidden
+} */
+.pd-wrap {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}
+.message-title {
+  width: 100%;
+  height: auto;
+  line-height: 100%;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  font-size: 16px;
+  color: #333;
+}
+.input-list {
+  position: relative;
+  width: 100%;
+  height: auto;
+  font-size: 15px;
+  color: #333;
+}
+.input-list .input-name {
+  width: 35%;
+  height: auto;
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+.input-list .input-wrap {
+  width: 65%;
+  padding-left: 15rpx;
+  min-height: 50rpx;
+}
+.input-list.error .item-error {
+  color: red;
+}
+.input-list.error {
+  color: red;
+}
+.input-list.error .border-bottom {
+  background: red;
+}
+.input-list .input-wrap .picker {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.input-list .input-wrap input {
+  height: 44px;
+}
+.input-list .input-wrap picker, .input-list .input-wrap input {
+  width: 100%;
+  color: #333;
+}
+.err-text {
+  width: 100%;
+  height: auto;
+  line-height: 100%;
+  font-size: 12px;
+  color: red;
+  text-align: center;
+}
+.agentFilds-wrap {
+  width: 100%;
+  height: auto;
+  background: transparent;
+}
+.apply-more {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+.apply-more.active {
+  display: block;
+}
+.blod-font {
+  padding: 20rpx 30rpx 0 30rpx;
+  color: #333;
+  font-size: 20px;
+}
+.title .border-bottom {
+  right: 0;
+  width: 90%;
+  margin: auto;
+  background: #999;
+}

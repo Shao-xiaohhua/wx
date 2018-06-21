@@ -1,0 +1,168 @@
+/* pages/approval/setp-seven.wxss */
+.pd-wrap {
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+}
+.file-wrap {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30rpx;
+}
+.file-title {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-right: 90px;
+  padding-bottom: 40rpx;
+  line-height: 100%;
+  font-size: 16px;
+  color: #333;
+}
+.file-list {
+  position: relative;
+  width: calc(50% - 10rpx);
+  height: 180rpx;
+  padding-top: 40rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+  font-size: 15px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.file-list-wrap {
+  width: 100%;
+  height: auto;
+}
+.file-list:nth-child(2n) {
+  margin-right: 0;
+}
+.btn-get {
+  position: relative;
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0 auto 20rpx auto;
+  border-radius: 50%;
+  border: 1px solid #cbcbcb;
+}
+.btn-get .line-two {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 26rpx;
+  width: 2rpx;
+  background: #cbcbcb;
+}
+.btn-get .lene {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  width: 26rpx;
+  height: 2rpx;
+  background: #cbcbcb;
+}
+.img-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+}
+.save-wrap {
+  width: 130px;
+  margin-left: 40rpx;
+  text-align: center;
+  line-height: 100%;
+  padding: 20rpx 25rpx;
+  font-size: 15px;
+  color: #5297fd;
+  border-radius: 20px;
+  border: 1px solid #5297fd;
+}
+.link-next {
+  font-size: 16px;
+  color: #5297fd;
+}
+.shadowWrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  z-index: 888;
+  display: none;
+}
+.shadowWrap.active {
+  display: block;
+}
+.closeSearch {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+.closeSearch .clearLine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 30px;
+  height: 1px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+.closeSearch .clearLine.active {
+  transform: rotate(-45deg);
+}
+.shadoClear {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding-top: 57rpx;
+  width: 550rpx;
+  height: 340rpx;
+  text-align: center;
+  border-radius: 4px;
+  background: #fff;
+}
+.shadoClear text {
+  width: 100%;
+  line-height: 100%;
+  display: block;
+}
+.shadoClear .name {
+  font-size: 18px;
+  color: #333;
+}
+.shadoClear .prompt {
+  padding-top: 20rpx;
+  font-size: 15px;
+  color: #999;
+}
+.shadoClear .clear-btn {
+  margin-top: 40rpx;
+  padding: 30rpx 100rpx;
+  line-height: 100%;
+  font-size: 16px;
+  color: #fff;
+  display: inline-block;
+  background: #ff3f3f;
+  border-radius: 30px;
+}
+.setp-wrap {
+  position: relative;
+  width: 100%;
+}

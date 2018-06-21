@@ -1,0 +1,34 @@
+<!--pages/toChaRecord/toChaRecord.wxml-->
+<view class='chatBox'>
+  <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" loop></audio>
+  <!--循环  -->
+  <view class="li {{item.typeName}} {{item.audio?'audioGo':''}} {{item.audioActive?'audio-active':''}} {{item.text?'file':''}} {{item.img?'imgGo':''}} clearfix" wx:for="{{listArr}}" wx:key="{{index}}">
+    <image class='head' src='{{item.headImg}}'></image>
+    <text class='name'>{{item.name}}</text>
+    <!--音频  -->
+    <view class='content' wx:if="{{item.contentSwite}}">
+      {{item.content}}
+    </view>
+    <view data-index="{{index}}" class='content' wx:if="{{item.audio}}" bindtap='toAudio'>
+      <view wx:if="{{item.typeName === 'goTo'}}" data-audiourl="{{item.audioUrl}}" class='audio-pic' style='background-image: url(../../images/icon-play-light.png'></view>
+      <view wx:if="{{item.typeName === 'goIn'}}" data-audiourl="{{item.audioUrl}}" class='audio-pic' style='background-image: url(../../images/icon-play-dark.png'></view>
+    </view>
+    <!--文件  -->
+    <view class='content' wx:if="{{item.text}}">
+      <view class='file-box'>
+        <view class='iconfont-wrap'>
+          <text class='iconfont icon-adv-exam'></text>
+        </view>
+        <view class='cont-box'>
+          <view class='name'>main.js</view>
+          <view class='size'>64.7KB </view>
+          <navigator open-type="switchTab" url='{{item.textUrl}}'>下载文件</navigator>
+        </view>
+      </view>
+    </view>
+    <!--图片  -->
+    <view class='content' wx:if="{{item.img}}">
+      <image src='{{item.imgUrl}}' mode="aspectFill" lazy-load="true" data-src="{{item.imgUrl}}" bindtap="showImage"></image>
+    </view>
+  </view>
+</view>

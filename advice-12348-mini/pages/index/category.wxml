@@ -1,0 +1,23 @@
+<!--category.wxml-->
+<view class="category">
+  <view class="weui-cells__title">分类<text>(最多只能选择 1 个标签类别)</text></view>
+  <view class="category-list">
+    <block wx:for-items="{{list}}" wx:key="{{item.sn}}">
+      <view class="item">
+        <view id="{{item.sn}}" class="item-hd {{item.opeen ? 'item-hd-show' : ''}}" bindtap="categoryToggle">
+          <view class="kind-list-text">{{item.name}}</view>
+        </view>
+        <view class="item-bd {{item.opeen ? 'item-bd-show' : ''}}">
+          <view class="columns">
+            <view class="column" wx:for-items="{{item.types}}" wx:for-item="type" wx:key="*item">
+              <view class="item-type {{type.checked ? 'checked' : ''}}"  bindtap="categoryTap" id="{{type.sn}}" data-typewin="{{item.sn}}" data-typename="{{item.name}}-{{type.name}}" data-typecode="{{type.code}}">
+                <text class="navigator-text">{{type.name}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  
+</view>

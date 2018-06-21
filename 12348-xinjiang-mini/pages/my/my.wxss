@@ -1,0 +1,192 @@
+/* pages/my/my.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #fff;
+  font-size: 20px;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.my-banner {
+  width: 100%;
+  height: auto;
+  padding-bottom: 45rpx;
+  background: #1788ce;
+}
+.my-banner .link {
+  margin-top: 15rpx;
+  color: #fff;
+  font-size: 15px;
+}
+.complaint-link {
+  width: 100%;
+  height: auto;
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+  line-height: 100%;
+  color: #666666;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.complaint-link navigator {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 30rpx 35rpx;
+}
+.complaint-link .name {
+  font-size: 16px;
+}
+.no-message {
+  width: 100%;
+  height: auto;
+  padding: 80rpx 0 80rpx 0;
+  margin-top: 30rpx;
+  text-align: center;
+  border-radius: 4px;
+  background: #fff;
+}
+.no-message .pic {
+  width: 180rpx;
+  height: 160rpx;
+  margin: 0 auto;
+  display: block;
+  background-size: 100% 100%;
+}
+.no-message .name {
+  font-size: 15px;
+  color: #aaaaaa;
+}
+/*列表  */
+.user-message-list {
+  width: 100%;
+  height: auto;
+  margin: 30rpx 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+.user-message-list .list {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  margin-bottom: 25rpx;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.user-message-list .list .clickA {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.user-message-list .list.df .abj-box {
+  display: block;
+}
+.user-message-list .abj-box {
+  position: relative;
+  width: 60rpx;
+  height: 60rpx;
+  float: right;
+  display: none;
+}
+.user-message-list .name-time {
+  padding-top: 25rpx;
+  font-size: 13px;
+  color: gray;
+}
+.user-message-list .content {
+  padding-top: 25rpx;
+  line-height: 20px;
+  font-size: 16px;
+  color: #333;
+}
+.user-message-list .name-time, .user-message-list .content, .user-message-list .label {
+  width: 100%;
+  height: auto;
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+  line-height: 100%;
+}
+.user-message-list .name-time, .user-message-list .content, .user-message-list .label {
+  width: 100%;
+  height: auto;
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+}
+.user-message-list .name-time, .user-message-list .content, .user-message-list .label {
+  width: 100%;
+  height: auto;
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+  line-height: 100%;
+}
+.label {
+  color: #333;
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+}
+.user-message-list .label .label-inner-box {
+  max-width: calc(100% - 80px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.user-message-list .list.df .not-to {
+  display: none;
+}
+.user-message-list .label .not-to {
+  color: #ec4040;
+  font-weight: 400;
+}
+.user-message-list .content text {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 25rpx;
+}
+.user-message-list .abj {
+  position: absolute;
+  top: -10rpx;
+  right: -10rpx;
+  width: 60rpx;
+  height: 60rpx;
+  border-width: 40rpx;
+  border-style: solid;
+  border-color: #0ebc4f #0ebc4f transparent transparent;
+  display: block;
+}
+.user-message-list .adopt {
+  position: relative;
+  float: right;
+  width: 60rpx;
+  height: 60rpx;
+  padding-top: 5rpx;
+  display: block;
+  text-align: right;
+  line-height: 100%;
+  color: #fff;
+}
+.user-message-list .label {
+  position: relative;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+}
+.inner-label {
+  margin-right: 20rpx;
+  color: #0e76bc;
+}

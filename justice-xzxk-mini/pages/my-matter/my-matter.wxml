@@ -1,0 +1,118 @@
+<!--pages/my-matter/my-matter.wxml-->
+<!--tabbar  -->
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<view class='tab-wrap clearfix'>
+  <view class="tab {{item.swite?'active':''}}" wx:for="{{tabList}}" wx:key="{{index}}" data-index="{{index}}" 
+  data-type="{{item.name}}"
+  bindtap='tabGet'>
+    {{item.name}} <text class='number'>({{item.num}})</text>
+  </view>
+</view>
+<!--未提交  -->
+<view class="content-wrap {{tabList[0].swite?'active':''}}">
+  <view class='list-warp'>
+    <view class='list' wx:for="{{listNot}}" 
+    wx:key="{{index}}" 
+    data-index="{{item.id}}"
+    data-id="{{item.id}}"
+    data-code="{{item.itemCode}}"
+    bindtap='getFormList'>
+      <navigator>
+        <view class='title'>
+          {{item.itemName}}
+        </view>
+        <view class='type'>姓名：{{item.applicantName}}</view>
+        <view class='type'>联系方式：{{item.applicantMobile}}</view>
+        <view class='type clearfix'>
+          发布时间：{{item.submitDate}}
+          <view class='tag pull-right' wx:if="{{item.status === 'Draft'}}">{{item.tips}}</view>
+          <view class='tag in pull-right' wx:elif="{{item.status === 'OnlineCorrection'}}">{{item.tips}}</view>
+          <view class='tag in pull-right' wx:else>{{item.tips}}</view>
+        </view>
+      </navigator>
+      <view class='bottom-wrap clearfix'>
+        <view class='border-top'></view>
+        <view class='check-box pull-left'
+        data-id="{{item.id}}"
+        data-code="{{item.itemCode}}"
+        data-status="{{item.status}}"
+        bindtap='removeSx'>
+          <text wx:if="{{item.status === 'Draft'}}">删除事项</text>
+          <text wx:else>撤销审批</text>
+          <view class='border-right'></view>
+        </view>
+        <view class='check-box pull-left' wx:if="{{item.status === 'Draft'}}" bindtap='toNext'>继续申请</view>
+        <view class='check-box pull-left' wx:if="{{item.status === 'OnlineCorrection' || item.status === 'NotifyCityLeveled'}}"
+        data-id="{{item.id}}"
+        data-code="{{item.itemCode}}"
+        bindtap='getListArr'>补充材料</view>
+      </view>
+    </view>
+  </view>
+</view>
+<!--审批中  -->
+<view class="content-wrap {{tabList[1].swite?'active':''}}">
+  <view class='list-warp'>
+    <view class='list' wx:for="{{listYes}}" wx:key="{{index}}" data-id="{{item.id}}">
+      <navigator>
+        <view class='title'>
+          {{item.itemName}}
+        </view>
+        <view class='type'>申请时间：{{item.submitDate}}</view>
+        <view class='type'>申请人：{{item.applicantName}}</view>
+        <view class='type clearfix'>
+          手机号码：{{item.applicantMobile}}
+          <view class='tag in pull-right'>{{item.tips}}</view>
+        </view>
+      </navigator>
+      <view class='bottom-wrap clearfix'>
+        <view class='border-top'></view>
+         <view class='check-box pull-left'
+          data-id="{{item.id}}"
+          data-code="{{item.itemCode}}"
+          data-status="{{item.status}}"
+          bindtap='removeSx'>
+          撤销审批
+          <view class='border-right'></view>
+        </view> 
+         <view class='check-box pull-left'
+          data-id="{{item.id}}"
+          bindtap='checkDetail'
+         >查看详情</view> 
+      </view>
+    </view>
+  </view>
+</view>
+<!--已审批  -->
+<view class="content-wrap {{tabList[2].swite?'active':''}}">
+  <view class='list-warp'>
+    <view class='list' wx:for="{{listPass}}" wx:key="{{index}}" bindtap='getNext'>
+      <navigator url=''>
+        <view class='title'>
+          {{item.itemName}}
+        </view>
+        <view class='type'>姓名：{{item.applicantName}}</view>
+        <view class='type'>联系方式：{{item.applicantMobile}}</view>
+        <view class='type clearfix'>
+          发布时间：{{item.submitDate}}
+          <view class='tag pass pull-right'>{{item.tips}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+<!--遮罩提示  -->
+<view class='shdow-box' wx:if="{{showSwite}}">
+  <view class='chcked'>
+    <text class='name' wx:if="{{isType === '未受理'}}">确认删除事项</text>
+    <text class='name' wx:if="{{isType === '审批中'}}">确认撤销审批</text>
+    <view class='botm-box clearfix'>
+      <view class='border-top'></view>
+      <view class='botm pull-left' bindtap='closeShdownomor'>
+        取消
+        <view class='border-right'></view>
+      </view>
+      <view class='botm pull-left' bindtap='closeShdow'>确定</view>
+    </view>
+  </view>
+</view>

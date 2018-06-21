@@ -1,0 +1,15 @@
+<!--pages/advice-flyz/flyz-type.wxml-->
+<view class='type-list-warp'>
+  <view class='title'>法律援助留言</view>
+  <view class='list-wrap'>
+    <view class="list clearfix {{item.checked?'active':''}}" 
+    wx:for="{{typeArr}}" 
+    wx:key="{{index}}"
+    bindtap='typeBind'
+    data-index="{{index}}"
+    >
+      <text class='type pull-left'>{{item.type}}</text>
+      <text class='iconfont icon-icon-right pull-right'></text>
+    </view>
+  </view>
+</view>

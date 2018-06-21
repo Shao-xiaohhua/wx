@@ -1,0 +1,13 @@
+<!--pages/advice-submit/advice-submit.wxml-->
+<view class='advice-submit-pic'>
+  <image class='pic' src='../../images/message_down.png'></image>
+  <view class='ts'>留言提交成功</view>
+  <view class='time'>相关人员会在1 ~ 2小时内回复</view>
+  <navigator class='toIndex' url='../index/index'>返回首页</navigator>
+</view>
+<view class='advice-submit-pic'>
+  <image class='pic' src='../../images/message_pass.png'></image>
+  <view class='ts'>留言提交失败</view>
+  <view class='time'>可能是网络原因，请检查您的网络</view>
+  <navigator class='toIndex' url='../index/index'>返回首页</navigator>
+</view>

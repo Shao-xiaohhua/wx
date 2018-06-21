@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "咨询录入",
+  "usingComponents": {
+    "my-component-tab": "../myTabComponent/myTabComponent"
+  }
+}

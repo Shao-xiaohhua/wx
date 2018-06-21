@@ -1,0 +1,40 @@
+<!--pages/user/my.wxml-->
+<view class='message-wrap clearfix' hidden='{{!loginSwite}}'>
+  <view class='pull-left'>
+    <view class='head-wrap'>
+      <image src='{{userImg}}' style='width: 100%; height: 100%'></image>
+    </view>
+  </view>
+   <!-- <navigator class='back-to-index' open-type='switchTab' url='../index/index'>返回首页<text class='iconfont icon-arrow'></text></navigator>  -->
+  <view class='pull-right'>
+    <view class='name'>{{userName}}</view>
+    <view class='number'>{{userPhone}}</view>
+  </view>
+</view>
+<view class='module-warp' hidden='{{!loginSwite}}'>
+  <view class='module clearfix'>
+    <view class='number-list' data-type="{{item.type}}" wx:for="{{messArr}}" wx:key="{{index}}" bindtap='getMatterType'>
+      <navigator url='../my-matter/my-matter'>
+        <view class='num-wrap'>
+          <text class='number'>{{item.num}}</text>
+          <text class='text'>条</text>
+        </view>
+        <view class='type'>{{item.type}}</view>
+      </navigator>
+    </view>
+  </view>
+  <view class='module'>
+    <view class='choice-list-wrap'>
+      <view class='list' 
+        wx:for="{{getMechanism}}" 
+        wx:key="{{index}}"
+        data-url="{{item.url}}"
+        bindtap='getNext'
+        >
+        <text class='name'>{{item.type}}</text>
+        <text class='iconfont icon-arrow pull-right'></text>
+        <view class='border-top'></view>
+      </view>
+    </view>
+  </view>
+</view>

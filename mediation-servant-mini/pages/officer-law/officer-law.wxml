@@ -1,0 +1,23 @@
+<!--pages/officer-law/officer-law.wxml-->
+<view class='officer-list-wrap'>
+  <view class='list' wx:for="{{contentListArr}}" wx:key="{{index}}">
+    <navigator url='../officer-law-detail/officer-law-detail'>
+      <view class='title'>{{item.title}}
+        <view class='border'></view>
+      </view>
+      <view class='content clearfix'>
+        <text class='name'>文书类型</text>
+        <text class='con-text'>{{item.type}}</text>
+      </view>
+      <view class='content clearfix'>
+        <text class='name'>法院</text>
+        <text class='con-text'>{{item.fy}}</text>
+      </view>
+      <view class='content clearfix'>
+        <text class='name'>时间</text>
+        <text class='con-text'>{{item.time}}</text>
+      </view>
+    </navigator>
+  </view>
+</view>
+

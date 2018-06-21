@@ -1,0 +1,32 @@
+<!--pages/calc-gspc-detail/calc-gspc-detail.wxml-->
+<view class='calc-res-title clearfix'>
+  <view class='icon-wrap'>
+    <text class='iconfont icon-v'></text>
+    <text>注:</text>
+  </view>
+  <view class='text'>预估结果仅参考，实际费用以当地实际情况为准！计算单位：人民币</view>
+</view>
+<view class='calc-res-list'>
+  <view class='list clearfix' wx:for="{{resArr}}" wx:key="{{index}}">
+    <view class='name'>{{item.name}}</view>
+    <view class='number {{item.full}}'>{{item.number}}</view>
+    <view class='border'></view>
+  </view>
+</view>
+<view class='calc-res-list'>
+  <view class='list clearfix' wx:for="{{resArrEnd}}" wx:key="{{index}}" wx:if="{{item.value}}">
+    <view class='name'>{{item.name}}</view>
+    <view class='number {{item.full}}'>{{item.number}}</view>
+    <view class='border'></view>
+  </view>
+</view>
+<!-- <view class='notes'>
+  <view class='title'>相关法律法规</view>
+  <view class='content-box'>
+    <navigator><text>本计算器依据2007年生效</text>《中华人民共和国诉讼费缴纳办法》<text>及各地高院的收费细则制作,仅供参考。</text></navigator>
+  </view>
+</view> -->
+<view class='btn-box clearfix'>
+  <button class='rep' bindtap='backOne'>重置</button>
+  <button class='back' bindtap='backIndex'>返回首页</button>
+</view>

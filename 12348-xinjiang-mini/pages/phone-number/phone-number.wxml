@@ -1,0 +1,14 @@
+<!--pages/phone-number/phone-number.wxml-->
+<view class='padding-wrap'>
+  <text class='phone-title'>绑定手机号</text>
+  <view class='phone-input-wrap'>
+    <input type='text' placeholder="输入手机号"></input>
+  </view>
+  <view class='phone-input-wrap clearfix'>
+    <view class='code-warp pull-left'>
+      <input type='text' placeholder="输入验证码"></input>
+    </view>
+    <view class='btn pull-right'>获取验证码</view>
+  </view>
+  <view class='btn-link' hover-class="active">立即绑定</view>
+</view>

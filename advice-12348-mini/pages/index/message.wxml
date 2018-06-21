@@ -1,0 +1,90 @@
+<!--message.wxml-->
+<view class="message">
+  <!--top-->
+  <view class="message-hd">
+    <view class="solver-card">
+      <view class="avatar-wrap">
+          <image src="{{servant.avatar?servant.avatar:'../../images/s.png'}}"  mode="aspectFill" class="avatar"></image>
+      </view> 
+      <view class="info">
+        <view class="name">
+          <text class='name-text'>{{servant.name}}</text>
+          <text class="type bg_red" wx:if="{{ servant.staffType === 'deb85cd4c8844d998593e691b54a8ffd'||servant.staffType === '4cfedc9f9b834ccbb564c0a356a2dcb3'||servant.staffType === '9f64419b2dc64ddcb0fd74d999153564'||servant.staffType === 'c47351813a37420682503ae438dcce73'}}">律师</text>
+          <text class="type bg_blue" wx:elif="{{ servant.staffType === '64ee1de160af46fc8198102d240d2486' }}">司法鉴定人</text>
+          <text class="type bg_orange" wx:elif="{{ servant.staffType === '1508a29267d24954ba3c071289606998' }}">人民调解员</text>
+          <text class="type bg_teal" wx:elif="{{ servant.staffType === '39d599d3ed4e44978a778119adbeca12' }}">公证员</text>
+        </view>
+        <view class="desc">
+          <!--<text>专业领域:</text>-->
+          <text class="tag">{{servant.company}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="message-end" bindtap="overZixun">
+      <image src="../../images/icon_close.png" mode="aspectFill" class="close-btn"></image>
+      <text>结束咨询</text>
+    </view>
+  </view>
+  
+  <!--end top-->
+  <scroll-view scroll-y="true" scroll-into-view="{{toView}}" scroll-with-animation="true" enable-back-to-top="true" 
+  class="message-bd"  scroll-top="{{scrollTop}}">
+    <view class="message-inner">
+        <view wx:for="{{ messages }}"  wx:key="item">
+          <!--通知-->
+          <view class="msg-tip-wrap" wx:if="{{ item.type === 'NOTIFICATION'}}">
+              <view class="msg-tip">
+                  <text>{{item.data.content}}</text>
+              </view>
+          </view>
+          <!--时间-->
+          <view class="msg-tip-wrap" wx:if="{{ item.type === 'TIME' }}">
+              <view class="msg-tip">
+                  <text>{{item.data.content}}</text>
+              </view>
+          </view>
+          <!--文本消息-->
+          <view class="msg-content {{item.role}}" wx:if="{{ item.type === 'TEXT'}}">
+            <view class="avatar-wrap">
+              <image src="{{item.talker.avatarUrl}}"  mode="aspectFill" lazy-load="true" class="avatar"></image>
+            </view>
+            <view class="content">{{item.text}}</view>
+          </view>
+          <!--图片消息-->
+          <view class="msg-content {{item.role}}" wx:if="{{ item.type === 'IMAGE' }}">
+            <view class="avatar-wrap">
+              <image src="{{item.talker.avatarUrl}}"  mode="aspectFill" lazy-load="true" class="avatar"></image>
+            </view>
+            <view class="content">
+              <image src="{{item.data}}" data-src="{{item.data}}"  lazy-load="true" class="avatar image" bindtap="showImage"></image>
+            </view>
+          </view>
+          
+          <view wx:if="{{item.msgId}}"  id="msg-{{item.msgId}}"></view>
+        </view>
+    </view>
+  </scroll-view>
+
+  <!--发送信息-->
+  <view class="message-fd" wx:if="{{ msgState === 'live' }}">
+    <form bindsubmit="bindFormSubmit" class="send-msg">
+    <view class="choose-img" bindtap="getImage"><text class="iconfont icon-picture"></text></view>
+       <!-- <textarea class="msg-input" confirm-type="send" cursor-spacing="16" auto-height bindconfirm="sendMessage" value="{{content}}"/>  -->
+        <input class="msg-input" confirm-type="send" focus="{{inputFocus}}" confirm-hold="true" cursor-spacing="16" auto-height="true"
+        maxlength="-1" name="textarea" bindconfirm="sendMessage" value="{{content}}" bindinput="bindKeyInput"/> 
+      <view class="send-btn">
+       <text class="iconfont icon-send" bindtap="sendMessage"></text>
+      </view>
+    </form>
+  </view>
+
+  <!--转留言-->
+  <view class="message-forward" wx:if="{{ msgState === 'forward' }}">
+    <view class="forward-text">
+      很抱歉，当前坐席全忙，您此次的咨询将自动转为留言，请确认后并提交，我们将在三个工作日内给您答复.
+    </view>
+    <button form-type="submit" class="submit-btn" type="primary" bindtap="forwardTap">我知道了</button>
+  </view>
+
+
+</view>

@@ -1,0 +1,39 @@
+/* pages/guide/list.wxss */
+.all-wrap {
+  width: 100%;
+  height: auto;
+}
+.parent-list {
+  width: 100%;
+  height: auto;
+}
+.parent-list .title {
+  width: 100%;
+  height: auto;
+  padding: 30rpx;
+  color: #333;
+  font-size: 16px;
+  background: #fff;
+}
+.parent-list .title.active .iconfont {
+  transform: rotate(90deg);
+}
+.child-list {
+  width: 100%;
+  height: auto;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.child-list .list {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+.list-name {
+  width: 80%;
+  /* overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap; */
+}

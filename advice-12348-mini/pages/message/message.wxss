@@ -1,0 +1,21 @@
+@import "../../weui.wxss";
+/* pages/message/message.wxss */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+.button-group button {
+  margin: 0;
+  width: calc(50% - 10px);
+}
+.button-group .submit-btn {
+  margin: 0;
+}
+.cancel-btn {
+  color: #999;
+}
+.error {
+  font-size: 14px;
+  color: #e64340;
+}

@@ -1,0 +1,100 @@
+/* pages/login/login.wxss */
+page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.login-banner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.login-banner .banner-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.login-banner .logo {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  top: 188rpx;
+  width: 368rpx;
+  height: 382rpx;
+}
+.login-box {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  padding-left: 48rpx;
+  padding-right: 48rpx;
+  background: rgba(255, 255, 255, 0);
+}
+.input-box {
+  position: relative;
+  width: 100%;
+  height: auto;
+  line-height: 100%;
+  padding-top: 68rpx;
+}
+.input-box .border {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: calc(100%);
+  height: 1px;
+  transform: scaleY(0.5);
+  background: #999999;
+}
+.input-box .iconfont {
+  position: absolute;
+  left: 0;
+  bottom: 7px;
+  font-size: 20px;
+  color: #999999;
+  float: left;
+}
+.input-box input {
+  display: inline-block;
+  width: calc(100% - 100rpx);
+  height: 55rpx;
+  margin-left: 40px;
+  font-size: 15px;
+  color: #999999;
+}
+.login-button {
+  margin-top: 30px;
+  border-radius: 30px;
+  border: none;
+  background-color: #4895ff;
+  color: #fff;
+}
+.login-button.active {
+  background: #1870ec
+}
+.login-link {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 30rpx;
+  line-height: 100%;
+}
+.login-link navigator {
+  width: 50%;
+  float: left;
+  font-size: 15px;
+  color: #cccccc;
+}
+.login-link .pass {
+  text-align: right;
+}
+.error {
+  font-size: 12px;
+  color: red;
+}

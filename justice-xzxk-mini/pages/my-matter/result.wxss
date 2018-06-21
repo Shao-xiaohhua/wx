@@ -1,0 +1,55 @@
+/* pages/my-matter/result.wxss */
+.content-wrap {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 46rpx 40rpx;
+  font-size: 18px;
+  color: #333;
+  background: #fff;
+}
+.list-content {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  background: #fff;
+}
+.list-content .list {
+  width: 100%;
+  height: auto;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  font-size: 16px;
+}
+.list-content .name {
+  width: 30%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  color: #666666;
+}
+.list-content .content {
+  width: 70%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  color: #333;
+}
+.tag {
+  height: 25px;
+  line-height: 25px;
+  margin-top: 15rpx;
+  padding: 0 20rpx;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 40px;
+  background: #eee;
+}
+.tag.pass {
+  background: #5297fd;
+}
+.tag.in {
+  background: #ff753f;
+}

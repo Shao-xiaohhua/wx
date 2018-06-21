@@ -1,0 +1,7 @@
+/* pages/calc-ylq/calc-ylq.wxss */
+page {
+  background: #fff;
+}
+.feedback-list-wrap .list .tp {
+  width: 290rpx;
+}

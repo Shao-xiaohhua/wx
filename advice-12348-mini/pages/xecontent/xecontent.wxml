@@ -1,0 +1,659 @@
+<!--pages/xecontent/xecontent.wxml-->
+<view class='content-block'>
+  <view class='cjk'>
+    <view class='b d'>“12348 上海法网 注册及服务协议”</view>
+  </view>
+  <view class='cjk'>
+    <view class='b'>上海法网提醒您</view>
+  </view>
+  <view class='cjk'>
+    【审慎阅读】您在申请注册流程中点击同意本协议之前，应当认真阅读本协议及隐私权政策（链接为：，以下本协议及隐私权政策合称“本协议”）。<text class='b'>请您务必审慎阅读、充分理解各条款内容，特别是其中免除或者限制责任的条款、法律适用和争议解决条款。免除或者限制责任的条款将以粗体下划线标识，您应重点阅读。</text>签约后，注册用户不得以未阅读本协议内容作任何形式的抗辩。如您对协议有任何疑问，可向“12348 上海法网” （“一下简称上海法网”） 客服咨询。
+  </view>
+  <view class='cjk'>
+    【签约动作】当您按照注册、登录页面提示填写信息并同意本协议且完成全部注册、登录程序后，即表示您已充分阅读、理解并接受本协议的全部内容，并与上海市司法局达成一致，成为上海法网“用户”<text class='b'>阅读本协议的过程中，如果您不同意本协议或其中任何条款约定，您应立即停止注册、登录程序。</text>
+  </view>
+  <view class='cjk'>
+    <text class='b'>第一条：定义</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 1.1 条</text>
+  </view>
+  <view class='cjk'>
+    <navigator>
+      <view class=''>上海法网：包括 12348 上海法网（域名为<text style='color:#007aff;'>http://12348.justice.gov.cn/</text>）的网站、移动互联网及手机客户端。</view>
+    </navigator>
+  </view>
+  <view class='cjk'>
+    <text class=''>上海法网服务：上海市司法局基于互联网，以包含上海法网网站、移动互联网、手机客户端等在内的各种形态（包括未来技术发展出现的新的服务形态）向您提供的各项普惠性公共法律服务。</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>上海法网规则：包括在所有上海法网规则频道内已经发布及后续发布的全部规则、解读、公告等内容以及各平台例如普法学法、各类咨询、信息查询、法律服务内发布的各类规则、实施细则、公告等。</text>
+  </view>
+  <view class='cjk'>
+    <text class='b'>第二条：协议范围</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 2.1 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>本协议由您与上海市司法局共同缔结，本协议及上海法网规则对您与上海市司法局均具有合同效力。您在享受上海法网任何单项服务时，应当受本协议的约束。如您为无民事行为能力人（无民事行为能力人，无法读懂这一条规定，而且与“第3.1条 您确认，无论在您开始注册、登录还是使用上海法网服务前，您应当属于中华人民共和国法律规定的与您行为相适应的民事行为能力的自然人、法人或其他组织”的规定相矛盾。）或为限制民事行为能力人，请告知您的监护人，并在您监护人的指导下阅读本协议和使用上海法网提供的服务，并特别注意未成年人使用条款。若您代表非自然人，则您确认，您订立并履行本协议不受您所属、所居住或开展经营活动或其他业务的国家或地区法律法规的限制。</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 2.2 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>上海市司法局是经营上海法网的法律主体。本协议项下，</text>
+    <text class='b'>上海法网经营者可能根据上海法网的业务调整而发生变更，变更后的上海法网经营者与您共同履行本协议并向您提供服务，上海法网经营者的变更不会影响您本协议项下的权益。上海法网经营者还有可能因为提供新的上海法网服务而对原有服务进行增减、更新及终止，您在享受各项服务时，应当及时查阅了解修改的内容，并自觉遵守本服务条款以及该单项服务的相关条款。如您使用新增的上海法网服务的，视为您同意新增的上海法网经营者与您共同履行本协议。</text> 
+  </view>
+  <view class='cjk'>
+    <text class=''>第 2.3 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>由于互联网高速发展，您与上海法网签署的本协议列明的条款并不能完整罗列并覆盖您与上海法网所有权利与义务，现有的约定也不能保证完全符合未来发展的需求。</text>
+    <text class='b'>因此，本服务协议以及其他各服务条款和公告可由上海法网经营者在确保尽可能减少您不便的情形下，以提升服务、贴近民生为宗旨，根据具体需要随时更新，且无需另行通知。</text>
+    <text>您在使用上海法网提供的各项服务之前，应仔细阅读本服务协议，您一旦使用上海法网服务，即视为您已了解并完全同意本服务协议各项内容，包括上海法网经营者对服务协议随时所做的任何修改。同时，上海法网</text><text class='bl'>隐私权政策</text>等均为本协议的补充协议，与本协议不可分割且具有同等法律效力。如您使用上海法网服务，视为您同意上述补充协议。
+  </view>
+  <view class='cjk'>
+    <text class='b'>第三条：账户的注册和使用</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 3.1 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>您确认，无论在您开始注册、登录还是使用上海法网服务前，您应当属于中华人民共和国法律规定的与您行为相适应的民事行为能力的自然人、法人或其他组织。</text><text class='b'>若您不具备前述与您行为相适应的民事行为能力，则上海法网有权注销您在上海法网的账户，您及您的监护人应依照法律规定承担因此而导致的一切后果。</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 3.2 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>当您按照注册、登录页面提示填写信息、阅读并同意本协议且完成全部注册、登录程序后，您可获得上海法网向您提供的唯一账户编号，并成为上海法网注册用户。</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 3.3 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>您有权使用您确认的用户名及您设置的密码或您确认的手机号码及短信验证码（用户名及密码或手机号码及短信验证码合称 </text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 3.4 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>您完成注册申请手续后，获得上海法网账户的使用权。用户应提供及时、详尽及准确的个人资料，并不断更新注册资料，符合及时、详尽准确的要求。所有原始键入的资料将引用为注册资料。</text><text class='b'>如果上海法网有合理理由认为您提供的资料错误、不实、过时或不完整的，上海法网有权向您发出询问及通知要求补正，并有权直接做出删除相应资料的处理，直至取消对您提供部分或全部上海法网的服务，上海法网不负任何责任。如果因注册信息不真实而引起的问题，并对问题发生所带来的后果，上海法网不负任何责任。如果因注册信息不真实或更新不及时而引发的相关问题，上海法网不负任何责任。</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>在法律有明确规定要求上海市司法局必须对部分您的信息进行核实的情况下，上海法网将依法不时地对您的信息进行检查核实，您应当配合提供最新、真实、完整、有效的信息。</text>
+  </view>
+  <view class='cjk'>
+    <text class='b'>如上海法网按您最后一次登录账户时提供的信息与您联系未果、您未按上海法网的要求及时提供信息或更新信息、您提供的信息存在明显不实或行政司法机关核实您提供的信息无效的，您将承担因此对您自身、他人及上海市司法局造成的全部损失与不利后果。上海法网可向您发出询问或要求整改的通知，并要求您进行重新认证，并同时中止、终止对您提供部分或全部上海法网服务，上海市司法局对此不承担责任。</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 3.5 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>由于您的上海法网账户关联您的个人信息包括但不限于上海法网商业信息及各类咨询、信息查询、法律服务、办事事项、建议投诉等信息，您的上海法网账户仅限您本人使用。未经上海法网同意，您直接或间接授权第三方使用您上海法网账户或获取您账户项下信息的行为无效。如上海法网判断您对于上海法网账户的使用可能危及您的账户安全或上海法网信息安全的，上海法网有权拒绝提供相应服务或终止本协议。</text>
+  </view>
+  <view class='cjk'>
+    <text class='b'>除上海法网存在过错外，您应对您账户项下的所有行为结果负责。您的账户也不得以任何方式转让，出售或出借予他人使用否则上海法网有权追究您的违约责任，且由此产生的一切责任均由您承担。</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 3.6 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>为使您更好地使用上海法网的各项服务，保障您的账户安全，上海法网可要求您按上海法网相关要求及我国法律规定完成实名认证，您应当予以积极配合。</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 3.7 条</text>
+  </view>
+  <view class='cjk'>
+    <text class='b'>对未按照要求进行实名认证的用户，上海法网有权回收您的账户，您的账户将不能再登录上海法网，相应服务也会同时一并终止。</text>
+  </view>
+  <view class='cjk'>
+    <text class='b'>第四条：注册信息管理</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 4.1 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>在使用上海法网服务时，您应当按上海法网页面的提示准确完整地提供您的信息，请保持这些信息的及时更新，以便上海法网向您提供帮助，或更好地为您提供服务。若国家法律法规有特殊规定的，您需要填写真实的身份信息。若您填写的信息不完整或不准确，则可能无法使用服务或在使用过程中受到限制。</text><text class='b'>您了解并同意，您有义务保持您提供信息的真实性及有效性。</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 4.2 条</text>
+  </view>
+  <view class='cjk'>
+    <text class='b'>您设置的上海法网用户名不得违反国家法律法规、不得侵犯或涉嫌侵犯他人合法权益及上海法网规则关于用户名的管理规定，否则上海法网有权删除或拒批上海法网用户名。</text><text class=''>上海法网用户名的删除或拒批不影响您以手机号码登录上海法网并使用上海法网服务。</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 4.3 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>用户账号注册后，如上海法网发现您以虚假信息进行账号注册等注册信息存在违法和不良信息的，上海法网有权不经通知单方采取限期改正、暂停使用、注销登记等措施。</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 4.4 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>您可随时改变用户账号的密码和图标，在上海法网许可之后，也可以结束旧的账号重开一个新账号。您同意若发现任何非法使用用户帐号或安全漏洞的情况，有义务立即通告上海法网。</text>
+  </view>
+  <view class='cjk'>
+    <text class='b'>第五条：账户安全规范</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 5.1 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>您的账户为您自行设置并由您保管，上海法网任何时候均不会主动要求您提供您的账户密码。因此，建议您务必保管好您的账户，并确保您在每个上网时段结束时退出登录并以正确步骤离开上海法网。</text>
+  </view>
+  <view class='cjk'>
+    <text class='b'>账户因您主动泄露或因您遭受他人攻击、诈骗等行为导致的损失及后果，上海法网并不承担责任，您应通过司法、行政等救济途径向侵权行为人追偿。</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 5.2 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>原则上，上海法网只允许每位用户使用一个上海法网账户。</text><text class='b'>您应对您的用户账户和密码或您确认的手机号码及短信验证码的安全，以及对通过您的用户账户和密码或您确认的手机号码及短信验证码实施的行为负责。如果发现任何人不当使用您的账户或有任何其他可能危及您的账户安全的情形时，您应当立即以有效方式通知上海法网，要求暂停相关服务。您应理解上海法网响应您的请求需要合理的时间，上海法网对在响应前已经产生的后果（包括但不限于您的任何损失）不承担任何责任。如有证据证明或上海法网有理由相信您存在不当注册或不当使用多个上海法网账户的情形，上海法网可采取冻结或关闭账户、拒绝提供服务等措施，如给上海法网及相关方造成损失的，您还应承担赔偿责任。</text>
+  </view>
+  <view class='cjk'>
+    <text class='b'>第六条：上海法网服务及规范</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 6.1 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>上海法网系由上海市司法局开办的综合性线上线下一体化法律平台，是上海市公共法律服务体系中的重要组成部分。上海法网将认真贯彻中央关于推进公共法律服务体系建设的决策部署，紧紧围绕经济社会发展和人民群众实际需要，立足 </text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 6.2 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>上海法网服务的具体内容由上海法网经营者根据实际情况提供。除非本服务协议另有其它明示规定，上海法网所推出的新产品、新功能、新服务，均受到本服务协议之规范。 </text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 6.3 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>鉴于网络服务的特殊性，您同意上海法网有权不经事先通知，随时变更、中断或终止部分或全部的网络服务（包括收费网络服务）。上海法网经营者不担保网络服务不会中断，对网络服务的及时性、安全性、准确性也都不作担保。 </text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 6.4 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>上海法网经营者需要定期或不定期地对提供网络服务的平台或相关的设备进行检修或者维护，如因此类情况而造成网络服务（包括收费网络服务）在合理时间内的中断，上海法网无需为此承担任何责任。上海法网保留不经事先通知维修保养、升级或其它目的暂停本服务任何部分的权利。 </text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 6.5 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>上海法网提供普法学法、信息查询、法律咨询、办事服务等服务，上海法网将努力成为您掌中的法律专家，社区的法律卫士，常供周全之策，备君不时之需。 </text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 6.6 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>上海法网在法治地图栏目中提供信息查询服务，便于您查询最新公开信息、法律服务人员机构队伍及法律服务志愿团的人员情况。 </text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 6.7 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>上海法网提供法律咨询服务，便于您针对法律、政务、公证、司法鉴定、人民调解、法律援助、司法考试、社区矫正和社会工作、监狱局狱务、戒毒局所务等服务从在线实时咨询、留言咨询、实体窗口咨询引导、电话咨询引导等多维度，全方面获取咨询服务。 </text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 6.8 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>上海法网提供法律服务栏目，将通过开通展示、查询等功能，方便公众在线获取包括但不限于法律援助、律师服务、公证服务、鉴定服务、人民调解、司法考试等信息在内的司法行政居间服务。 </text><text class='b'>上海法网只负责该栏目的信息居间，并不对您所需的任何服务做任何的推荐。上海法网不对您与第三方接洽后所获得的后续服务内容及质量提供担保。</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 6.9 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>上海法网提供普法学法服务，依托法律热点、法宣动态及活动、在线访谈和学法平台等栏目，多维度传递与民生密切相关的法律知识和司法行政资讯等。 </text><text class='b'></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 6.10 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''> </text><text class='b'>您明确同意保障和维护上海法网全体成员的利益，使用上海法网服务的风险由您个人承担，上海法网提供的各类咨询、信息查询与居间及其他链接服务，对于您后续接洽过程中产生的法律风险及责任或使用超出服务范围引起的律师费用，违反服务条款的损害补偿费用，其它人使用您的电脑、账号而产生的费用，上海法网不作担保。</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 6.11 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''> </text><text class='b'>上海法网的帐号与服务以"现有"的状态提供给您，上海法网明确表示不提供任何类型的担保，不论是明确的或隐含的，也不担保服务一定能满足您的要求，包括但不限于发布的信息不及时准确、咨询回复的质量优劣及是否正确、您查询的律师执业技能、您发布的信息能否准确、及时、顺利地传送等。</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 6.12 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''> </text><text class='b'>您理解并接受，下载或通过上海法网产品服务取得的任何信息资料的使用，取决于您自己，并由其自行承担由于系统受损、资料丢失以及其它任何风险。</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 6.13 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''> </text><text class='b'>上海法网上发布的委托信息、招聘信息、公开信息等仅供您参考使用，上海法网不作担保。</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 6.14 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''> </text><text class='b'>您不会从上海法网处收到口头或书面的意见或信息，上海法网也不会在这里作明确担保。</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 6.15 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>上海市司法局对上海法网上的任何内容、信息、软件、产品或服务均有合法著作权及其他权利，上海法网禁止任何第三方未经授权，转售、再次链接、非法使用、拷贝、监视、截屏、展示、下载或复制并用作商业或竞争用途。</text><text class='b'></text>
+  </view>
+  <view class='cjk'>
+    <text class='b'>第七条：服务费用</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 7.1 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>上海法网系应社会需求而生，以贴近民生为服务宗旨的公益性法律服务平台，平台组织了一批优秀的律师、公证员、人民调解员等各条线专业工作者为市民提供一站式法律服务。上海法网向您提供的服务目前均为免费，如未来上海法网向您收取合理费用，上海法网会采取合理途径并以足够合理的期限提前通过法定程序并以本协议第十一条约定的方式通知您，确保您有充分选择的权利。</text><text class='b'></text>
+  </view>
+  <view class='cjk'>
+    <text class='b'>第八条：用户的行为规范</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 8.1 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>您不得恶意注册上海法网账号。上海法网可以对恶意注册行为进行独立判断和处理。</text><text class='b'></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 8.2 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>上海法网账号的使用权仅属于初始申请注册人。未经上海法网许可，您不得赠与、借用、租用、转让或售卖上海法网账号或者以其他方式许可非初始申请注册人使用上海法网账号。</text><text class='b'></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 8.3 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>如果您当前使用的上海法网账号并不是您初始申请注册的或者通过上海法网提供的其他途径获得的，但您却知悉该账号当前的密码，您不得用该账号登录或进行任何操作，并请您在第一时间通知上海法网或者该账号的初始申请注册人。</text><text class='b'></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 8.4 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>您可以在本服务平台上发布和共享信息，但您应当保证拥有这些信息的合法权利或已经得到权利人的授权。</text><text class='b'></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 8.5 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>您在使用上海法网提供的服务时，必须遵守国家法律、法规等规范性文件及上海法网各项规则的规定和要求，不得利用上海法网服务从事以下行为，包括但不限于：</text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（一）发布、传送、传播、储存违反国家法律、危害国家安全统一、煽动民族仇恨、民族歧视、破坏民族团结、破坏国家宗教政策，宣扬邪教和封建迷信、散布谣言，扰乱社会秩序，破坏社会稳定、公序良俗、社会公德以及侮辱、诽谤、淫秽、暴力的内容；</text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（二）发布、传送、传播、储存侵害他人名誉权、隐私权、商标权、著作权、专利权、肖像权、知识产权、商业秘密等合法权利的内容；</text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（三）散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪；</text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（四）散布含有虚假、有害、胁迫、侵害他人隐私、骚扰、侵害、中伤、粗俗、猥亵或其它道德上令人反感的内容；</text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（五）虚构事实、隐瞒真相，误导、欺骗他人；</text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（六）发表、传送、传播广告信息及垃圾信息；</text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（七）存在可能破坏、篡改、删除、影响上海法网任何系统正常运行或未经授权秘密获取上海法网及其他用户的数据、个人资料的病毒、木马、爬虫等恶意软件、程序代码的；</text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（八）通过非上海法网经营者开发、授权的第三方软件、插件、外挂、系统，登录或使用上海法网及服务，或制作、发布、传播上述工具；</text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（九）从事其他违反法律法规、政策及公序良俗、社会公德等或违反依据相关上海法网协议、规则，干扰上海法网正常提供服务的。</text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>如果您实施了前款约定的行为，上海法网经营者将保留依法追究法律责任的权利。</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 8.6 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>注册用户违反本协议或相关的服务条款的规定，导致或产生的任何第三方主张的任何索赔、要求或损失，包括合理的律师费，您均应当以自己的名义独立承担所有的法律责任，并应确保上海法网及</text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>注册用户违反本协议或相关的服务条款的规定，导致或产生的任何第三方主张的任何索赔、要求或损失，包括合理的律师费，您均应当以自己的名义独立承担所有的法律责任，并应确保上海法网及 / 或其关联企业及平台（例如"xx 区公共法律服务中心"."xx 街镇（乡）公共法律服务工作站"，居村级平台为"xx 居村委会公共法律服务工作室"等）免于因此产生损失或增加费用。 / 或其关联企业及平台（例如"xx 区公共法律服务中心"."xx 街镇（乡）公共法律服务工作站"，居村级平台为"xx 居村委会公共法律服务工作室"等）免于因此产生损失或增加费用。</text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>如您的行为使上海法网及 / 或其关联企业及平台遭受第三人主张权利，上海法网及 / 或其关联企业及平台可在对第三人承担金钱给付等义务后就全部损失向您追偿。</text><text class=''>对此，上海法网有权视您的行为性质，采取包括但不限于删除您发布信息内容、暂停使用许可、终止服务、限制使用、回收上海法网账号、追究法律责任等措施。对恶意注册上海法网账号或利用上海法网账号进行违法活动、捣乱、骚扰、欺骗、其他用户以及其他违反本协议的行为，上海法网有权回收其账号。同时，上海法网经营者会视司法部门的要求，协助调查。</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 8.8 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>您明确了解并同意对您自己在使用上海法网服务过程中的行为承担法律责任，上海市司法局不为此承担任何直接、间接、附带、特别、衍生性或惩罚性赔偿。若上海市司法局不幸承担了因您行为导致的行政处罚或侵权损害赔偿责任后，您应给予上海市司法局等额的赔偿。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>第九条：用户信息的保护及授权</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 9.1 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>上海法网非常重视用户个人信息的保护，在您使用上海法网提供的服务时，您同意上海法网经营者按照在上海法网上公布的隐私权政策收集、存储、使用、披露和保护您的个人信息。</text><text class='b'>上海法网希望通过隐私权政策向您清楚地介绍上海法网对您个人信息的处理方式。因此，上海法网建议您完整地阅读隐私权政策，以帮助您更好地保护您的隐私权。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 9.2 条</text>
+  </view>
+  <view class='cjk'>
+    <text class=''>您声明并保证，您对您所发布的信息拥有相应、合法的权利。否则，上海法网可对您发布的信息依法或依本协议进行删除或屏蔽。</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>第十条：用户的违约及处理</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 10.1 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>发生如下情形之一的，视为您违约：</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>（一）使用上海法网服务时违反有关法律法规规定的；</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>（二）违反本平台注册及服务协议约定的。</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>为适应电子商务发展和满足海量用户对高效优质服务的需求，您理解并同意，</text><text class='b'>上海法网经营者可在上海法网规则中约定违约认定的程序和标准。如：上海法网经营者可依据您的用户数据与海量用户数据的关系来认定您是否构成违约；您有义务对您的数据异常现象进行充分举证和合理解释，否则将被认定为违约。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 10.2 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>如您违反法律法规、上海法网各服务协议或业务规则的规定，若产生相应任何法律后果的，以您自己的名义独立承担所有的法律责任，并确保上海市司法局免受因此产生任何损失。若使上海法网及 / 或其关联企业及平台直接遭受损失（包括自身的直接经济损失、商誉损失及包括但不限于诉讼成本的例如对外支付的赔偿金、调解及和解款、律师费、诉讼费、公证费其他的间接经济损失），您应赔偿上海法网及 / 或其关联企业及平台上述的全部损失。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>同时，上海法网有权进行独立判断并随时限制、冻结或终止您上海法网账号的使用，且根据实际情况决定是否恢复使用或在平台上公示您的该等涉嫌违法或违约行为，无需经过您的同意或提前通知您。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 10.3 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>如果上海法网发现您并非账号初始申请注册人，上海法网有权在未经通知的情况下终止您使用该注册账号。</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 10.4 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>为了充分利用注册账号，如果您存在注册账号后未及时进行初次登录使用，或连续六个月未登陆使用注册账号等情形，上海法网有权终止该注册帐号的使用。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 10.5 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>上海法网按照本规则或相关法律法规，限制、冻结或终止您对注册账号的使用，而由此给您带来的损失（包括但不限于通信中断，用户资料及相关数据清空等），由您自行承担。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 10.6 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（包括：您在上海法网上实施的行为，或虽未在上海法网上实施但对上海法网及其用户产生影响的行为等）是否构成违约,并可依据相应规则限制或中止向您提供部分、全部服务或作出相应处罚。您应自行保存与您行为有关的全部证据，并应对无法提供必要证据而承担的不利后果。如您的行为构成根本违约的，上海法网可注销您的注册账户，并同时终止向您提供服务。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>第十一条：通知。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>第 11.1 条</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>您在注册成为上海法网用户，并接受上海法网提供的各类服务时，您应该向上海法网提供真实有效的联系方式（包括您的电子邮件地址、联系电话、联系地址等），对于联系方式发生变更的，您有义务及时更新有关信息，并保持可被联系的状态。</text><text class='b'>此外，上海法网建议您应时常在上海法网登录您注册账号，在"个人中心"栏中查看最新推送及发布的信息。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>上海法网将向您的上述联系方式的其中之一或其中若干向您送达各类通知，而此类通知的内容可能对您的权利义务产生重大的有利或不利影响，请您务必及时关注。同时，上海法网有权通过您注册时填写的手机号码或者电子邮箱获取并向您推荐您可能感兴趣的公益信息；您如果不愿意接收此类信息，您有权向上海法网另行提出书面申请予以退订（书面申请？现在一般退订都是以短信的形式）。</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 11.2 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>上海法网通过上述联系方式向您发出通知，向您提供的联系电话发送手机短信，向您提供的电子邮件地址发送电子邮件，向您的账号发送系统消息以及站内信信息，在发送成功后即视为送达；以纸质载体发出的书面通知，按照提供联系地址交邮后若被退信的，则以退信之日视为送达日。信件一旦送达即视为上海法网告知的达成，注册用户不能以收件人非本人进行抗辩。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 11.3 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>您同意上海市司法局可根据您在上海法网填写的联系地址或户籍地址及联系方式送达与您有关的法律文书，同时也可采取以上一种或多种送达方式向您达法律文书。</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>您同意上述送达方式适用于各个司法程序阶段。如进入诉讼程序的，包括但不限于一审、二审、再审、执行以及督促程序等。</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 11.4 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>你应当保证所提供的联系方式是准确、有效的，并进行实时更新。如果因提供的联系方式不确切，或不及时告知变更后的联系方式，使法律文书无法送达或未及时送达，由您自行承担由此可能产生的法律后果。</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>第十二条：不可抗力</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 12.1 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>因下列原因导致上海法网无法正常提供服务，上海法网经营者不承担任何责任：</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（一）上海法网系统停机维护或升级；</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（二）因台风、地震、洪水、雷电或恐怖袭击等不可抗力原因；</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（三）您的电脑软硬件和通信线路、供电线路出现故障的；</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（四）您操作不当或通过非上海法网授权或认可的方式使用上海法网提供的服务；</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（五）因病毒、木马、恶意程序攻击、网络拥堵、系统不稳定、系统或设备故障、通讯故障、电力故障、银行原因、第三方服务瑕疵或政府行为等原因。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>上海法网将采取合理行动积极促使服务恢复正常。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>第十三条：免责声明</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 13.1 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>在法律允许的范围内，上海法网上的律师、公证员、鉴定人员、调解员、社区工作者等人员，若在没有获取上海法网所签发的纸质版书面授权情况下，其实施的行为均不能视为上海法网的行为，上海法网也不对上述人员实施的无效代理行为承担任何法律责任。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 13.2 条 著作权的授权</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>您同意，对于其上传到本网站的照片 / 图片 / 文字等任何内容（例如在法律咨询窗口添加照片等）即视为您合法拥有该照片 / 图片 / 文字的著作权，并授权、同意、允许上海法网享有免费的在全世界范围内不限形式和载体地享有永久的、不可撤销的、免费的、非独家的使用权和转授权的权利，包括但不限于修改、复制、发行、展览、改编、汇编、出版、翻译、信息网络传播、广播、表演和再创作及著作权法等法律法规确定的其他权利，但您或原著作权人仍保有上载作品的著作权。您特别授权上海法网以自己名义单独对第三方的侵权行为提起诉讼并获得全额赔偿。上海法网无须为此向您给予任何报酬或承担任何义务，也无须另行通知。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 13.4 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>上传者保证这些照片 / 图片不含任何病毒、木马病毒或内嵌任何受病毒感染的文件，并保证照片 / 图片不涉及色情、非法、淫秽、侮辱性、令人反感的、不恰当的内容，不侵犯任何第三方权益（如知识产权、著作权或隐私等）。</text><text class='b'>任何不符合上述标准的照片 / 图片将不予发布，上海法网有权随时将其撤下或删除，无需向注册用户发出任何事先通知。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 13.5 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>基于互联网的开放性和社交网络服务的传播特殊性，上海法网特别提醒您谨慎注意以下风险：</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>上海法网专为市民搭建的综合线上平台，您应当使用本服务所获取的内容进行独立判断并承担因依赖该内容而引起的所有风险，包括但不限于因对内容的正确性、完整性或实用性的依赖而产生的风险以及因您个人信息被其他用户获知而带来的风险。您了解并确认，上海法网不对本服务注册用户之间的纠纷承担任何责任。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>您在使用本服务过程中所发布的内容有可能会被第三方复制、转载、修改或做其他用途，脱离您的预期和控制，您必须充分意识此类风险的存在，上海法网对由此产生的纠纷不予负责。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>请您切勿在使用本服务时透露任何涉及财产、本服务账号及密码等重要信息，否则，由此带来的损失由您自行承担。</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>上海法网对提供服务项下涉及的境内外基础电信运营商的移动通信网络的故障、技术缺陷、覆盖范围限制、不可抗力、计算机病毒、黑客攻击、您所在位置、您关机或其他非上海法网技术能力范围内的事因等造成的服务中断、您发送的短信息的内容丢失、出现乱码、错误接收、无法接收、迟延接收不承担责任。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>由于您或其他用户违反本服务相关规则导致被上海法网按照本协议进行处理的，可能会影响上海法网提供给您的部分服务。同时，您在本服务中的相关信息等数据也可能会造成一定影响。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>第十四条：知识产权归属</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>第 14.1 条</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>除非上海法网另行声明，上海法网内的所有产品、技术、软件、程序、数据及其他信息（包括但不限于文字、图像、图片、照片、音频、视频、图表、色彩、版面设计、电子文档）的所有知识产权（包括但不限于版权、商标权、专利权、商业秘密等）及相关权利，均归上海市司法局所有。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>未经上海法网许可，任何人不得擅自使用（包括但不限于复制、截屏、传播、创建链接、发布、展示、推广、销售、整合、利用、组合、镜像、上载、下载）或通过非常规方式（如：恶意干预上海法网数据）影响上海法网的正常服务，任何人不得擅自以软件程序自动获得上海法网数据。否则，上海法网将依法追究法律责任。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 14.2 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>上海法网的LOGO,"上海市公共法律服务中心"等文字、图形及其组合，以及上海法网的其他标识、徵记、产品和服务名称均为上海市司法局所有，</text><text class='b'>未经上海法网书面授权，任何人不得以任何方式展示、使用或作其他处理，也不得向他人表明您有权展示、使用或作其他处理。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 14.3 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>任何单位或个人认为通过上海法网搜索链接到的第三方网页内容可能涉嫌侵犯其信息网络传播权，应该及时向上海法网提出书面权利通知，并提供身份证明、权属证明及详细侵权情况证明。上海法网在收到上述法律文件后，将会依法尽快断开相关链接内容。</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 14.4 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>上海法网拥有本网站内所有资料的版权，任何被授权的浏览、复制、打印和传播属于本网站内的资料必须符合以下条件才能被视为"合理使用"</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（一）所有的资料和图象均不得用于商业目的；</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（二）所有的资料、图象及其任何部分都必须包括此版权声明。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>第十五条：协议的终止</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 15.1 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>注册用户有权通过以下任一方式终止本协议：</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（一）在注册用户账号时，对本协议内容有异议并拒绝按照流程进行下一步注册操作的；</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（二）注册用户账号后，以书面形式明确向上海法网主动提出要求注销账号的申请，并经上海法网确认批准注销的；</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（三）上海法网用户协议及相关政策变更事项生效前用户自行停止使用并以书面形式明确告知上海法网不愿接受变更事项的；</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 15.2 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>您同意，上海法网有权自行全权决定以任何理由，任何时间，不经事先通知的中止、终止向您提供部分或全部网上服务平台服务，暂时冻结或永久冻结（注销）您的账户，且无须为此向您或任何第三方承担任何责任。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 15.3 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>出现以下情况时，上海法网有权直接以注销账户的方式终止本协议：</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（一）上海法网终止向您提供服务后，您再一次直接或间接或以他人名义注册为上海法网用户的；</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（二）您提供的电子邮箱不存在或无法接收电子邮件，且没有其他方式可以与您进行联系，或上海法网以本协议第十一条所列的方式通知您更改电子邮件信息，而您在上海法网通知后三个工作日内仍未更改为有效的电子邮箱的。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（三）您注册信息中的主要内容不真实或不准确或不及时或不完整。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（四）本协议（含规则）变更时，您明示并通知上海法网不愿接受新的服务协议的；</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（五）其它上海法网认为应当终止服务的情况。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 15.4 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>出现以下情况时，上海法网可以本协议第十一条的所列的方式通知您终止本协议：</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（一）您违反本协议约定，上海法网依据违约条款终止本协议的；</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（二）您盗用他人账户、发布违禁信息、骗取他人财物、售假、扰乱市场秩序、采取不正当手段谋利等行为，上海法网依据上海法网规则对您的账户予以查封的；</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（三）除上述情形外，因您多次违反上海法网规则相关规定且情节严重，上海法网依据上海法网规则对您的账户予以查封的；</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（四）您的账户被上海法网依据本协议回收的；</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（五）其它应当终止服务的情况。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 15.5 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>本协议终止后，除法律有明确规定外，上海法网无义务向您或您指定的第三方披露您账户中的任何信息，也没有义务向您或第三方转发任何您未曾阅读或发送过的信息。</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 15.6 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>本协议终止后，上海法网仍享有下列权利：</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（一）继续保存您留存于上海法网的本协议第四条所列的各类信息；</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>（二）对于您过往的违约行为，上海法网仍可依据本协议向您追究违约责任。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''></text><text class='b'>第十六条：其他</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 16.1 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>本规则签订地为中华人民共和国上海市徐汇区。</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 16.2 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>本协议之效力、解释、变更、执行与争议解决均适用中华人民共和国法律。若您和上海法网之间发生任何纠纷或争议，首先应友好协商解决；</text><text class='b'>协商不成的，您同意将纠纷或争议提交本规则签订地有管辖权的人民法院管辖。</text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>第 16.3 条</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>本协议任一条款无论因何种原因部分无效或不可执行，并不影响本协议其余条款的有效性及可执行性，对双方仍具有约束力。对条款的解释权及对本系统使用的解释权归上海市司法局所有。</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>若遇其他问题，或对本协议约定未充分理解的，您可以通过如下联络方式同上海市司法局取得联系：</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>中国上海市徐汇区建国西路 648 号</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>上海市司法局</text><text class='b'></text><text class=''></text>
+  </view>
+  <view class='cjk'>
+    <text class=''>邮政编码： 200020</text><text class='b'></text><text class=''></text>
+  </view>
+</view>

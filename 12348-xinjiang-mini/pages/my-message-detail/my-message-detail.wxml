@@ -1,0 +1,22 @@
+<!--pages/my-message-detail/my-message-detail.wxml-->
+<view class='message-detail-my'>
+  <view class='title'>
+    <image class='pic' src='{{myMessage.picUrl}}'></image>
+    <text class='name'>{{myMessage.name}}</text>
+  </view>
+  <view class='content'>{{myMessage.content}}</view>
+  <view class='tag-time clearfix'>
+    <view class='tag-wrap pull-left'>
+      <text class='tag' wx:for="{{myMessage.tag}}" wx:key="{{index}}">{{item}}</text>
+    </view>
+    <text class='time pull-right'>{{myMessage.time}}</text>
+  </view>
+</view>
+<view class='message-reply'>
+  <image class='pic' src='../../images/default_male.jpg'></image>
+  <view class='name'>阿布拉江·吐尔逊</view>
+  <view class='time'>回答于2017-09-19</view>
+</view>
+<view class='reply-content'>
+  承租人单方提前解除合同属违约,须承担违约责任。虽然合同没有约定提前退租的违约责任,但没有约定违约责任并不当然排除违约方,违约方仍须根据合同法的相关规定承担违约责任(合同法关于违约责任的
+</view>

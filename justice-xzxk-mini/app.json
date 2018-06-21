@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/apply/setp-six",
+    "pages/apply/setp-seven",
+    "pages/approval/setp-seven-clear",
+    "pages/my-query/my-query",
+    "pages/user/my",
+    "pages/my-matter/my-matter",
+    "pages/my-query/query-state",
+    "pages/user/user",
+    "pages/appointment/appointment",
+    "pages/appointment/callback",
+    "pages/appointment/list",
+    "pages/apply/setp-three",
+    "pages/user/fild-core",
+    "pages/approval/setp-six",
+    "pages/apply/setp-eight",
+    "pages/user/register",
+    "pages/user/user-core",
+    "pages/feedback/feedback",
+    "pages/approval/setp-eight",
+    "pages/user/login",
+    "pages/approval/setp-seven",
+    "pages/result/result",
+    "pages/apply/seto-two",
+    "pages/apply/setp-five",
+    "pages/apply/setp-four",
+    "pages/apply/setp-one",
+    "pages/guide/list",
+    "pages/query-web-view/query-web-view",
+    "pages/my-matter/result",
+    "pages/guide/guide",
+    "pages/answer/answer",
+    "pages/my-complaint/my-complaint",
+    "pages/my-consultation/my-consultation",
+    "pages/logs/logs",
+    "pages/my-query/query-web-view",
+    "pages/my-matter/detail",
+    "pages/approval/new-six"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#454545",
+    "navigationBarTitleText": "行政审批",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#5297fd",
+    "backgroundColor": "#fff",
+    "borderStyle": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "服务",
+        "iconPath": "images/icon_plane.png",
+        "selectedIconPath": "images/icon_plane_fill.png"
+      },
+      {
+        "pagePath": "pages/user/my",
+        "text": "我的",
+        "iconPath": "images/icon_people.png",
+        "selectedIconPath": "images/icon_people_fill.png"
+      }
+    ]
+  }
+}

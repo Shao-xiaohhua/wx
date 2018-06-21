@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "口头调解",
+  "usingComponents": {
+    "my-component-tab": "../myTabComponent/myTabComponent"
+  }
+}

@@ -1,0 +1,51 @@
+<!--pages/my-matter/result.wxml-->
+<view class='content-wrap'>
+  xxx
+  <view class='border-bottom'></view>
+</view>
+<!--列表  -->
+<view class='list-content'>
+  <view class='list clearfix'>
+    <view class='name pull-left'>身份证号</view>
+    <view class='content pull-left'>上海市送检去阿发发发发阿发发发啊发发啊罚法啊发顺丰安抚a</view> 
+  </view>
+  <view class='list clearfix'>
+    <view class='name pull-left'>身份证号</view>
+    <view class='content pull-left'>上海市送检去阿发发发发阿发发发啊发发啊罚法啊发顺丰安抚a</view> 
+  </view>
+  <view class='list clearfix'>
+    <view class='name pull-left'>身份证号</view>
+    <view class='content pull-left'>上海市送检去阿发发发发阿发发发啊发发啊罚法啊发顺丰安抚a</view> 
+  </view>
+  <view class='list clearfix'>
+    <view class='name pull-left'>身份证号</view>
+    <view class='content pull-left'>上海市送检去阿发发发发阿发发发啊发发啊罚法啊发顺丰安抚a</view> 
+  </view>
+  <view class='border-bottom'></view>
+</view>
+<!--材料  -->
+<view class='list-content'>
+  <view class='list clearfix'>
+    <view class='name pull-left'>身份证号</view>
+    <view class='content pull-left'>上海市送检去阿发发发发阿发发发啊发发啊罚法啊发顺丰安抚a</view> 
+  </view>
+  <view class='list clearfix'>
+    <view class='name pull-left'>身份证号</view>
+    <view class='content pull-left'>上海市送检去阿发发发发阿发发发啊发发啊罚法啊发顺丰安抚a</view> 
+  </view>
+  <view class='list clearfix'>
+    <view class='name pull-left'>身份证号</view>
+    <view class='content pull-left'>上海市送检去阿发发发发阿发发发啊发发啊罚法啊发顺丰安抚a</view> 
+  </view>
+  <view class='list clearfix'>
+    <view class='name pull-left'>身份证号</view>
+    <view class='content pull-left'>上海市送检去阿发发发发阿发发发啊发发啊罚法啊发顺丰安抚a</view> 
+  </view>
+</view>
+<!--状态  -->
+<view class='list-content'>
+  <view class='list clearfix' style='padding-bottom: 30rpx;'>
+    <view class='name pull-left'>办理状态</view>
+    <view class='tag pass pull-right'>已审批</view>
+  </view>
+</view>

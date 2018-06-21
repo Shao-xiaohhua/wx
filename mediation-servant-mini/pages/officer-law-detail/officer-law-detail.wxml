@@ -1,0 +1,32 @@
+<!--pages/officer-law-detail/officer-law-detail.wxml-->
+<view class='officer-detail-wrap'>
+  <view class='title'>王某与唐某某医疗损害责任纠纷一审民事判决书</view>
+  <view class='text-number'>（2016）冀0203民初2052号</view>
+  <view class='message-list'>
+    <view class='list clearfix'>
+      <view class='head pull-left'>法院:</view>
+      <view class='body pull-left'>唐山市路北区人民法院</view>
+    </view>
+    <view class='list clearfix'>
+      <view class='head pull-left'>纠纷类型：</view>
+      <view class='body pull-left'>婚姻家庭纠纷</view>
+    </view>
+    <view class='list clearfix'>
+      <view class='head pull-left'>文书类型：</view>
+      <view class='body pull-left'>调解书</view>
+    </view>
+    <view class='list clearfix'>
+      <view class='head pull-left'>案由：</view>
+      <view class='body pull-left'>这里是案由</view>
+    </view>
+    <view class='list clearfix'>
+      <view class='head pull-left'>审理程序：</view>
+      <view class='body pull-left'>一审</view>
+    </view>
+  </view>
+  <view class='content'>
+    为了正确处理医疗事故，保障病员和医务人员的合法权益，维护医疗单位的工作秩序，国务院于1987年6月29日制定《医疗事故处理办法》，从医疗事故认定、赔偿、处罚等不同方面对医疗事故处理进行规范。但由于该办法规定医疗事故的认定由卫生行政管理部门认定，因此医疗纠纷在处理过程中，将主管医疗事故处理的医疗行政管理部门也牵涉其中。2002年，国务院颁布实施《医疗事故处理条例》，规定医疗事故的认定由社会学术团体(医学会)担任，从而将医疗卫生行政主管部门(卫生局)从纠纷中解脱出来。
+  </view>
+</view>
+
+

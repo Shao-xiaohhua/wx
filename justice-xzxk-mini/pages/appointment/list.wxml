@@ -1,0 +1,23 @@
+<!--pages/appointment/list.wxml-->
+<view class='list-wrap'>
+  <view class='list clearfix' wx:for="{{listArr}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap='getNext'>
+    <view class='img-wrap pull-left'>
+      <image src='{{item.imagesrc}}' wx:if="{{item.imagesrc}}"></image>
+      <image src='../../images/default_org.jpg' wx:if="{{!item.imagesrc}}"></image>
+    </view>
+    <view class='mess-wrap pull-left'>
+      <view class='name'>
+        {{item.name}}
+        <view class='border-bottom'></view>
+      </view>
+      <view class='address'>
+        <text class='iconfont icon-telephone'></text>
+        {{item.phone}}
+      </view>
+      <view class='number'>
+        <text class='iconfont icon-location'></text>
+        {{item.address}}
+      </view>
+    </view>
+  </view>
+</view>

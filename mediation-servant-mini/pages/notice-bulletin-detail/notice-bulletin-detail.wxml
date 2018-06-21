@@ -1,0 +1,4 @@
+<!--pages/notice-bulletin-detail/notice-bulletin-detail.wxml-->
+<view class='title'>{{title}}</view>
+<view class='time'>日期：{{time}}</view>
+<view class='content'>{{content}}</view>

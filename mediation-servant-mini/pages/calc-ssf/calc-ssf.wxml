@@ -1,0 +1,16 @@
+<!--pages/calc/calc.wxml-->
+<view class='feedback-list-wrap'>
+  <form>
+    <view class='list {{item.error?"error":""}} clearfix' wx:for="{{inputArr}}" wx:key="{{index}}">
+      <view class='tp'>{{item.title}}</view>
+      <input placeholder="{{item.ip}}" value='{{item.value}}' bindblur='chInput' />
+      <view class='border'></view>
+      <view class='arrow' wx:if="{{item.arrow}}"></view>
+      <text class='y' wx:if="{{item.y}}">{{item.y}}</text>
+      <text class='text-error' wx:if="{{item.link}}">选项不能为空！</text> 
+      <text class='text-error' wx:if="{{!item.link}}">请输入正确数字!</text>  
+      <navigator url='{{item.linkUrl}}{{index}}' wx:if="{{item.link}}"></navigator>
+    </view>
+    <button form-type="submit" class='feed-done' bindtap='cares'>计算</button>  
+  </form>
+</view>

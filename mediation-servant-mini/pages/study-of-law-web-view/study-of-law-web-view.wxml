@@ -1,0 +1,2 @@
+<!--pages/study-of-law-web-view/study-of-law-web-view.wxml-->
+<web-view src="{{urlAg}}"></web-view>

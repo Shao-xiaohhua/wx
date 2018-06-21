@@ -1,0 +1,90 @@
+/* pages/assistant/assistant.wxss */
+page {
+  background: #fff;
+}
+.ass-wrap {
+  width: 100%;
+  height: auto;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+}
+.ass-wrap .title {
+  padding-top: 40rpx;
+  line-height: 100%;
+  font-size: 15px;
+  color: #333;
+}
+.link-wrap {
+  width: 100%;
+  height: auto;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  padding-left: 17rpx;
+  padding-right: 17rpx;
+}
+.link-wrap navigator {
+  position: relative;
+  width: 25%;
+  height: auto;
+  margin-bottom: 15rpx;
+  float: left;
+  line-height: 100%;
+  text-align: center;
+}
+.link-wrap navigator::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 1px;
+  height: 68rpx;
+  background: #f2f2f2;
+  content: "";
+}
+.link-wrap navigator:nth-child(4n)::after {
+  display: none;
+}
+.link-wrap navigator:last-child::after {
+  display: none;
+}
+.link-wrap navigator text {
+  width: 100%;
+  display: inline-block;
+}
+.link-wrap navigator text.iconfont {
+  width: 90rpx;
+  height: 90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  font-size: 26px;
+  border-radius: 50%;
+  background: red;
+}
+.link-wrap navigator text.iconfont.blue {
+  background: #ecf6fe;
+  color: #40a4f4;
+}
+.link-wrap navigator text.iconfont.green {
+  background: #f1f9e8;
+  color: #78c21d;
+}
+.link-wrap navigator text.iconfont.orange {
+  background: #fef2ee;
+  color: #f47b52;
+}
+.link-wrap navigator text.iconfont.yellow {
+  background: #fff7ef;
+  color: #ffb165;
+}
+.link-wrap navigator text.name {
+  margin-top: 10rpx;
+  line-height: 100%;
+  font-size: 13px;
+  color: #999;
+}
+.link-wrap navigator text.nameTwo {
+  line-height: 100%;
+  font-size: 12px;
+  color: #999;
+}

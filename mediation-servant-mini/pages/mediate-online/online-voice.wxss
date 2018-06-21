@@ -1,0 +1,9 @@
+/* pages/mediate-online/online-voice.wxss */
+page {
+  position: relative;
+  height: 100%;
+  background: #fff;
+}
+.voice-wrap {
+  height: 985rpx;
+}

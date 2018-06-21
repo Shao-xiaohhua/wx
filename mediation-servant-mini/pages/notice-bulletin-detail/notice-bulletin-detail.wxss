@@ -1,0 +1,31 @@
+/* pages/notice-bulletin-detail/notice-bulletin-detail.wxss */
+page {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  background: #ffffff;
+}
+.title {
+  padding-top: 38rpx;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+.time {
+  padding-top: 20rpx;
+  line-height: 100%;
+  text-align: right;
+  font-size: 13px;
+  color: #cccccc;
+}
+.content {
+  padding-top: 20rpx;
+  font-size: 15px;
+  color: #999999;
+}
+.phone {
+  padding-top: 20rpx;
+  line-height: 100%;
+  text-align: left;
+  font-size: 15px;
+  color: #999999;
+}

@@ -1,0 +1,29 @@
+<!--pages/user/fild-core.wxml-->
+<view class='core-title'>
+  <text class='name'>证件材料</text>
+  <text class='bj pull-right' wx:if="{{bjSwite}}" bindtap='bjFile'>编辑</text>
+  <text class='bj pull-right' wx:if="{{!bjSwite}}" bindtap='bjFile'>撤销</text>
+</view>
+<view class="filed-wrap clearfix {{!bjSwite?'active':''}}">
+  <view class='fild-box pull-left'
+    wx:for="{{fildArr}}"
+    wx:key="{{index}}"
+    data-index="{{index}}"
+    data-src="{{item.src}}"
+    bindtap='getImgSrc'>
+    <image src='{{item.src}}' mode='aspectFit'></image>
+    <view class='tit'>{{item.name}}</view>
+    <view class="actice {{item.active?'ch':''}}">
+      <text class='iconfont icon-right'></text>
+    </view>
+  </view>
+</view>
+<view class='down-filed' wx:if="{{!bjSwite}}"  bindtap='downFildList'>下载</view>
+<view class="img-preview {{imgSwite?'active':''}}">
+  <view class='title clearfix'>
+    <text class='iconfont icon-arrow'></text>
+    <text bindtap='back'>返回</text>
+    <!-- <text class='pull-right' bindtap='hImg'>更换照片</text> -->
+  </view>
+  <image mode='aspectFit' src='{{imgSrc}}'></image>
+</view>

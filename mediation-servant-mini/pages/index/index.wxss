@@ -1,0 +1,133 @@
+/**index.wxss**/
+/* pages/core.wxss */
+.server-number-box {
+  width: 100%;
+  height: 160rpx;
+  margin-bottom: 20rpx;
+  background: #fff;
+  box-shadow: 0 0 15rpx 5rpx #ccc;
+}
+.server-number-box .list {
+  position: relative;
+  width: calc(100% / 3);
+  height: 100%;
+  padding-top: 34rpx;
+  padding-bottom: 34rpx;
+  float: left;
+  text-align: center;
+}
+.server-number-box .list navigator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.server-number-box .list:after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 1px;
+  height: 65rpx;
+  content: "";
+  background: #ccc;
+  transform: scaleX(0.5);
+}
+.server-number-box .list:last-child:after {
+  display: none;
+}
+.server-number-box .list .number {
+  line-height: 100%;
+  color: #4895ff;
+  font-size: 24px;
+}
+.server-number-box .list text {
+  color: #cccccc;
+  font-size: 14px;
+}
+.server-link-wrap {
+  width: 100%;
+  height: auto;
+  padding-top: 47rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  background: #fff;
+}
+.server-link-wrap .list {
+  position: relative;
+  width: calc(50% - 30rpx);
+  margin-left: 20rpx;
+  margin-bottom: 30rpx;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 0 15rpx 5rpx #eeeeee;
+  float: left;
+  overflow: hidden;
+}
+.server-link-wrap .list.full {
+  width: calc(100% - 40rpx);
+}
+.server-link-wrap .list navigator {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 25rpx;
+  line-height: 100%;
+  font-size: 18px;
+  color: #333333;
+}
+.server-link-wrap .list navigator .icon-wrap {
+  position: relative;
+  width: 80rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background: #a8a8a8;
+  border-radius: 4px;
+  display: inline-block;
+}
+.server-link-wrap .list navigator .icon-wrap.blue {
+  background: #40a4f4;
+}
+.server-link-wrap .list navigator .icon-wrap.yellow {
+  background: #ffb165;
+}
+.server-link-wrap .list navigator .icon-wrap.orange {
+  background: #fc8158;
+}
+.server-link-wrap .list navigator .icon-wrap.green {
+  background: #76c01a;
+}
+.server-link-wrap .list navigator .icon-wrap.ze {
+  background: #ab8cf4;
+}
+.server-link-wrap .list navigator .icon-wrap .iconfont {
+  font-size: 25px;
+  color: #fff;
+}
+.swiper-wrap {
+  width: 100%;
+  height: 36rpx;
+  margin-top: 10rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  text-align: left;
+  font-size: 13px;
+  color: #fff;
+  overflow: hidden;
+}
+.swiper-wrap swiper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.swiper-wrap swiper navigator {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 90%;
+  height: 100%;
+  float: left;
+}

@@ -1,0 +1,32 @@
+<!--pages/my-complaint/my-complaint.wxml-->
+<view style='padding-left: 38rpx; padding-right: 38rpx;background: #fff'>
+  <view class='core-title'>
+    <text class='name'>我要投诉</text>
+  </view>
+  <view class='check-list'>
+    <view class='list clearfix' wx:for="{{listArr}}" wx:key="{{index}}" data-index="{{index}}" bindtap='checkList'>
+      <view class="icon-wrap pull-left {{item.active?'active':''}}">
+        <text class='iconfont icon-right'></text>
+      </view>
+      <view class='content pull-left'>{{item.name}}</view>
+    </view>
+  </view>
+</view>
+<view class='pd-warp'>
+  <view class='title'>
+    <input type='text' placeholder='请填写信件标题' data-type="input" bindinput='getXj'></input>
+    <view class='border-bottom'></view>
+  </view>
+  <view class='content'>
+    <textarea placeholder='请填写信件内内容' maxlength="100" data-type="textarea" bindinput='getXj'></textarea>
+    <view class='text-num'>
+      <text class='num'>{{textNum}}</text>
+      /
+      100
+    </view>
+  </view>
+</view>
+<view class='btn-box' bindtap='getNext'>
+  <view class='btn'>提交意见</view>
+</view>
+

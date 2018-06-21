@@ -1,0 +1,120 @@
+<!--pages/search-mediate/search-mediate.wxml-->
+<view class='serach-wrap'>
+  <view class='serach-box'>
+    <input placeholder='输入搜索关键词' placeholder-class="placeholder" bindinput="kewTtext" bindblur='blurGetList'></input>
+    <text class='iconfont icon-search'></text>
+  </view>
+</view>
+<view class='tab-wrap-mediate clearfix'>
+  <view bindtap='tabCheck' data-index="{{index}}" class='tab {{item.active}}' wx:for="{{tabArr}}" wx:key="{{index}}" style="width:{{item.width}}">
+    {{item.name}}
+    <view class='triangle'></view>
+    <view class='borderx'></view>
+  </view>
+</view>
+<view class='search-list-wrap-parent'>
+  <view class='shado-box' wx:if="{{shadoWhite}}">
+    <view class='content'>
+      <scroll-view scroll-y>
+      <view class='close-box' bindtap='mp'></view>
+      <!--案件类型  -->
+        <view class='tag-box clearfix' wx:if="{{morSwite}}">
+          <view class='tag' wx:for="{{typeArr}}" wx:key="{{index}}">
+            <view class="content text-hinde {{item.active?'active':''}}" data-index="{{index}}" data-id="{{item.value}}" bindtap='getType'>{{item.name}}</view>
+          </view>
+          <!-- <view class='tag'>
+            <view class='content' hover-class="active">更多</view>
+          </view> -->
+        </view>
+        <!--案件状态  -->
+        <view class='tag-box clearfix' wx:if="{{stateSwite}}">
+          <view class='tag' wx:for="{{stateArr}}" wx:key="{{index}}">
+            <view class="content text-hinde {{item.active?'active':''}}" data-index="{{index}}" data-id="{{item.value}}" bindtap='getState'>{{item.name}}</view>
+          </view>
+          <!-- <view class='tag'>
+            <view class='content' hover-class="active">更多</view>
+          </view> -->
+        </view>
+        <!--案件时间  -->
+        <!-- <view class='tag-box time clearfix' wx:if="{{timeSwite && !timeMoreSwite}}">
+          <view class='tag' wx:for="{{timeArr}}" wx:key="{{index}}">
+            <view class='content text-hinde' hover-class="active">{{item.name}}</view>
+          </view>
+          <view class='tag timeMore'>
+            <view class='content' hover-class="active" bindtap='timeMore'>其他日期范围</view>
+          </view>
+        </view> -->
+        <!--自定义时间  -->
+        <view class='timeMore-box' wx:if="{{timeSwite && timeMoreSwite}}">
+          <view class="flex box box-tb box-align-center">
+            <view class="calendar pink-color box box-tb">
+                  <view class="top-handle fs28 box box-lr box-align-center box-pack-center">
+                      <view class="prev box box-rl" bindtap="handleCalendar" data-handle="prev">
+                          <view class="prev-handle box box-lr box-align-center box-pack-center">《</view>
+                      </view>
+                      <view bindtap="chooseYearAndMonth" class="date-area box box-lr box-align-center box-pack-center">{{cur_year || "--"}} 年 {{cur_month || "--"}} 月</view>
+                      <view class="next box box-lr" bindtap="handleCalendar" data-handle="next">
+                          <view class="next-handle box box-lr box-align-center box-pack-center">》</view>
+                      </view>
+                  </view>
+                  <view class="weeks box box-lr box-pack-center box-align-center">
+                      <view class="flex week fs28" wx:for="{{weeks_ch}}" wx:key="{{index}}" data-idx="{{index}}">{{item}}</view>
+                  </view>
+                  <view class="days box box-lr box-wrap">
+                      <view wx:if="{{hasEmptyGrid}}" class="grid white-color box box-align-center box-pack-center" wx:for="{{empytGrids}}" wx:key="{{index}}" data-idx="{{index}}">
+                      </view>
+                      <view class="grid white-color box box-align-center box-pack-center {{item.choosed ? 'border-radius pink-bg' : ''}} {{item.centeSwite ? 'pink-bgll' : ''}}" wx:for="{{days}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="tapDayItem">
+                          <view class="day box box-align-center box-pack-center">{{item.day}}</view>
+                      </view>
+                  </view>
+              </view>
+          </view>
+
+          <view wx:if="{{showPicker}}" class="box box-tb">
+              <view class="picker-btns box box-lr box-pack-between box-align-center">
+                  <view class="picker-btn picker-cancel" data-type="cancel" bindtap="tapPickerBtn">取消</view>
+                  <view class="picker-btn picker-confirm" data-type="confirm" bindtap="tapPickerBtn">确定</view>
+              </view>
+              <picker-view class="flex" indicator-style="height: 50px;" style="width: 100%; height: 150px;" value="{{picker_value}}" bindchange="pickerChange">
+                  <picker-view-column>
+                      <view class="picker-view" wx:for="{{picker_year}}" wx:key="{{index}}" style="line-height: 50px">{{item}}年</view>
+                  </picker-view-column>
+                  <picker-view-column>
+                      <view class="picker-view" wx:for="{{picker_month}}" wx:key="{{index}}" style="line-height: 50px">{{item}}月</view>
+                  </picker-view-column>
+              </picker-view>
+          </view>
+          <view class='time-button-box clearfix'>
+            <view class='inner-button' bindtap='mp'>取消</view>
+            <view class='inner-button active' bindtap='mpC'>确定</view>
+          </view>
+        </view>
+        <!--自定义时间结束  -->
+      </scroll-view>
+    </view>
+  </view>
+  <scroll-view bindtouchend='addNew' scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" upper-threshold="0" lower-threshold="0">
+  <loading hidden="{{hidden}}">加载中...</loading>
+    <view class='search-child-list-wrap'>
+      <view class='list' wx:for="{{listArr}}" wx:key="{{index}}">
+        <view class='title'>
+          <view class='name'>{{item.title}}</view>
+          <view class='time'>{{item.date}}</view>
+          <view class='border'></view>
+        </view>
+        <view class='list-wrap'>
+          <view class='inner-wrap'>
+            <view class='inner-list clearfix'>
+              <text>姓名：{{item.name}}</text>
+            </view>
+            <view class='inner-list clearfix'>
+              <text>联系方式：{{item.mobile}}</text>
+            </view>
+            <view wx:if="{{item.status}}" class="tag">{{item.status}}</view>
+          </view>
+        </view>
+        <navigator url='../record-detail/investigation-detail?&id={{item.id}}'></navigator>
+      </view>
+    </view>
+  </scroll-view>
+</view>

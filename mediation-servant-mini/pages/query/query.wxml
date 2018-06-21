@@ -1,0 +1,23 @@
+<!--pages/query/query.wxml-->
+<view class='serach-wrap'>
+  <view class='serach-box'>
+    <input placeholder='请输入' placeholder-class="placeholder"></input>
+    <text class='iconfont icon-search'></text>
+  </view>
+   <view class='serach-tag-box clearfix'>
+    <view class='tag' wx:for="{{tagArr}}" wx:key="{{index}}">
+      <navigator url='{{item.url}}'>
+        {{item.name}}
+      </navigator>
+    </view>
+  </view> 
+</view>
+<view class='query-link-wrap clearfix' wx:for="{{linkArr}}" wx:key="{{index}}">
+  <view class='title'>{{item.title}}</view>
+  <view class='nav-wrap clearfix'>
+    <navigator class='inner-link' url='' wx:for="{{item.list}}" wx:key="{{index}}">
+      <text class='iconfont {{item.icon}} {{item.color}}'></text>
+      <text class='name'>{{item.name}}</text>
+    </navigator>
+  </view>
+</view>

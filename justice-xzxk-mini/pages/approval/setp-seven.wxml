@@ -1,0 +1,86 @@
+<!--pages/approval/setp-seven.wxml-->
+<view class="shadowWrap {{shadowSwite?'active':''}}">
+  <view class='shadoClear'>
+    <text class='name'>保存成功</text>
+    <view class='clear-btn' bindtap='clearShadow'>我知道了</view>
+  </view>
+</view>
+<view class='setp-wrap clearfix'>
+  <loading hidden="{{hiddenLoading}}">正在加载</loading>
+<!--顶部setp  -->
+  <scroll-view scroll-x style="width: 100%" scroll-into-view="{{scrollId}}">
+    <view class='slwp' style='width:1400rpx'>
+      <view bindtap='getStorNav' id="{{item.id}}" class="scroll-item {{item.dq?'dq':''}}" wx:for="{{setpArr}}" wx:key="{{index}}">
+        <navigator url='{{item.url}}' open-type="redirect">
+          <view class="number {{item.pass?'pass':''}}">{{index + 1}}</view>
+          <view class="number {{item.pass?'':'pass'}}"><text class='iconfont icon-right'></text></view>
+          <view class='name'>{{item.name}}</view>
+          <view class='border-center'></view>
+        </navigator>
+      </view>
+    </view>
+  </scroll-view>
+  <!--内容区  -->
+  <view class='padding-wrap clearfix'>
+    <view class='child-wrap'>
+      <!--title  -->
+      <view class='title'>
+        <view class='name'>
+          <text>请补充材料</text>
+          <view class='title-line left'></view>
+          <view class='title-line right'></view>
+        </view>
+        <!-- <view>或</view>
+        <navigator bindtap='upDataFileSwite' class='link-next' url='setp-eight'>窗口提交<text class="iconfont icon-arrow"></text></navigator> -->
+      </view>
+      <!--content  -->
+      <view class='content-wrap' style="padding-top: 0;">
+        <view class='pd-wrap'>
+          <view class='file-wrap clearfix' wx:for="{{fileArr}}" wx:key="{{idx}}"
+          wx:for-index="idx" wx:for-item="itemName">
+            <view class='file-title clearfix'>{{idx + 1}}. {{itemName.stuffName}}
+              <view class="switch-wrap {{itemName.swite?'active':''}} pull-right clearfix" data-index="{{idx}}" bindtap='closeFile'>
+                <view class='cont pull-left'>线上</view>
+                <view class='cont pull-left'>线下</view>
+                <view class='btn-bol'></view>
+              </view>
+            </view>
+            <view class='file-list-wrap clearfix'>
+              <view class='file-list pull-left' 
+                wx:for="{{itemName.list}}"
+                wx:key="{{index}}" 
+                data-index="{{index}}"
+                data-findex="{{idx}}"
+                bindtap='getFile'>
+                <view class='file-box' wx:if="{{!item.url}}">
+                  <view class='btn-get'>
+                   <view class='line-two'></view>
+                    <view class='lene'></view>
+                  </view>
+                  <view class='name'>{{item.displayStuffName}}</view>
+                </view>
+                <view class='img-box' wx:if="{{item.url}}">
+                  <image style='width: 100%; height: 100%;' src="{{item.url}}" mode="aspectFit"></image>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='save-wrap' bindtap='saveFile'>
+          <text class='iconfont icon-approval'></text>
+          保存为草稿
+        </view>
+        <view wx:if="{{nexwSwite}}" class='next-btn-wrap' style="padding-top: 60rpx;">
+          <view class="child-btn active" bindtap='getNext'>下一步</view>
+        </view>
+        <view wx:if="{{!nexwSwite}}" class='next-btn-wrap' style="padding-top: 60rpx;">
+          <view class="child-btn" bindtap=''>下一步</view>
+        </view>
+        <view class='login-link-wrap' wx:if="{{loginLink}}">
+          <navigator url=''>已有账号，立即登录 <text class='iconfont icon-arrow'></text></navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+

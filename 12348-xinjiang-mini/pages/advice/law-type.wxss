@@ -1,0 +1,4 @@
+/* pages/advice/law-type.wxss */
+page {
+  background: #fff;
+}

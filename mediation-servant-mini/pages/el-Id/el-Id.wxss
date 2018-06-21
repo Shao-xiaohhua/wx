@@ -1,0 +1,41 @@
+/* pages/el-Id/el-Id.wxss */
+.mess-list {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20rpx;
+}
+.mess-list .list {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 37rpx 24rpx;
+  line-height: 100%;
+  font-size: 16px;
+  color: #666666;
+  background: #fff;
+}
+.mess-list .list .border {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: calc(100% - 48rpx);
+  height: 1px;
+  background: #e5e5e5;
+  transform: scaleY(0.5);
+}
+.mess-list .list:last-child .border {
+  display: none;
+}
+.mess-list .list text {
+  display: inline-block;
+  max-width: 50%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.mess-list .list .content {
+  color: #999999;
+  float: right;
+}

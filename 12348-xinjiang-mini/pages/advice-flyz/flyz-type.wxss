@@ -1,0 +1,4 @@
+/* pages/advice-flyz/flyz-type.wxss */
+page {
+  background: #fff;
+}

@@ -1,0 +1,107 @@
+/**index.wxss**/
+page {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.banner-swiper {
+  position: relative;
+  width: 100%;
+  height: 300rpx;
+  margin-bottom: 30rpx;
+}
+.banner-swiper .banner-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #1788ce;
+}
+.banner-swiper .banner-link image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-size: 100% 100%;
+}
+.server-list-wrap {
+  width: 100%;
+  height: auto;
+  margin-top: 25rpx;
+  overflow: hidden;
+}
+.server-list-wrap .list {
+  position: relative;
+  width: calc(100% / 3 - 32rpx);
+  height: auto;
+  margin-bottom: 24rpx;
+  margin-left: 24rpx;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  float: left;
+}
+.server-list-wrap .list navigator {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 48rpx;
+  padding-bottom: 48rpx;
+  display: block;
+  text-align: center;
+}
+.server-list-wrap .list navigator .icon-wrap {
+  width: 80rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  margin: 0 auto 20rpx auto;
+  background: #0e76bc;
+  border-radius: 50%; 
+}
+.server-list-wrap .list navigator .iconfont {
+  color: #fff;
+  font-size: 45rpx;
+}
+.server-list-wrap .list navigator .name {
+  display: block;
+  font-size: 16px;
+  color: #333;
+}
+.banner-link {
+  position: relative;
+  width: 100%;
+  height: 300rpx;
+  background: #12c6bc;
+}
+.banner-link navigator {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.banner-link navigator image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+}

@@ -1,0 +1,42 @@
+@import "../../weui.wxss";
+/* my.wxss */
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+	align-items: center;
+  padding: 15px;
+  border-bottom: 1rpx solid #e8e8e8;
+  background-color: #fff;
+}
+.profile .user-avatar {
+  width: 72px;
+  height: 72px;
+}
+.profile .avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.profile .user-nickname {
+  margin-top: 5px;
+  font-size: 17px;
+}
+.profile .user-info {
+  font-size: 14px;
+  color: #888;
+}
+.feedback {
+  margin-top: 10px;
+}
+.readme {
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  margin-top: 20px;
+  font-size: 12px;
+  color: gray;
+}
+.readme navigator {
+  display: inline-block;
+  color: #348ac7;
+}

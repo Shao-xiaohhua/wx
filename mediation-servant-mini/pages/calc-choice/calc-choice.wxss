@@ -1,0 +1,12 @@
+/* pages/calc-choice/calc-choice.wxss */
+.label-tag-wrap radio {
+    display:block
+}
+.lnkage-choice-wrap .label-tag-wrap label {
+    padding-top: 30rpx;
+    padding-bottom: 30rpx;
+}
+.label-tag-wrap.active label {
+    color: #fff;
+    background: #4895ff;
+}

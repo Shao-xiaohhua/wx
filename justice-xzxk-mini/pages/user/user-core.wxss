@@ -1,0 +1,96 @@
+/* pages/user/user-core.wxss */
+page {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  background: #fff;
+}
+.core-title  {
+  padding-top: 50rpx;
+}
+.core-title .name {
+  font-size: 28px;
+  color: #333;
+}
+
+.message-list-wrap {
+  width: 100%;
+  height: auto;
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+  background: white;
+}
+.message-list-wrap .list {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  text-align: left;
+  font-size: 16px;
+  color: #999;
+}
+.message-list-wrap .name {
+  display: inline-block;
+  width: 30%;
+  color: #333;
+}
+.message-list-wrap input {
+  width: 70%;
+  text-align: right;
+  display: block;
+}
+.message-list-wrap .list .iconfont {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+}
+.img-wrap {
+  position: relative;
+  width: 116rpx;
+  height: 116rpx;
+}
+.img-wrap .input-filed {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  color: #fff;
+  background: #3eb0ff;
+  border-radius: 50%;
+}
+.img-wrap .input-filed .iconfont {
+  font-size: 30rpx;
+}
+.img-wrap image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.user-btn {
+  width: 100%;
+  height: auto;
+  padding-bottom: 28rpx;
+  padding-top: 28rpx;
+  margin-bottom: 40rpx;
+  line-height: 100%;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  background: #5297fd;
+  border-radius: 60px;
+}
+.user-btn.active {
+  color: #333;
+  background: #fff;
+  border: 1px solid #ccc;
+}

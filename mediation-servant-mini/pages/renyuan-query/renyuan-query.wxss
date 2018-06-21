@@ -1,0 +1,23 @@
+/* pages/renyuan-query/renyuan-query.wxss */
+.serach-wrap {
+  padding-top: 30rpx;
+}
+page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.shado-box {
+  top: 80rpx;
+  height: calc(100% - 80rpx);
+}
+/*搜索列表  */
+.search-list-wrap-parent {
+  width: 100%;
+  height: calc(100% - 298rpx);
+}
+.search-list-wrap-parent scroll-view {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

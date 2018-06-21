@@ -1,0 +1,169 @@
+/* pages/user/register.wxss */
+page {
+  background: #ffffff;
+}
+page {
+  position: relative;
+  width: 100%;
+}
+.shadowWrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  z-index: 888;
+  display: none;
+}
+.shadowWrap.active {
+  display: block;
+}
+.closeSearch {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+.closeSearch .clearLine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 30px;
+  height: 1px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+.closeSearch .clearLine.active {
+  transform: rotate(-45deg);
+}
+.shadoClear {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding-top: 57rpx;
+  width: 550rpx;
+  height: 340rpx;
+  text-align: center;
+  border-radius: 4px;
+  background: #fff;
+}
+.shadoClear text {
+  width: 100%;
+  line-height: 100%;
+  display: block;
+}
+.shadoClear .name {
+  font-size: 18px;
+  color: #333;
+}
+.shadoClear .prompt {
+  padding-top: 20rpx;
+  font-size: 15px;
+  color: #999;
+}
+.shadoClear .clear-btn {
+  margin-top: 40rpx;
+  padding: 30rpx 100rpx;
+  line-height: 100%;
+  font-size: 16px;
+  color: #fff;
+  display: inline-block;
+  background: #ff3f3f;
+  border-radius: 30px;
+}
+.setp-wrap {
+  position: relative;
+  width: 100%;
+}
+.top-link {
+  width: 100%;
+  height: auto;
+  padding-top: 55rpx;
+  padding-bottom: 30rpx;
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+  font-size: 14px;
+  color: #ff753f;
+}
+.input-wrap {
+  width: 100%;
+  height: auto;
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+}
+.list {
+  width: 100%;
+  height: 100rpx;
+  margin-bottom: 38rpx;
+  font-size: 16px;
+  background: #f0f0f0;
+  border-radius: 60px;
+  border: 1px solid #e2e2e2;
+  overflow: hidden;
+}
+.list.active {
+  border: 1px solid red;
+}
+.list.active input {
+  color: red;
+}
+.list.small {
+  width: 390rpx;
+}
+.get-code {
+  width: 280rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+  background: #ff753f;
+  border-radius: 60px;
+  float: right;
+}
+.get-code.active {
+  background: #999;
+}
+.list.login {
+  line-height: 100rpx;
+  color: #fff;
+  text-align: center;
+  background: #5297fd;
+  border-color: #5297fd;
+}
+.list .icon-warp {
+  position: relative;
+  width: 100rpx;
+  height: 100%;
+  text-align: center;
+  line-height: 100rpx;
+  color: #999;
+}
+.list .icon-warp::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  height: 30rpx;
+  margin: auto;
+  background: #999;
+  display: block;
+}
+.inp-wrap {
+  width: calc(100% - 100rpx);
+  height: 100%;
+}
+input {
+  width: 100%;
+  height: 100%;
+  padding-left: 30rpx;
+  font-size: 16px;
+  color: #333;
+}

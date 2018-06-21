@@ -1,0 +1,496 @@
+<!--pages/apply/setp-six.wxml-->
+<view class="setp-wrap clearfix">
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<view class="shadowWrap {{shadowSwite?'active':''}}">
+  <view class='shadoClear'>
+    <text class='name'>请完善信息</text>
+    <text class='prompt'>请将必填信息全部填写完毕</text>
+    <view class='clear-btn' bindtap='clearShadow'>我知道了</view>
+  </view>
+</view>
+<view class="shadowWrap {{shadowSwiteJY?'active':''}}">
+  <view class='shadoClear'>
+    <text class='name'>校验失败</text>
+    <text class='prompt'>{{JYtext}}</text>
+    <view class='clear-btn' bindtap='clearShadowJY'>我知道了</view>
+  </view>
+</view>
+<!--搜索机构  -->
+<view class='shaow-search-wrap' hidden="{{!JGswite}}" bindtap=''>
+  <view class='closeSearch' bindtap='cloesJGswite'>
+    <view class='clearLine'></view>
+    <view class='clearLine active'></view>
+  </view>
+  <view class='search-wrap'>
+    <view class='blod-font'>搜索机构</view>
+    <view class='title'>
+      <view class='input-wrap'>
+        <input value='{{JGtext}}' type='text' placeholder='请输入机构检索名称' bindblur='getorgName'></input>
+      </view>
+      <view class='icon-wrap'>
+        <text class='iconfont icon-icon-search'></text>
+      </view>
+      <view class='border-bottom'></view>
+    </view>
+    <view class='search-list-wrap'>
+      <scroll-view scroll-y style='height: 100%; width: 100%;'>
+        <view class='list' wx:for="{{JGlist}}" wx:key="{{index}}" bindtap='getJGtext' data-text="{{item.name}}" data-arr="{{item}}">
+          {{item.name}}
+          <view class='border-bottom'></view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>
+<!--搜索人员  -->
+<view class='shaow-search-wrap' hidden="{{!RYswite}}" bindtap=''>
+  <view class='closeSearch' bindtap='cloesRYwite'>
+    <view class='clearLine'></view>
+    <view class='clearLine active'></view>
+  </view>
+  <view class='search-wrap'>
+    <view class='blod-font'>搜索人员</view>
+    <view class='title'>
+      <view class='input-wrap'>
+        <input value='{{RYtext}}' type='text' placeholder='请输入人员身份证号码' bindblur="getpersonSearch"></input>
+      </view>
+      <view class='icon-wrap'>
+        <text class='iconfont icon-icon-search'></text>
+      </view>
+      <view class='border-bottom'></view>
+    </view>
+    <view class='search-list-wrap'>
+      <scroll-view scroll-y style='height: 100%; width: 100%;'>
+        <view class='list' wx:for="{{RYlist}}" wx:key="{{index}}" bindtap='getRYtext' data-text="{{item.name}}" data-arr="{{item}}">
+          {{item.name}}
+          <view class='border-bottom'></view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>
+<!--顶部setp  -->
+  <scroll-view scroll-x style="width: 100%" scroll-into-view="{{scrollId}}">
+    <view class='slwp' style='width:1400rpx'>
+      <view bindtap='getStorNav' id="{{item.id}}" class="scroll-item {{item.dq?'dq':''}}" wx:for="{{setpArr}}" wx:key="{{index}}">
+        <navigator url='{{item.url}}' open-type="redirect">
+          <view class="number {{item.pass?'pass':''}}">{{index + 1}}</view>
+          <view class="number {{item.pass?'':'pass'}}"><text class='iconfont icon-right'></text></view>
+          <view class='name'>{{item.name}}</view>
+          <view class='border-center'></view>
+        </navigator>
+      </view>
+    </view>
+  </scroll-view>
+  <!--内容区  -->
+  <form bindsubmit="formSubmit" bindreset="formReset" hidden='{{allShow}}'>
+    <view class='padding-wrap clearfix'>
+    <view class='child-wrap'>
+      <!--title  -->
+        <view class='title'>
+          <view class='name'>
+            <text>请填写信息</text>
+            <view class='title-line left'></view>
+            <view class='title-line right'></view>
+          </view>
+        </view>
+        <!--content  -->
+        <view class='content-wrap' style="padding-top: 0;">
+          <view class='pd-wrap'>
+            <view class='message-title'>1.基本信息</view>
+            <!--列表  -->
+            <!--基本信息  -->
+            <view class="input-list {{item.error?'error':''}} clearfix" wx:for="{{listArr.baseFields}}" wx:key="{{index}}" wx:if="{{listArr.baseFields.length}}">
+              <view class='input-name pull-left'><text class="required-text {{item.required?'active':''}}">*</text>{{item.displayName}}</view>
+              <view class='input-wrap pull-right'>
+                <!--普通文本  -->
+                <input disabled='{{item.disabled}}' bindinput='inputVal' data-parent="baseFields" data-index="{{index}}" value="{{item.val}}" name="{{item.name}}" type='text' placeholder="请输入{{item.displayName}}" class="item-error" wx:if="{{item.type === 'text'}}"></input>
+                <!--number  -->
+                <input disabled='{{item.disabled}}' bindinput='inputVal' data-parent="baseFields" data-index="{{index}}" value="{{item.val}}" name="{{item.name}}" type='number' placeholder="请输入{{item.displayName}}" class="item-error" wx:if="{{item.type === 'number'}}"></input>
+                <!--禁用搜索  -->
+                <!--机构  -->
+                <input bindtap='inputTpJG' data-iseavl="{{item.isEval}}" data-parent="baseFields" data-index="{{index}}" value="{{item.val}}" name="{{item.name}}" type='number' disabled="{{true}}" placeholder="请选择{{item.displayName}}" class="item-error" wx:if="{{item.type === 'entityOrg'}}"></input>
+                <!--人  -->
+                <input bindtap='inputTpRY' data-iseavl="{{item.isEval}}" data-parent="baseFields" data-index="{{index}}" value="{{item.val}}" name="{{item.name}}" type='number' disabled="{{true}}" placeholder="请选择{{item.displayName}}" class="item-error" wx:if="{{item.type === 'entity'}}"></input>
+                <!--日期  -->
+                <picker disabled='{{item.disabled}}' disabled='{{item.disabled}}' disabled='{{item.disabled}}' class="item-error" name="{{item.name}}" data-parent="baseFields" data-index="{{index}}" wx:if="{{item.type === 'date'}}" mode="date" value="{{item.date}}" start="1990-09-01" end="2050-09-01" bindchange="bindDateChange">
+                  <view class="picker">
+                    {{item.date}}
+                  </view>
+                </picker>
+                <!--下拉  -->
+                <picker disabled='{{item.disabled}}' disabled='{{item.disabled}}' disabled='{{item.disabled}}' class="item-error" name="{{item.name}}" data-parent="baseFields" data-index="{{index}}" wx:if="{{item.type === 'select'}}" bindchange="bindPickerChange" value="{{item.enList[item.count]}}" range="{{item.cnList}}">
+                  <view class="picker">
+                    {{item.cnList[item.count]}}
+                  </view>
+                </picker>
+                <!--地理信息  -->
+                <picker disabled='{{item.disabled}}' disabled='{{item.disabled}}' disabled='{{item.disabled}}' data-parent="baseFields" data-index="{{index}}" wx:if="{{item.type === 'zone'}}" name="{{item.name}}" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+                  <view class="picker">
+                    当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+                  </view>
+                </picker>
+                <!--多选  -->
+                <view class='select-mour' wx:if="{{item.type === 'multiSelect'}}" 
+                  bindtap='getMorSelect'
+                  data-parent="baseFields"
+                  data-pr="pr"
+                  data-index="{{index}}"
+                  >
+                  <view class='selected clearfix'>
+                    <!--已选  -->
+                    <view class='select-list' 
+                      wx:for="{{item.listArr}}"
+                      wx:for-item="itemListC" 
+                      wx:for-index="itemIndexC" 
+                      wx:key="{{itemIndexC}}">
+                      <text>{{itemListC.cn}}</text>
+                      <view class='close-box'
+                      data-chindex="{{itemIndexC}}"
+                      data-index="{{index}}"
+                      data-parent="baseFields"
+                      data-cn="{{itemListC.cn}}"
+                      data-id="{{itemListC.id}}"
+                      catchtap="getDelList"
+                      >
+                        <view class='close-parent'></view>
+                      </view>
+                    </view>
+                    <!--选择列表  -->
+                    <view class='select-list-wrap' hidden="{{!item.listShow}}">
+                      <scroll-view scroll-y style="height: 100%; width: 100%;">
+                        <view class='list' 
+                          wx:for="{{item.list}}" 
+                          wx:for-item="itemList" 
+                          wx:for-index="itemIndex" 
+                          wx:key="{{itemIndex}}"
+                          data-parent="baseFields"
+                          data-pr="ch"
+                          data-index="{{index}}"
+                          data-cn="{{itemList.cn}}"
+                          data-id="{{itemList.id}}"
+                          data-indexc="{{itemIndex}}"
+                          catchtap='getMorListed'
+                          >
+                          {{itemList.cn}}
+                        </view>
+                      </scroll-view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='border-bottom'></view>
+            </view>
+            <!--申请人信息  -->
+            <view class="input-list {{item.error?'error':''}} clearfix" wx:for="{{listArr.applicantFields}}" wx:key="{{index}}" wx:if="{{listArr.applicantFields.length}}">
+              <view class='input-name pull-left'><text class="required-text {{item.required?'active':''}}">*</text>{{item.displayName}}</view>
+              <view class='input-wrap pull-right'>
+               <!--普通  -->
+                <input disabled='{{item.disabled}}' bindinput='inputVal' data-parent="applicantFields" data-index="{{index}}" value="{{item.val}}" name="{{item.name}}" type='text' placeholder="请输入{{item.displayName}}" class="item-error" wx:if="{{item.type === 'text'}}"></input>
+                <!--number  -->
+                <input disabled='{{item.disabled}}' bindinput='inputVal' data-parent="applicantFields" data-index="{{index}}" value="{{item.val}}" name="{{item.name}}" type='number' placeholder="请输入{{item.displayName}}" class="item-error" wx:if="{{item.type === 'number'}}"></input>
+                <!--禁用搜索  -->
+                <!--机构  -->
+                <input bindtap='inputTpJG' data-iseavl="{{item.isEval}}" data-parent="applicantFields" data-index="{{index}}" value="{{item.val}}" name="{{item.name}}" type='number' disabled="{{true}}" placeholder="请选择{{item.displayName}}" class="item-error" wx:if="{{item.type === 'entityOrg'}}"></input>
+                <!--人  -->
+                <input bindtap='inputTpRY' data-iseavl="{{item.isEval}}" data-parent="applicantFields" data-index="{{index}}" value="{{item.val}}" name="{{item.name}}" type='number' disabled="{{true}}" placeholder="请选择{{item.displayName}}" class="item-error" wx:if="{{item.type === 'entity'}}"></input>
+                <!--日期  -->
+                <picker disabled='{{item.disabled}}' disabled='{{item.disabled}}' class="item-error" name="{{item.name}}" data-parent="applicantFields" data-index="{{index}}" wx:if="{{item.type === 'date'}}" mode="date" value="{{item.date}}" start="1990-09-01" end="2050-09-01" bindchange="bindDateChange">
+                  <view class="picker">
+                    {{item.date}}
+                  </view>
+                </picker>
+                <!--下拉  -->
+                <picker disabled='{{item.disabled}}' disabled='{{item.disabled}}' class="item-error" name="{{item.name}}" data-parent="applicantFields" data-index="{{index}}" wx:if="{{item.type === 'select'}}" bindchange="bindPickerChange" value="{{item.enList[item.count]}}" range="{{item.cnList}}">
+                  <view class="picker">
+                    {{item.cnList[item.count]}}
+                  </view>
+                </picker>
+                <!--地理信息  -->
+                <picker disabled='{{item.disabled}}' disabled='{{item.disabled}}' data-parent="applicantFields" data-index="{{index}}" wx:if="{{item.type === 'zone'}}" name="{{item.name}}" mode="region" bindchange="bindRegionChange" value="{{item.region}}" custom-item="{{customItem}}">
+                  <view class="picker">
+                    {{item.region[0]}}，{{item.region[1]}}，{{item.region[2]}}
+                  </view>
+                </picker>
+                <!--多选  -->
+                <view class='select-mour' wx:if="{{item.type === 'multiSelect'}}" 
+                  bindtap='getMorSelect'
+                  data-parent="applicantFields"
+                  data-pr="pr"
+                  data-index="{{index}}"
+                  >
+                  <view class='selected clearfix'>
+                    <!--已选  -->
+                    <view class='select-list' 
+                      wx:for="{{item.listArr}}"
+                      wx:for-item="itemListC" 
+                      wx:for-index="itemIndexC" 
+                      wx:key="{{itemIndexC}}">
+                      <text>{{itemListC.cn}}</text>
+                      <view class='close-box'
+                      data-chindex="{{itemIndexC}}"
+                      data-index="{{index}}"
+                      data-parent="applicantFields"
+                      data-cn="{{itemListC.cn}}"
+                      data-id="{{itemListC.id}}"
+                      catchtap="getDelList"
+                      >
+                        <view class='close-parent'></view>
+                      </view>
+                    </view>
+                    <!--选择列表  -->
+                    <view class='select-list-wrap' hidden="{{!item.listShow}}">
+                      <scroll-view scroll-y style="height: 100%; width: 100%;">
+                        <view class='list' 
+                          wx:for="{{item.list}}" 
+                          wx:for-item="itemList" 
+                          wx:for-index="itemIndex" 
+                          wx:key="{{itemIndex}}"
+                          data-parent="applicantFields"
+                          data-pr="ch"
+                          data-index="{{index}}"
+                          data-cn="{{itemList.cn}}"
+                          data-id="{{itemList.id}}"
+                          data-indexc="{{itemIndex}}"
+                          catchtap='getMorListed'
+                          >
+                          {{itemList.cn}}
+                        </view>
+                      </scroll-view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class='border-bottom'></view>
+            </view>
+            <!--多个申请人  -->
+            <view class="apply-more {{applyMoreSwite?'active':''}}">
+              <view class='message-title'>申请人2信息</view>
+              <view class="input-list {{item.error?'error':''}} clearfix" wx:for="{{applicantFields_1}}" wx:key="{{index}}">
+                <view class='input-name pull-left'><text class="required-text {{item.required?'active':''}}">*</text>{{item.displayName}}</view>
+                <view class='input-wrap pull-right'>
+                  <!--普通  -->
+                  <input disabled='{{item.disabled}}' bindinput='inputValMore' data-parent="applicantFields_1" data-index="{{index}}" value="{{item.val}}" name="applicantFields_1_{{item.name}}" type='text' placeholder="请输入{{item.displayName}}" class="item-error" wx:if="{{item.type === 'text'}}"></input>
+                  <!--number  -->
+                  <input disabled='{{item.disabled}}' bindinput='inputValMore' data-parent="applicantFields_1" data-index="{{index}}" value="{{item.val}}" name="applicantFields_1_{{item.name}}" type='number' placeholder="请输入{{item.displayName}}" class="item-error" wx:if="{{item.type === 'number'}}"></input>
+                <!--禁用搜索  -->
+                <!--机构  -->
+                <input bindtap='inputTpJG' data-iseavl="{{item.isEval}}" data-parent="applicantFields_1" data-index="{{index}}" value="{{item.val}}" name="{{item.name}}" type='number' disabled="{{true}}" placeholder="请选择{{item.displayName}}" class="item-error" wx:if="{{item.type === 'entityOrg'}}"></input>
+                <!--人  -->
+                <input bindtap='inputTpRY' data-iseavl="{{item.isEval}}" data-parent="applicantFields_1" data-index="{{index}}" value="{{item.val}}" name="{{item.name}}" type='number' disabled="{{true}}" placeholder="请选择{{item.displayName}}" class="item-error" wx:if="{{item.type === 'entity'}}"></input>
+                  <!--日期  -->
+                  <picker disabled='{{item.disabled}}' class="item-error" name="applicantFields_1_{{item.name}}" data-parent="applicantFields_1" data-index="{{index}}" wx:if="{{item.type === 'date'}}" mode="date" value="{{item.date}}" start="1990-09-01" end="2050-09-01" bindchange="bindDateChangeMove">
+                    <view class="picker">
+                      {{item.date}}
+                    </view>
+                  </picker>
+                  <!--下拉  -->
+                  <picker disabled='{{item.disabled}}' class="item-error" name="applicantFields_1_{{item.name}}" data-parent="applicantFields_1" data-index="{{index}}" wx:if="{{item.type === 'select'}}" bindchange="bindPickerChangeMore" value="{{item.enList[item.count]}}" range="{{item.cnList}}">
+                    <view class="picker">
+                      {{item.cnList[item.count]}}
+                    </view>
+                  </picker>
+                  <!--地理信息  -->
+                <picker disabled='{{item.disabled}}' data-parent="applicantFields_1" data-index="{{index}}" wx:if="{{item.type === 'zone'}}" name="{{item.name}}" mode="region" bindchange="bindRegionChange" value="{{item.region}}" custom-item="{{customItem}}">
+                  <view class="picker">
+                    {{item.region[0]}}，{{item.region[1]}}，{{item.region[2]}}
+                  </view>
+                </picker>
+                <!--多选  -->
+                <view class='select-mour' wx:if="{{item.type === 'multiSelect'}}" 
+                  bindtap='getMorSelect'
+                  data-parent="applicantFields_1"
+                  data-pr="pr"
+                  data-index="{{index}}"
+                  >
+                  <view class='selected clearfix'>
+                    <!--已选  -->
+                    <view class='select-list' 
+                      wx:for="{{item.listArr}}"
+                      wx:for-item="itemListC" 
+                      wx:for-index="itemIndexC" 
+                      wx:key="{{itemIndexC}}">
+                      <text>{{itemListC.cn}}</text>
+                      <view class='close-box'
+                      data-chindex="{{itemIndexC}}"
+                      data-index="{{index}}"
+                      data-parent="applicantFields_1"
+                      data-cn="{{itemListC.cn}}"
+                      data-id="{{itemListC.id}}"
+                      catchtap="getDelList"
+                      >
+                        <view class='close-parent'></view>
+                      </view>
+                    </view>
+                    <!--选择列表  -->
+                    <view class='select-list-wrap' hidden="{{!item.listShow}}">
+                      <scroll-view scroll-y style="height: 100%; width: 100%;">
+                        <view class='list' 
+                          wx:for="{{item.list}}" 
+                          wx:for-item="itemList" 
+                          wx:for-index="itemIndex" 
+                          wx:key="{{itemIndex}}"
+                          data-parent="applicantFields_1"
+                          data-pr="ch"
+                          data-index="{{index}}"
+                          data-cn="{{itemList.cn}}"
+                          data-id="{{itemList.id}}"
+                          data-indexc="{{itemIndex}}"
+                          catchtap='getMorListed'
+                          >
+                          {{itemList.cn}}
+                        </view>
+                      </scroll-view>
+                    </view>
+                  </view>
+                </view>
+                </view>
+                <view class='border-bottom'></view>
+              </view>
+              <view class='message-title'>申请人3信息</view>
+              <view class="input-list {{item.error?'error':''}} clearfix" wx:for="{{applicantFields_2}}" wx:key="{{index}}">
+                <view class='input-name pull-left'><text class="required-text {{item.required?'active':''}}">*</text>{{item.displayName}}</view>
+                <view class='input-wrap pull-right'>
+                  <!--普通  -->
+                  <input disabled='{{item.disabled}}' bindinput='inputValMore' data-parent="applicantFields_2" data-index="{{index}}" value="{{item.val}}" name="applicantFields_2_{{item.name}}" type='text' placeholder="请输入{{item.displayName}}" class="item-error" wx:if="{{item.type === 'text'}}"></input>
+                  <!--数字  -->
+                  <input disabled='{{item.disabled}}' bindinput='inputValMore' data-parent="applicantFields_2" data-index="{{index}}" value="{{item.val}}" name="applicantFields_2_{{item.name}}" type='number' placeholder="请输入{{item.displayName}}" class="item-error" wx:if="{{item.type === 'number'}}"></input>
+                  <!--禁用搜索  -->
+                  <!--机构  -->
+                <input bindtap='inputTpJG' data-iseavl="{{item.isEval}}" data-parent="applicantFields_2" data-index="{{index}}" value="{{item.val}}" name="{{item.name}}" type='number' disabled="{{true}}" placeholder="请选择{{item.displayName}}" class="item-error" wx:if="{{item.type === 'entityOrg'}}"></input>
+                <!--人  -->
+                <input bindtap='inputTpRY' data-iseavl="{{item.isEval}}" data-parent="applicantFields_2" data-index="{{index}}" value="{{item.val}}" name="{{item.name}}" type='number' disabled="{{true}}" placeholder="请选择{{item.displayName}}" class="item-error" wx:if="{{item.type === 'entity'}}"></input>
+                  <!--日期  -->
+                  <picker disabled='{{item.disabled}}' class="item-error" name="applicantFields_2_{{item.name}}" data-parent="applicantFields_2" data-index="{{index}}" wx:if="{{item.type === 'date'}}" mode="date" value="{{item.date}}" start="1990-09-01" end="2050-09-01" bindchange="bindDateChangeMove">
+                    <view class="picker">
+                      {{item.date}}
+                    </view>
+                  </picker>
+                  <!--下拉  -->
+                  <picker disabled='{{item.disabled}}' class="item-error" name="applicantFields_2_{{item.name}}" data-parent="applicantFields_2" data-index="{{index}}" wx:if="{{item.type === 'select'}}" bindchange="bindPickerChangeMore" value="{{item.enList[item.count]}}" range="{{item.cnList}}">
+                    <view class="picker">
+                      {{item.cnList[item.count]}}
+                    </view>
+                  </picker>
+                  <!--地理信息  -->
+                <picker disabled='{{item.disabled}}' data-parent="applicantFields_2" data-index="{{index}}" wx:if="{{item.type === 'zone'}}" name="{{item.name}}" mode="region" bindchange="bindRegionChange" value="{{item.region}}" custom-item="{{customItem}}">
+                  <view class="picker">
+                    {{item.region[0]}}，{{item.region[1]}}，{{item.region[2]}}
+                  </view>
+                </picker>
+                <!--多选  -->
+                <view class='select-mour' wx:if="{{item.type === 'multiSelect'}}" 
+                    bindtap='getMorSelect'
+                    data-parent="applicantFields_2"
+                    data-pr="pr"
+                    data-index="{{index}}"
+                    >
+                    <view class='selected clearfix'>
+                      <!--已选  -->
+                      <view class='select-list' 
+                        wx:for="{{item.listArr}}"
+                        wx:for-item="itemListC" 
+                        wx:for-index="itemIndexC" 
+                        wx:key="{{itemIndexC}}">
+                        <text>{{itemListC.cn}}</text>
+                        <view class='close-box'
+                        data-chindex="{{itemIndexC}}"
+                        data-index="{{index}}"
+                        data-parent="applicantFields_2"
+                        data-cn="{{itemListC.cn}}"
+                        data-id="{{itemListC.id}}"
+                        catchtap="getDelList"
+                        >
+                          <view class='close-parent'></view>
+                        </view>
+                      </view>
+                      <!--选择列表  -->
+                      <view class='select-list-wrap' hidden="{{!item.listShow}}">
+                        <scroll-view scroll-y style="height: 100%; width: 100%;">
+                          <view class='list' 
+                            wx:for="{{item.list}}" 
+                            wx:for-item="itemList" 
+                            wx:for-index="itemIndex" 
+                            wx:key="{{itemIndex}}"
+                            data-parent="applicantFields_2"
+                            data-pr="ch"
+                            data-index="{{index}}"
+                            data-cn="{{itemList.cn}}"
+                            data-id="{{itemList.id}}"
+                            data-indexc="{{itemIndex}}"
+                            catchtap='getMorListed'
+                            >
+                            {{itemList.cn}}
+                          </view>
+                        </scroll-view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+                <view class='border-bottom'></view>
+              </view>
+            </view>
+            <!--委托人信息  -->
+            <view class='agentFilds-wrap' wx:if="{{!agentFieldsSwite}}">
+              <view class='message-title'>2. 委托人信息</view>
+              <view class="input-list {{item.error?'error':''}} clearfix" wx:for="{{listArr.agentFields}}" wx:key="{{index}}" wx:if="{{listArr.agentFields.length}}">
+                <view class='input-name pull-left'><text class="required-text {{item.required?'active':''}}">*</text>{{item.displayName}}</view>
+                <view class='input-wrap pull-right'>
+                  <!--普通  -->
+                  <input disabled='{{item.disabled}}' bindinput='inputVal' data-parent="agentFields" data-index="{{index}}" value="{{item.val}}" name="{{item.name}}" type='text' placeholder="请输入{{item.displayName}}" class="item-error" wx:if="{{item.type === 'text'}}"></input>
+                  <!--number  -->
+                  <input disabled='{{item.disabled}}' bindinput='inputVal' data-parent="agentFields" data-index="{{index}}" value="{{item.val}}" name="{{item.name}}" type='number' placeholder="请输入{{item.displayName}}" class="item-error" wx:if="{{item.type === 'number'}}"></input>
+                <!--  日期  -->
+                  <picker disabled='{{item.disabled}}' class="item-error" name="{{item.name}}" data-parent="agentFields" data-index="{{index}}" wx:if="{{item.type === 'date'}}" mode="date" value="{{item.date}}" start="1990-09-01" end="2050-09-01" bindchange="bindDateChange">
+                    <view class="picker">
+                      {{item.date}}
+                    </view>
+                  </picker>
+                  <!--下拉  -->
+                  <picker disabled='{{item.disabled}}' class="item-error" name="{{item.name}}" data-parent="agentFields" data-index="{{index}}" wx:if="{{item.type === 'select'}}" bindchange="bindPickerChange" value="{{item.enList[item.count]}}" range="{{item.cnList}}">
+                    <view class="picker">
+                      {{item.cnList[item.count]}}
+                    </view>
+                  </picker>
+                </view>
+                <view class='border-bottom'></view>
+              </view>
+            </view>
+            <!--送达  -->
+            <view class='message-title' wx:if="{{agentFieldsSwite}}">2. 送达方式</view>
+            <view class='message-title' wx:if="{{!agentFieldsSwite}}">3. 送达方式</view>
+            <view class="input-list {{item.error?'error':''}} clearfix" wx:for="{{listArr.sendFields}}" wx:key="{{index}}" wx:if="{{listArr.sendFields.length}}">
+              <view class='input-name pull-left'><text class="required-text {{item.required?'active':''}}">*</text>{{item.displayName}}</view>
+              <view class='input-wrap pull-right'>
+                <!--普通  -->
+                <input disabled='{{item.disabled}}' bindinput='inputVal' data-parent="sendFields" data-index="{{index}}" value="{{item.val}}" name="{{item.name}}" type='text' placeholder="请输入{{item.displayName}}" class="item-error" wx:if="{{item.type === 'text'}}"></input>
+                <!--数组  -->
+                <input disabled='{{item.disabled}}' bindinput='inputVal' data-parent="sendFields" data-index="{{index}}" value="{{item.val}}" name="{{item.name}}" type='number' placeholder="请输入{{item.displayName}}" class="item-error" wx:if="{{item.type === 'number'}}"></input>
+                <!--日期  -->
+                <picker disabled='{{item.disabled}}' class="item-error" name="{{item.name}}" data-parent="sendFields" data-index="{{index}}" wx:if="{{item.type === 'date'}}" mode="date" value="{{item.date}}" start="1990-09-01" end="2050-09-01" bindchange="bindDateChange">
+                  <view class="picker">
+                    {{item.date}}
+                  </view>
+                </picker>
+                <!--下拉  -->
+                <picker disabled='{{item.disabled}}' class="item-error" name="{{item.name}}" data-parent="sendFields" data-index="{{index}}" wx:if="{{item.type === 'select'}}" bindchange="bindPickerChange" value="{{item.enList[item.count]}}" range="{{item.cnList}}">
+                  <view class="picker">
+                    {{item.cnList[item.count]}}
+                  </view>
+                </picker>
+              </view>
+              <view class='border-bottom'></view>
+            </view>
+          </view>
+          <view class='next-btn-wrap' style="padding-top: 60rpx;">
+            <!-- <view class='child-btn active' bindtap='getNext'>下一步</view> -->
+            <button class='child-btn active' formType="submit">下一步</button>
+          </view>
+          <view class='login-link-wrap' wx:if="{{loginLink}}">
+            <navigator url=''>已有账号，立即登录 <text class='iconfont icon-arrow'></text></navigator>
+          </view>
+        </view>
+      </view>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,22 @@
+<!--pages/guide/list.wxml-->
+<view class='all-wrap'>
+  <view class='parent-list' wx:for="{{listArr}}" wx:key="{{index}}">
+    <view class="title clerfix {{item.swite?'active':''}}" data-index="{{index}}" bindtap='listGet'>
+      {{item.name}}
+      <text class="iconfont icon-arrow pull-right"></text>
+    </view>
+    <view class='child-list' hidden='{{!item.swite}}'>
+      <view class='list clearfix' 
+        wx:for="{{item.data}}"
+        wx:for-index="idx"
+        wx:for-item="itemName"
+        bindtap='getNext'
+        data-id="{{itemName.id}}"
+        wx:key="{{idx}}">
+        <view class='list-name pull-left'>{{itemName.title}}</view>
+        <text class='iconfont icon-arrow pull-right'></text>
+        <view class='border-bottom'></view>
+      </view>
+    </view>
+  </view>
+</view>

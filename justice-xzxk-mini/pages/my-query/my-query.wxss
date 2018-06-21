@@ -1,0 +1,64 @@
+/* pages/my-query/my-query.wxss */
+.list-wrap {
+  width: 100%;
+  height: auto;
+  padding-top: 20rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  background: #fff;
+}
+.input-list {
+  position: relative;
+  width: 100%;
+  height: auto;
+  font-size: 15px;
+  color: #333;
+}
+.input-list .input-name {
+  width: 35%;
+  height: auto;
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+.input-list .input-wrap {
+  width: 65%;
+  padding-left: 15rpx;
+  min-height: 50rpx;
+}
+.input-list.error .item-error {
+  color: red;
+}
+.input-list.error {
+  color: red;
+}
+.input-list.error .border-bottom {
+  background: red;
+}
+.input-list .input-wrap .picker {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.input-list .input-wrap input {
+  height: 44px;
+}
+.input-list .input-wrap picker, .input-list .input-wrap input {
+  width: 100%;
+  color: #333;
+}
+.input-code {
+  padding-right: 200rpx;
+}
+.code-img-wrap {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 160rpx;
+  height: 60rpx;
+}
+.btn-box {
+  padding-top: 60rpx;
+  padding-bottom: 60rpx;
+  background: #fff;
+}

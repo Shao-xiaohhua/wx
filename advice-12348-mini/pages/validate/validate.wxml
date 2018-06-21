@@ -1,0 +1,32 @@
+<!--validate.wxml-->
+<view class="feedback-form">
+  <form bindsubmit="validateSubmit" >
+  <view class="weui-cells__title">绑定手机号</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">手机号</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" type="digit" confirm-type="next" placeholder="请输入手机号" bindinput="setNum" disabled="{{numdisabled}}" name="mobile"/>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input weui-cell_vcode">
+      <view class="weui-cell__hd">
+        <view class="weui-label">验证码</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" type="digit" confirm-type="go" name="code"/>
+      </view>
+      <view class="weui-cell__ft"  bindtap="htap">
+        <view class="weui-vcode-btn disabled" wx:if="{{ timerval !== '获取验证码' }}">{{ timerval }}</view>
+        <view class="weui-vcode-btn" wx:else>{{ timerval }}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="weui-cells__title error">{{errorinfo}}</view>
+  <button form-type="submit" class="submit-btn" type="primary" hover-class="active-state">验证手机</button>
+  <view class='readme'>点击立即验证手机，即表示已阅读并同意<navigator url='../xecontent/xecontent'>《用户注册协议》</navigator></view>
+  </form>
+</view>

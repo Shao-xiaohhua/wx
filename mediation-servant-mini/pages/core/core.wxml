@@ -1,0 +1,52 @@
+<!--pages/core.wxml-->
+<view class='core-wrap'>
+  <view class='core-banner'>
+    <image class='banner-img' src='../../images/banner.png'></image>
+    <view class='pic-box'>
+      <image bindtap="" class="userinfo-avatar" src="{{userInfo.avatar}}" background-size="cover"></image>
+      <navigator open-type="reLaunch" class='core-user-id' url="../index/index">
+        前往首页
+        <view class='arrow'></view>
+      </navigator>
+    </view>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <view class='userinfo-number'>{{userInfo.org}}</view>
+    <view class='user-tag'>
+      <text class='iconfont icon-v'></text>
+      <text class='tag-type'>人民调解员</text>
+    </view>
+  </view>
+  <!--列表1  -->
+  <view class='core-list-wrap'>
+    <view class='list clearfix' wx:for="{{listArrOne}}" wx:key="{{index}}">
+      <text class='iconfont {{item.icon}} {{item.color}}'></text>
+      <navigator class='list-link' url='{{item.url}}'>
+        <text class='list-name'>{{item.name}}</text>
+      </navigator>
+      <view class='arrow'></view>
+    </view>
+  </view>
+  <!--列表2  -->
+   <view class='core-list-wrap'>
+    <view class='list clearfix' wx:for="{{listArrTwo}}" wx:key="{{index}}">
+      <text class='iconfont {{item.icon}} {{item.color}}'></text>
+      <navigator class='list-link' url='{{item.url}}'>
+        <text class='list-name'>{{item.name}}</text>
+      </navigator>
+      <view class='arrow'></view>
+    </view>
+  </view> 
+  <!--列表3设置  -->
+  <!-- <view class='core-list-wrap'>
+    <view class='list clearfix'>
+      <text class='iconfont icon-set-up'></text>
+      <navigator class='list-link' url=''>
+        <text class='list-name'>设置</text>
+      </navigator>
+      <view class='arrow'></view>
+    </view>
+  </view> -->
+  <view class='button-box-core'>
+    <button type='warn' bindtap='logout'>退出登录</button>
+  </view>
+</view>

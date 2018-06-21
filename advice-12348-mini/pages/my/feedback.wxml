@@ -1,0 +1,11 @@
+<!--feedback.wxml-->
+<view class="feedback-form">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <textarea class="weui-textarea" maxlength="-1" auto-focus="true" auto-height="true" bindinput="setCounter" placeholder="请输入您要反馈及投诉的情况" style="min-height: 10em"  value="{{counter}}"/>
+        </view>
+      </view>
+    </view>
+    <button class="submit-btn" type="primary" hover-class="active-state" bindtap="send">确认发送</button>
+</view>

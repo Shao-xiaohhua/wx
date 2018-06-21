@@ -1,0 +1,44 @@
+/* pages/apply/seto-two.wxss */
+.content-wrap {
+  padding-top: 0;
+}
+.swpier-wrap {
+  width: 100%;
+  height: 600rpx;
+  background: transparent;
+}
+.choice-list-wrap {
+  width: 100%;
+  height: 100%;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  background: white;
+}
+.choice-list-wrap .list {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  padding-right: 60rpx;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+}
+.choice-list-wrap .list .iconfont {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+}
+/* .choice-list-wrap .list:active {
+  background: red;
+} */
+.choice-list-wrap .list.active {
+  color: #ff753f;
+}

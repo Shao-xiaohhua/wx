@@ -1,0 +1,8 @@
+<!--pages/feedbackDown/feedbackDown.wxml-->
+<view class='padding-wrap'>
+  <view class='icon-wrap'>
+    <text class='iconfont icon-apply'></text>
+  </view>
+  <text class='down'>提交成功</text>
+  <text class='thanks'>感谢您的反馈!</text>
+</view>

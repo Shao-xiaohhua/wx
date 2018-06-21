@@ -1,0 +1,132 @@
+/* pages/my-matter/my-matter.wxss */
+page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 110rpx;
+}
+.shdow-box {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  z-index: 888;
+}
+.shdow-box .chcked {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 549rpx;
+  height: 244rpx;
+  background: #fff;
+  border-radius: 4px;
+}
+.shdow-box .chcked text {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 156rpx;
+  text-align: center;
+  line-height: 156rpx;
+  font-size: 18px;
+  color: #333;
+}
+.shdow-box .chcked .botm-box {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 156rpx);
+}
+.chcked .botm-box .botm {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  padding-top: 20rpx;
+  text-align: center;
+}
+.tab-wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  z-index: 888;
+}
+.tab-wrap .tab {
+  width: calc(100% / 3);
+  height: auto;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  float: left;
+  text-align: center;
+  font-size: 15px;
+  color: #333;
+}
+.tab-wrap .tab.active {
+  color: #5297fd;
+}
+.content-wrap {
+  width: 100%;
+  height: auto;
+  margin-top: 20rpx;
+  display: none;
+}
+.content-wrap.active {
+  display: block;
+}
+.list-warp {
+  width: 100%;
+  height: auto;
+  margin-top: 20rpx;
+}
+.list-warp .list {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20rpx;
+  background: #fff;
+}
+ .list-warp .list navigator {
+   padding: 40rpx 40rpx 20rpx 40rpx;
+ }
+.list-warp .list .title {
+  margin-bottom: 25rpx;
+  font-size: 16px;
+  color: #333;
+}
+.list-warp .list .type {
+  margin-bottom: 20rpx;
+  font-size: 14px;
+  color: #999;
+}
+.tag {
+  padding: 6rpx 20rpx;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 40px;
+  background: #eee;
+}
+.tag.pass {
+  background: #5297fd;
+}
+.tag.in {
+  background: #ff753f;
+}
+.bottom-wrap {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.bottom-wrap .check-box {
+  position: relative;
+  width: 50%;
+  height: auto;
+  padding-top: 25rpx;
+  padding-bottom: 25rpx;
+  text-align: center;
+  line-height: 100%;
+}

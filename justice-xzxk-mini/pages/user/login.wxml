@@ -1,0 +1,33 @@
+<!--pages/user/login.wxml-->
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<view class="shadowWrap {{shadowSwite?'active':''}}">
+  <view class='shadoClear'>
+    <text class='name'>{{msg}}</text>
+    <!-- <text class='prompt'>填写全部信息才可进行下一步</text> -->
+    <view class='clear-btn' bindtap='clearShadow'>我知道了</view>
+  </view>
+</view>
+<view class='top-link clearfix'>
+  <navigator bindtap='clearWXswite' url='register' class='pull-right'>没有账号，立即注册  <text class='iconfont icon-arrow'></text></navigator>
+</view>
+<view class='input-wrap'>
+  <view class='list clearfix'>
+    <view class='icon-warp pull-left'>
+      <text class='iconfont icon-phone'></text>
+    </view>
+    <view class='inp-wrap pull-left'>
+      <input bindinput='getNum' type='number' placeholder='请输入手机或身份证号码'></input>
+    </view>
+  </view>
+  <view class='list clearfix'>
+    <view class='icon-warp pull-left'>
+      <text class='iconfont icon-new-password'></text>
+    </view>
+    <view class='inp-wrap pull-left'>
+      <input bindinput='getPass' type='password' placeholder='请输入密码'></input>
+    </view>
+  </view>
+  <view class='list login clearfix' bindtap='getNext'>
+    立即登录
+  </view>
+</view>

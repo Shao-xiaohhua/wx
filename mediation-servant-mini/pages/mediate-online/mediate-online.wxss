@@ -1,0 +1,111 @@
+/* pages/mediate-online/mediate-online.wxss */
+page {
+  padding-top: 100rpx;
+}
+.top-tab {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  z-index: 88888888888888888888888;
+}
+.top-tab .list {
+  width: calc(100% / 2);
+  height: auto;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  line-height: 100%;
+  text-align: center;
+  font-size: 15px;
+  float: left;
+}
+.top-tab .list.active text {
+  color: #4895ff;
+  border-color: #4895ff;
+}
+.top-tab .list text {
+  max-width: 100%;
+  margin-bottom: -2px;
+  line-height: 100%;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  color: #cccccc;
+  border-bottom: 3px solid transparent;
+}
+.card-wrap {
+  width: 100%;
+  height: auto;
+  padding-left: 24rpx;
+  padding-right: 24rpx; 
+  margin-top: 20rpx;
+}
+.card-wrap .card {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20rpx;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.card-wrap .card.active .list.head {
+  background: #f63131;
+}
+.card-wrap .card.active .list.head .ct {
+  color: #fb9898;
+}
+.card-wrap .card .list {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 20rpx 17rpx;
+  line-height: 100%;
+  font-size: 15px;
+}
+.card-wrap .card .list:last-child .border {
+  display: none;
+}
+.card-wrap .card .list .border {
+  width: calc(100% - 34rpx);
+  right: 0;
+  margin: auto;
+  transform: scaleY(0.5);
+}
+.card-wrap .card .list text {
+  display: inline-block;
+  height: auto;
+  line-height: 100%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.card-wrap .card .list.head {
+  background: #999999;
+}
+.card-wrap .card .list.head .tp {
+    width: 80%;
+    color: #fff;
+}
+.card-wrap .card .list.head .ct {
+    width: 20%;
+    color: #cccccc;
+}
+.card-wrap .card .list .tpct {
+  text-align: left;
+  color: #666666;
+}
+.card-wrap .card .list .ct {
+    width: 70%;
+  float: right;
+  text-align: right;
+  color: #999999;
+}
+.search-child-list-wrap {
+  padding-left: 0;
+  padding-right: 0;
+}

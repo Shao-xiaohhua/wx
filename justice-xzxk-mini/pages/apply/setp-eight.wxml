@@ -1,0 +1,72 @@
+<!--pages/apply/setp-eight.wxml-->
+<view class='setp-wrap clearfix'>
+  <loading hidden="{{hiddenLoading}}">正在加载</loading>
+  <!--顶部setp  -->
+  <scroll-view scroll-x style="width: 100%" scroll-into-view="{{scrollId}}">
+    <view class='slwp' style='width:1400rpx'>
+      <view bindtap='getStorNav' id="{{item.id}}" class="scroll-item {{item.dq?'dq':''}}" wx:for="{{setpArr}}" wx:key="{{index}}">
+        <navigator url='{{item.url}}' open-type="redirect">
+          <view class="number {{item.pass?'pass':''}}">{{index + 1}}</view>
+          <view class="number {{item.pass?'':'pass'}}"><text class='iconfont icon-right'></text></view>
+          <view class='name'>{{item.name}}</view>
+          <view class='border-center'></view>
+        </navigator>
+      </view>
+    </view>
+  </scroll-view>
+  <!--内容区  -->
+    <view class='padding-wrap clearfix'>
+      <view class='child-wrap'>
+      <!--title  -->
+      <view class='title'>
+        <view class='name'>
+          <text>请确认信息</text>
+          <view class='title-line left'></view>
+          <view class='title-line right'></view>
+        </view>
+      </view>
+      <!--content  -->
+      <view class='content-wrap' style="padding-top: 0;">
+        <view class='pd-wrap'>
+          <!--步骤  -->
+          <view class='' style='padding-top: 30rpx;padding-bottom: 20rpx;'>
+            1. 事项名称
+          </view>
+          <view class='setp-str'>{{setpStr}}
+            <!-- <view class='border-bottom'></view> -->
+          </view>
+          <!--列表  -->
+          <view class='' style='padding-top: 0;padding-bottom: 0;'>
+            2. 基本信息
+          </view>
+          <view class='setp-list'>
+            <view class='list' wx:for="{{busArr}}" wx:key="{{index}}">
+              <text class='name'>{{item.displayName}} : </text>
+              <text class='content'>{{item.val}}</text>
+            </view>
+            <!-- <view class='border-bottom'></view> -->
+          </view>
+          <!--材料  -->
+          <view class='setp-str' style='padding-top: 0;padding-bottom: 20rpx'>
+           3. 线上材料
+          </view>
+          <view class='cl-list-wrap' style='width:100%'>
+            <view class='list-item' style='margin-bottom: 10rpx;' wx:for="{{newbusFileArr.xs}}" wx:key="{{index}}">{{item.stuffName}}<text class='color-text'> x {{item.list.length}}</text></view>
+          </view>
+          <view class='setp-str' style='padding-top: 40rpx;padding-bottom: 20rpx'>
+           4. 线下材料
+          </view>
+          <view class='cl-list-wrap' style='width:100%'>
+            <view class='list-item' style='margin-bottom: 10rpx;' wx:for="{{newbusFileArr.xx}}" wx:key="{{index}}">{{item.stuffName}}<text class='color-text'> x {{item.list.length}}</text></view>
+          </view>
+        </view>
+        <view class='next-btn-wrap' style="padding-top: 60rpx;">
+          <view class='child-btn active' bindtap='getNext'>确认提交</view>
+        </view>
+        <view class='login-link-wrap' wx:if="{{loginLink}}">
+          <navigator url=''>已有账号，立即登录 <text class='iconfont icon-arrow'></text></navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

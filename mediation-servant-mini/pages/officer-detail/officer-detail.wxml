@@ -1,0 +1,50 @@
+<!--pages/officer-detail/officer-detail.wxml-->
+<view class='officer-detail-wrap' style='display:{{isLaw?"block":"none"}}'>
+    <view class='title'>{{lawData.name}}</view>
+    <view class='message-list'>
+        <view class='list clearfix'>
+            <view class='head pull-left'>条款:</view>
+            <view class='body pull-left'>{{lawData.item}}</view>
+        </view>
+        <view class='list clearfix'>
+            <view class='head pull-left'>效力级别：</view>
+            <view class='body pull-left'>{{lawData.effective}}</view>
+        </view>
+        <view class='list clearfix'>
+            <view class='head pull-left'>时效性：</view>
+            <view class='body pull-left'>{{lawData.aging}}</view>
+        </view>
+    </view>
+    <view class='content'>
+        {{lawData.content}}
+    </view>
+</view>
+<view class='officer-detail-wrap' style='display:{{isLaw?"none":"block"}}'>
+    <view class='title'>{{caseData.title}}</view>
+    <view class='text-number'>{{caseData.number}}</view>
+    <view class='message-list'>
+        <view class='list clearfix'>
+            <view class='head pull-left'>法院:</view>
+            <view class='body pull-left'>{{caseData.court}}</view>
+        </view>
+        <view class='list clearfix'>
+            <view class='head pull-left'>裁判要旨：</view>
+            <view class='body pull-left'>{{caseData.gist}}</view>
+        </view>
+        <view class='list clearfix'>
+            <view class='head pull-left'>文书类型：</view>
+            <view class='body pull-left'>{{caseData.type}}</view>
+        </view>
+        <view class='list clearfix'>
+            <view class='head pull-left'>案由：</view>
+            <view class='body pull-left'>{{caseData.cause}}</view>
+        </view>
+        <view class='list clearfix'>
+            <view class='head pull-left'>审理程序：</view>
+            <view class='body pull-left'>{{caseData.grade}}</view>
+        </view>
+    </view>
+    <view class='content'>
+        {{caseData.content}}
+    </view>
+</view>

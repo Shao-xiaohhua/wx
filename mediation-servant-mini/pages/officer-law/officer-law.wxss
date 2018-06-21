@@ -1,0 +1,58 @@
+/* pages/officer-law/officer-law.wxss */
+.officer-list-wrap {
+  width: 100%;
+  height: auto;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+}
+.officer-list-wrap .list {
+  width: 100%;
+  height: auto;
+  margin-top: 24rpx;
+  padding-bottom: 30rpx;
+  padding-left: 17rpx;
+  padding-right: 17rpx;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.officer-list-wrap .list navigator {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+  background: white;
+}
+.officer-list-wrap .list .title {
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 16px;
+  color: #666;
+  font-weight: bold;
+}
+.officer-list-wrap .list .content {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 30rpx;
+  font-size: 14px;
+}
+.officer-list-wrap .list .content .name {
+  display: block;
+  max-width: 40%;
+  float: left;
+  color: #999999;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.officer-list-wrap .list .content .con-text {
+  display: block;
+  max-width: 60%;
+  float: right;
+  color: #666666;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}

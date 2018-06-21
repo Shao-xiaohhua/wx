@@ -1,0 +1,76 @@
+/* pages/consultation-done/consultation-done.wxss */
+.message-wrap {
+  width: 100%;
+  height: auto;
+  margin-top: 20rpx;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  background: #fff;
+}
+.new-message {
+  width: 370rpx;
+  height: auto;
+  margin: 0 auto;
+}
+.new-message navigator {
+  padding: 26rpx 20rpx;
+  line-height: 100%;
+  font-size: 15px;
+  color: #fff;
+  border-radius: 4px;
+  background: #4895ff;
+}
+.new-message .iconfont {
+  margin-right: 10rpx;
+}
+.new-message .number {
+  float: right;
+}
+.number-list-wrap {
+  width: 100%;
+  height: auto;
+  margin-top: 20rpx;
+}
+.number-list {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  font-size: 15px;
+  color: #333;
+}
+.number-list:last-child .border {
+  display: none;
+}
+.number-list .number {
+  float: right;
+  color: #4895ff;
+}
+.message-wrap .notes {
+  display: block;
+  line-height: 20px;
+  color: #999;
+  font-size: 15px;
+}
+.button-box {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+.button-box button {
+  width: 50%;
+  float: left;
+  color: #fff;
+  border-radius: 0;
+}
+.button-box button.r {
+  background: #41d12e;
+}
+.button-box button.n {
+  background: #4895ff;
+}

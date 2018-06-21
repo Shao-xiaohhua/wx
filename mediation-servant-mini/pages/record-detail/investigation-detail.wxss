@@ -1,0 +1,4 @@
+/* pages/record-detail/investigation-detail.wxss */
+.button-box .n {
+  width: 100%;
+}

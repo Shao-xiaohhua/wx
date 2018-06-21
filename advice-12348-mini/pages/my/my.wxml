@@ -1,0 +1,43 @@
+<!--my.wxml-->
+<view class="my">
+  <block class="profile" wx:if="{{hasUserInfo === ''}}">
+    <text>未获取用户信息</text>
+  </block>
+  <view class="profile">
+    <view class="user-avatar"><image src="{{ userInfo.avatarUrl }}" mode="aspectFill" class="avatar"></image></view>
+    <view class="user-nickname">{{ userInfo.nickName }}</view>
+    <view wx:if="{{ phoneNum === '' }}" class="user-info">暂未验证手机号</view>
+    <view wx:else class="user-info">手机号码: <text>{{ phoneNum }}</text></view>
+  </view>
+  <view class="weui-cells feedback" wx:if="{{ phoneNum === '' }}">
+    <navigator url="../validate/validate" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">绑定手机</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+  
+  <view class="weui-cells feedback">
+    <navigator url="feedback" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">反馈及投诉</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+  <button class="submit-btn" type="primary" hover-class="active-state" bindtap="zixunBtn">我要咨询</button>
+  <!-- 如果有咨询记录 -->
+  <view class="weui-panel advice-list" wx:if="{{zixunlist.length>0}}">
+    <view class="weui-panel__hd">我的咨询</view>
+    <view class="weui-panel__bd">
+      
+      <navigator wx:for="{{zixunlist}}" wx:key="item" url="/pages/collection/show?id={{item.id}}&title={{item.title}}&type={{item.type}}" class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text"><text class="tag" wx:if="{{item.typeName!=''}}">[{{item.typeName}}]</text>{{item.title}}</view>
+        <view class="weui-media-box__info">
+          <view class="weui-media-box__info__meta">
+            <text class="status {{item.status=='已回复'?'bg_blue':'bg_orange'}}">{{item.status}}</text>
+            <text class="type">{{item.type}}</text>
+          </view>
+          <view class="weui-media-box__info__meta">{{item.time}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

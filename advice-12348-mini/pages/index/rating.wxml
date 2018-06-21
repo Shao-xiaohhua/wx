@@ -1,0 +1,51 @@
+<!--pages/index/rating.wxml-->
+<view class='visitor'>
+<!--基本信息  -->
+  <view class='law-card clearfix' wx:if="{{servant!=null}}">
+    <view class='thumb'>
+      <image class="userinfo-avatar" src="{{servant.avatar?servant.avatar:'../../images/s.png'}}" background-size="cover"></image>
+    </view>
+    <view class='name-box'>
+      <view class='name'>{{servant.name}}<text class='small'>{{servant.staffTypeName}}</text></view>
+      <view class='desc'>{{servant.company}}</view>
+    </view>
+  </view>
+  <!--表情评价  -->
+  <view class='evaluate'>
+    <view class='row evaluate-list'>
+      <view class='col-33' wx:for="{{evaluateItems}}" wx:key="item">
+        <view class='evaluate-item {{item.value==evaluate?"active":""}}' bindtap="selectVlaue" data-value="{{item.value}}">
+          <text class='iconfont {{item.icon}}'></text>
+          <view>{{item.name}}</view>
+        </view>
+      </view>
+      
+    </view>
+  </view>
+  <!--tag  -->
+  <view class='comment-cell'>
+    <view class='tag-group clearfix'>
+      <view class='list' wx:for="{{fieldItems}}" wx:key="item" >
+        <view class='tag {{item.check?"active":""}}' bindtap="selectFieldValue" data-value="{{item.name}}">{{item.name}}</view>
+      </view>
+      
+    </view>
+    <!--输入评价  -->
+    <view class='comment-box'>
+      <textarea placeholder="请输入您的评价" maxlength="-1" value="{{fieldValue}}"/>
+    </view>
+    <button bindtap="submitEvaluate" class='rating-btn'> 提交评价 </button>
+  </view>
+  <!--应答者 -->
+  <!--<view class='staff'>
+    <form class='feedback'>
+      <view class='form-group'>
+        <input placeholder="咨询问题" class='title' auto-focus/>
+      </view>
+      <view class='form-comment'>
+        <textarea placeholder="输入您的答复" maxlength="-1" auto-focus />
+      </view>
+      <button bindtap="warn" class='rating-btn'> 提交评价 </button>
+    </form>
+  </view>-->
+</view>

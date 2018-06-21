@@ -1,0 +1,86 @@
+<!--pages/mediate-online/online-voice.wxml-->
+<my-component-tab tab-arr="{{tabArr}}"></my-component-tab>
+<form bindsubmit='goNext'>
+    <view class='con-voice-wrap'>
+        <view class='title'>请简述纠纷主要事实及争议事项</view>
+        <view class='voice-wrap'>
+            <textarea placeholder='请简述纠纷主要事实及争议事项。自动识别语音内容，并可对识别内容进行修改' bindinput='onchange' name="content" value="{{content}}"></textarea>
+            <view class='voice-button active' bindtouchstart='voiceB' bindtouchend='voiceE' hover-class="hot">
+                <text class='iconfont icon-microphone'></text>
+            </view>
+            <view class='voice-login' wx:if="{{voiceLoginSwite}}">识别中...</view>
+            <view class='voice-animate-wrap clearfix' hidden='{{recording}}'>
+                <view class='line-box clearfix'>
+                    <view class='line le1'></view>
+                    <view class='line le2'></view>
+                    <view class='line le3'></view>
+                    <view class='line le4'></view>
+                    <view class='line le5'></view>
+                    <view class='line le6'></view>
+                    <view class='line le7'></view>
+                    <view class='line le8'></view>
+                    <view class='line le9'></view>
+                </view>
+                <view class='line-box'>
+                    <view class='line le12'></view>
+                    <view class='line le22'></view>
+                    <view class='line le32'></view>
+                    <view class='line le42'></view>
+                    <view class='line le52'></view>
+                    <view class='line le62'></view>
+                    <view class='line le72'></view>
+                    <view class='line le82'></view>
+                    <view class='line le92'></view>
+                </view>
+                <view class='line-box'>
+                    <view class='line le13'></view>
+                    <view class='line le23'></view>
+                    <view class='line le33'></view>
+                    <view class='line le43'></view>
+                    <view class='line le53'></view>
+                    <view class='line le63'></view>
+                    <view class='line le73'></view>
+                    <view class='line le83'></view>
+                    <view class='line le93'></view>
+                </view>
+                <view class='line-box'>
+                    <view class='line le14'></view>
+                    <view class='line le24'></view>
+                    <view class='line le34'></view>
+                    <view class='line le44'></view>
+                    <view class='line le54'></view>
+                    <view class='line le64'></view>
+                    <view class='line le74'></view>
+                    <view class='line le84'></view>
+                    <view class='line le94'></view>
+                </view>
+                <view class='line-box'>
+                    <view class='line le15'></view>
+                    <view class='line le25'></view>
+                    <view class='line le35'></view>
+                    <view class='line le45'></view>
+                    <view class='line le55'></view>
+                    <view class='line le65'></view>
+                    <view class='line le75'></view>
+                    <view class='line le85'></view>
+                    <view class='line le95'></view>
+                </view>
+                <view class='line-box'>
+                    <view class='line le16'></view>
+                    <view class='line le26'></view>
+                    <view class='line le36'></view>
+                    <view class='line le46'></view>
+                    <view class='line le56'></view>
+                    <view class='line le66'></view>
+                    <view class='line le76'></view>
+                    <view class='line le86'></view>
+                    <view class='line le96'></view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='button-box clearfix'>
+        <button class='r'>重新录入</button>
+        <button class='n' form-type='submit'>下一步</button>
+    </view>
+</form>

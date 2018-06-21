@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<scroll-view scroll-y style="height: 100%;">
+  <view class='index-wrap-box'>
+    <view class='bd-bg'>
+      <text class='cont-number'>已解答<text class='iner-number'>{{zxPrintCount}}</text>个法律问题</text>
+      <text class='cont-text'>免费法律咨询</text>
+      <view class='header-banner'></view>
+    </view>
+    <view class='consultation-wrap'>
+      <view class='list' wx:if="{{listArr.length > 0}}" wx:for="{{listArr}}" wx:key="item">
+        <view class="list-a" data-windowId="{{item.id}}" data-windowName="{{item.name}}" 
+        data-textonline="{{item.textonline}}" bindtap="startZixun">
+          <view class='icon-wrap' data-windowId="{{item.id}}" data-windowName="{{item.name}}" data-textonline="{{item.textonline}}">
+            <text class="iconfont {{item.icon}}" data-windowId="{{item.id}}" data-windowName="{{item.name}}" 
+            data-textonline="{{item.textonline}}"></text>
+          </view>
+          <view class='name' data-windowId="{{item.id}}" data-windowName="{{item.name}}"
+          data-textonline="{{item.textonline}}">{{item.name}}</view>
+          <view class='number' data-windowId="{{item.id}}" data-windowName="{{item.name}}" 
+          data-textonline="{{item.textonline}}" style="font-size:12px;">{{item.number}} 人次</view>
+        </view>
+      </view>
+      <view  wx:if="{{listArr.length == 0}}"  style="text-align:center;">
+        <view style="text-align:center;font-size:14px;color:#888;margin-top:50px;">请检查你的网络是否正常连接！</view>
+        <button size="mini" style="margin-bottom:50px;" bindtap="refreshTap">刷新</button>
+      </view>
+      <view class='clearboth'></view>
+    </view>
+  </view>
+  <view class='banner hotline'>
+    <navigator url="/pages/index/hotline">
+      <view class='banner-inner'>
+        <text class='title'>12348公共法律服务热线</text>
+        <text class='desc'>已服务<text class='number'>{{hotlinePrintCount}}</text>人次</text>
+        <view class='more'>查看详情</view>
+      </view>
+    </navigator>
+  </view>
+  
+</scroll-view>

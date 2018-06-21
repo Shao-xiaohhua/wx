@@ -1,0 +1,5 @@
+<!--pages/feedback/feedback.wxml-->
+<view class='padding-wrap'>
+  <textarea placeholder-class="plaColor" class='texa' placeholder="请输入您要反馈及投诉的情况"></textarea>
+  <view class='btn-link' hover-class="active" bindtap='getDown'>确认发送</view>
+</view>

@@ -1,0 +1,38 @@
+<!--pages/el-Id/el-Id.wxml-->
+<view class='core-wrap'>
+  <view class='core-banner'>
+    <image class='banner-img' src='../../images/banner.png'></image>
+    <navigator open-type="reLaunch" class='core-user-id' url="../index/index">
+      前往首页
+      <view class='arrow'></view>
+    </navigator>
+    <view class='pic-box'>
+      <image bindtap="" class="userinfo-avatar" src="{{userInfo.avatar}}" background-size="cover"></image>
+    </view>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <view class='userinfo-number'>{{userInfo.org}}</view>
+    <view class='user-tag'>
+      <text class='iconfont icon-v'></text>
+      <text class='tag-type'>{{userInfo.peopleType}}</text>
+    </view>
+  </view>
+  <!--信息列表  -->
+  <view class='mess-list'>
+    <view class='list clearfix' wx:for="{{arrOne}}" wx:key="{{index}}">
+      <text class='head'>{{item.head}}</text>
+      <text class='content'>{{item.content}}</text>
+      <view class='border'></view>
+    </view> 
+  </view>
+  <view class='mess-list'>
+    <view class='list clearfix' wx:for="{{arrTwo}}" wx:key="{{index}}">
+      <text class='head'>{{item.head}}</text>
+      <text class='content'>{{item.content}}</text>
+      <view class='border'></view>
+    </view> 
+  </view>
+</view>
+<!-- <view class='sfj-logo'>
+  <image class='banner-img' src='../../images/sfj_logo.png'></image>
+  <navigator url='../index/index'></navigator>
+</view> -->

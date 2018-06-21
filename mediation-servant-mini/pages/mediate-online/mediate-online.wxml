@@ -1,0 +1,49 @@
+<!--pages/mediate-online/mediate-online.wxml-->
+<view class='top-tab clearfix'>
+    <view class='list {{item.cl}}' wx:for="{{tabArr}}" wx:key="{{index}}" bindtap="ck" data-index="{{index}}">
+        <text>{{item.name}} ({{item.number}})</text>
+    </view>
+</view>
+<view class='card-wrap'>
+    <loading hidden="{{hidden}}">加载中...</loading>
+    <view class='search-child-list-wrap'>
+        <view class='list' wx:for="{{listArr}}" wx:key="{{index}}">
+            <view class='title'>
+                <view class='name'>{{item.name}}</view>
+                <view class='time'>{{item.date}}</view>
+                <view class='border'></view>
+            </view>
+            <view class='list-wrap'>
+                <view class='inner-wrap'>
+                    <view class='inner-list clearfix'>
+                        <text>联系方式：{{item.mobile}}</text>
+                    </view>
+                    <view class='inner-list clearfix'>
+                        <text>调委会：{{item.committee}}</text>
+                    </view>
+                    <!-- <view class='tag {{item.tagSwite}}' wx:if="{{item.tag}}">{{item.tag}}</view> -->
+                </view>
+            </view>
+            <navigator url='{{item.url}}'></navigator>
+        </view>
+        <!-- <view class='list'>
+            <view class='title'>
+                <view class='name'>11</view>
+                <view class='time'>22</view>
+                <view class='border'></view>
+            </view>
+            <view class='list-wrap'>
+                <view class='inner-wrap'>
+                    <view class='inner-list clearfix'>
+                        <text>姓名：33</text>
+                    </view>
+                    <view class='inner-list clearfix'>
+                        <text>联系方式：444</text>
+                    </view>
+                    <view class='tag {{item.tagSwite}}'>555</view>
+                </view>
+            </view>
+            <navigator url='mediate-online-detail'></navigator>
+        </view> -->
+    </view>
+</view>

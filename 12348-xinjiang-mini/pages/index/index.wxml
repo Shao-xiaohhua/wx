@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<swiper indicator-dots="true"
+  indicator-color="white"
+  indicator-active-color="#f8d752"
+  autoplay="trye" 
+  interval="5000" 
+  duration="500"
+  class='banner-swiper'
+  >
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <navigator url='#' class='banner-link'>
+        <image src="{{item}}" class="slide-image" width="100%" height="100%"/>
+      </navigator>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='padding-wrap'>
+  <view class='title-line'>
+    <text class='name'>留言咨询</text>
+  </view>
+</view>
+<view class='server-list-wrap'>
+  <view class='list' wx:for="{{linkArr}}" wx:key="{{index}}">
+    <navigator url='{{item.url}}'>
+      <view class='icon-wrap'>
+        <text class='iconfont {{item.icon}}'></text>
+      </view>
+      <text class='name'>{{item.name}}</text>
+    </navigator>
+  </view>
+</view>
+<view class='banner-link'>
+  <navigator url='../hot-tel/hot-tel'>
+    <image src="../../images/banner3.png" class="slide-image" width="100%" height="100%"/>
+  </navigator>
+</view>
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>   -->

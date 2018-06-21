@@ -1,0 +1,2 @@
+<!--pages/study-of-law-web-view/zyal.wxml-->
+<web-view src="https://12348.justice.gov.cn/m/miniApps/news/index.jsp?category=lpa.JudicialCase"></web-view>

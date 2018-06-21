@@ -1,0 +1,4 @@
+/* pages/investigation/investigation.wxss */
+page {
+  background: #fff;
+}

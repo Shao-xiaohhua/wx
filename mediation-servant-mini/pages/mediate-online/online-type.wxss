@@ -1,0 +1,4 @@
+/* pages/mediate-online/online-type.wxss */
+.lnkage-choice-wrap .title {
+  text-align: center;
+}

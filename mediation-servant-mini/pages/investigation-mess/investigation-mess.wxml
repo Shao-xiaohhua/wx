@@ -1,0 +1,47 @@
+<!--pages/investigation-mess/investigation-mess.wxml-->
+<my-component-tab tab-arr="{{tabArr}}"></my-component-tab>
+<view class='plate-wrap'>
+    <view class='title'>请读取当事人身份证件</view>
+    <view class='pic-box'>
+        <image src="{{picUrl}}" wx:if="picUrlSwite" bindtap='getPic'></image>
+        <view class='pic-button-box' bindtap='getPic' wx:if="{{!picUrlSwite}}">
+            <view class='pic-button' hover-class="active">
+                <text class='iconfont icon-photograph'></text>
+            </view>
+        </view>
+    </view>
+</view>
+<form bindsubmit='submitForm'>
+    <view class='feedback-list-wrap'>
+        <view class='title'>
+            <text>请确认以下信息</text>
+            <!-- <text class='pull-right' bindtap='getPic' wx:if="{{sbSwite}}">自动识别</text> -->
+            <text class='pull-right' wx:if="{{!sbSwite}}">识别中...</text>  
+            <view class='border'></view>
+        </view>
+        <view class='list {{item.error}} clearfix' wx:for="{{inputArr}}" wx:key="{{index}}">
+            <view class='tp'>{{item.name}}</view>
+            <input placeholder='{{item.ip}}' id="{{item.n}}" name='{{item.n}}' value="{{item.y}}" bindblur='onchange' />
+            <view class='border'></view>
+            <view class='arrow' wx:if="{{item.arrow}}"></view>
+            <text class='y' wx:if="false"></text>
+            <text class='text-error'>{{errorMsg}}</text>
+        </view>
+        <view class='title'>
+            <text>请确认纠纷发生地</text>
+            <view class='border'></view>
+        </view>
+        <view class='list {{item.error}} clearfix' wx:for="{{inputArrTwo}}" wx:key="{{index}}">
+            <view class='tp'>{{item.name}}</view>
+            <input placeholder="{{item.ip}}" name='{{item.n}}' value='{{item.y}}' disabled='true' />
+            <view class='border'></view>
+            <view class='arrow' wx:if="{{item.arrow}}"></view>
+            <text class='text-error'>调解员信息未找到</text>
+            <navigator url="{{item.url}}" wx:if="{{item.link}}"></navigator>
+        </view>
+    </view>
+    <view class='button-box clearfix'>
+        <button class='r' bindtap='toFirstPage'>重新录入</button>
+        <button class='n' form-type='submit'>完成</button>
+    </view>
+</form>

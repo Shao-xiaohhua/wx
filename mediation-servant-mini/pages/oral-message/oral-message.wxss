@@ -1,0 +1,139 @@
+/* pages/oral-message/oral-message.wxss */
+
+.lnkage-choice-wrap .title {
+    text-align: center;
+}
+
+.oral-time-wrap {
+    width: 100%;
+    height: auto;
+    padding-top: 40rpx;
+    padding-bottom: 90rpx;
+    margin-bottom: 20rpx;
+    padding-left: 90rpx;
+    padding-right: 90rpx;
+    background: #fff;
+}
+
+.oral-time-wrap .title {
+    width: 100%;
+    height: auto;
+    line-height: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: #333;
+}
+
+.oral-time-wrap .prompt {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20rpx;
+    padding-top: 20rpx;
+    text-align: center;
+    line-height: 100%;
+    color: #999;
+    font-size: 14px;
+}
+
+.oral-time-wrap .oral-button {
+    font-size: 15px;
+    color: #999;
+    border: 1px solid #ccc;
+}
+.oral-time-wrap .oral-button:after {
+  display: none;
+}
+.oral-time-wrap .oral-button.active {
+    color: #4895ff;
+    background: #fff;
+    border: 1px solid #4895ff;
+}
+
+.oral-time-box {
+    width: 100%;
+    height: auto;
+    margin-top: 20rpx;
+}
+
+.oral-time-box .time-tag {
+    width: calc(100% / 4 - 8rpx);
+    height: auto;
+    padding-top: 15rpx;
+    padding-bottom: 15rpx;
+    margin-left: 10rpx;
+    margin-bottom: 8rpx;
+    float: left;
+    color: #b7b7b7;
+    border-radius: 4px;
+    border: 1px solid #b7b7b7;
+}
+.oral-time-box .result-tag {
+    width: calc(100% / 3 - 16rpx);
+    height: auto;
+    text-align:center;
+    padding-top: 15rpx;
+    padding-bottom: 15rpx;
+    margin: 0rpx 8rpx 8rpx 8rpx;
+    float: left;
+    color: #b7b7b7;
+    border-radius: 4px;
+    border: 1px solid #b7b7b7;
+}
+
+.oral-time-box .choosed {
+    color: #4895ff;
+    background: #fff;
+    border: 1px solid #4895ff;
+}
+
+.oral-time-box .time-tag.active {
+    color: #fff;
+    background: #999;
+}
+
+.oral-time-box .time-tag .time {
+    font-size: 14px;
+    text-align: center;
+}
+
+.oral-time-box .time-tag .tp {
+    font-size: 12px;
+    text-align: center;
+}
+
+.oral-time-box .time-tag:first-child {
+    margin-left: 0;
+}
+
+.oral-time-box .time-tag:nth-child(4n + 1) {
+    margin-left: 0;
+}
+.link-for-officer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 35rpx;
+  padding-bottom: 70rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+  background: white;
+}
+.link-for-officer text {
+  display: block;
+  margin-bottom: 50rpx;
+  line-height: 100%;
+  font-size: 15px;
+  color: #333333;
+}
+.link-for-officer navigator {
+  padding-left: 125rpx;
+  padding-right: 125rpx;
+  padding-top: 18rpx;
+  padding-bottom: 18rpx;
+  line-height: 100%;
+  font-size: 15px;
+  color: white;
+  background: #4895ff;
+  border-radius: 4px;
+  display: inline-block;
+}

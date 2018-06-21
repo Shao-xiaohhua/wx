@@ -1,0 +1,41 @@
+<!--pages/oral-message/oral-message.wxml-->
+<my-component-tab tab-arr="{{tabArr}}"></my-component-tab>
+<view class='link-for-officer'>
+  <text>办案参考信息</text>
+  <navigator url="../officer/officer?action=kttj">智能辅助</navigator>
+</view>
+<view class='oral-time-wrap'>
+    <view class='title'>请选择调解结果</view>
+    <view class='oral-time-box clearfix'>
+        <view class='result-tag {{item.choosed}}' bindtap='chooseResult' wx:for="{{resultArr}}" wx:key="{{index}}" data-id="{{item.val}}">
+            <view class='time'>{{item.tp}}</view>
+        </view>
+    </view>
+</view>
+<view style='display:{{showXieyi}};'>
+    <view class='lnkage-choice-wrap clearfix' wx:for="{{hyArr}}" wx:key="{{index}}" wx:for-item="itA" wx:for-index="idx">
+        <view class='title'>{{itA.title}}</view>
+        <view class='label-tag-wrap' wx:for="{{itA.labelArr}}" wx:key="{{index}}" data-index="{{index}}" bindtap='cl' data-tp="{{idx}}" data-id='{{item.id}}'>
+            <label class='{{item.active}}'>
+                <checkbox checked="{{item.check}}"></checkbox>
+                {{item.name}}
+            </label>
+        </view>
+    </view>
+    <view class='oral-time-wrap'>
+        <view class='title'>请选择履行时间</view>
+        <view class='prompt'>（温馨提示:选择期限越长风险越大）</view>
+        <button class='oral-button {{lijilvxing}}' bindtap='chooseTimeLiji'>立即履行</button>
+        <view class='oral-time-box clearfix'>
+            <view class='time-tag {{item.choosed}}' bindtap='chooseTime' wx:for="{{timeArr}}" wx:key="{{index}}" data-time="{{item.time}}">
+                <view class='time'>{{item.tp1}}</view>
+                <view class='tp'>{{item.tp2}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='button-box clearfix'>
+    <button class='r' bindtap="goList"  style='display:{{allowEdit?"none":"block"}}'>返回列表</button>
+    <button class='r' bindtap="toFirstPage"  style='display:{{allowEdit?"block":"none"}}'>重新录入</button>
+    <button class='n' bindtap='submit'>完成录入</button>
+</view>

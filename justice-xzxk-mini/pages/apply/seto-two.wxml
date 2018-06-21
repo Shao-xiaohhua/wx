@@ -1,0 +1,111 @@
+<!--pages/apply/seto-two.wxml-->
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<view class='setp-wrap clearfix'>
+<!--顶部setp  -->
+  <scroll-view scroll-x style="width: 100%" scroll-into-view="{{scrollId}}">
+    <view class='slwp' style='width:1400rpx'>
+      <view bindtap='getStorNav' id="{{item.id}}" class="scroll-item {{item.dq?'dq':''}}" wx:for="{{setpArr}}" wx:key="{{index}}">
+        <navigator url='{{item.url}}' open-type="redirect">
+          <view class="number {{item.pass?'pass':''}}">{{index + 1}}</view>
+          <view class="number {{item.pass?'':'pass'}}"><text class='iconfont icon-right'></text></view>
+          <view class='name'>{{item.name}}</view>
+          <view class='border-center'></view>
+        </navigator>
+      </view>
+    </view>
+  </scroll-view>
+  <!--内容区  -->
+  <view class='padding-wrap clearfix'>
+    <view class='child-wrap'>
+    <!--title  -->
+      <view class='title'>
+        <view class='name'>
+          <text>请选择事项名称</text>
+          <view class='title-line left'></view>
+          <view class='title-line right'></view>
+        </view>
+      </view>
+      <!--content  -->
+      <view class='content-wrap' style='padding-top: 0;'>
+      <!--中间滑块  -->
+        <view class='swpier-wrap'>
+        <!--一级列表  -->
+          <swiper indicator-dots="{{true}}"
+          indicator-active-color="#333"
+            autoplay="{{false}}" style='height: 100%;' current="{{swiperIndex}}">
+            <block>
+              <swiper-item>
+                <scroll-view scroll-y style="height: 90%; width: 100%">
+                  <view class='choice-list-wrap'>
+                    <view class="list {{item.active?'active':''}}"
+                      wx:for="{{getMechanism}}" 
+                      wx:key="{{index}}"
+                      data-type="{{item.englishName}}"
+                      data-name="{{item.chineseName}}"
+                      data-index="{{index}}"
+                      bindtap='getBtype'
+                      >
+                      <text class='name'>{{item.chineseName}}</text>
+                      <text class='iconfont icon-arrow pull-right'></text>
+                      <view class='border-top'></view>
+                    </view>
+                  </view>
+                </scroll-view>
+              </swiper-item>
+            </block>
+            <block>
+              <!--二级列表  -->
+              <swiper-item>
+                <scroll-view scroll-y style="height: 90%; width: 100%">
+                  <view class='choice-list-wrap'>
+                    <view class="list {{item.active?'active':''}}"
+                      wx:for="{{getBusinessType}}" 
+                      wx:key="{{index}}"
+                      data-code="{{item.majorCode}}"
+                      data-name="{{item.majorName}}"
+                      data-index="{{index}}"
+                      bindtap='getMajorCode'
+                      >
+                      <text class='name'>{{item.majorName}}</text>
+                      <text class='iconfont icon-arrow pull-right'></text>
+                      <view class='border-top'></view>
+                    </view>
+                  </view>
+                </scroll-view>
+              </swiper-item>
+            </block>
+            <!--三级列表  -->
+            <block>
+              <swiper-item>
+                <scroll-view scroll-y style="height: 90%; width: 100%">
+                  <view class='choice-list-wrap'>
+                    <view class="list {{item.active?'active':''}}"
+                      wx:for="{{getMajorCode}}" 
+                      wx:key="{{index}}"
+                      data-code="{{item.itemCode}}"
+                      data-name="{{item.itemName}}"
+                      data-index="{{index}}"
+                      bindtap='getItemCode'
+                      >
+                      <text class='name'>{{item.itemName}}</text>
+                      <text class='iconfont icon-right pull-right' wx:if="{{item.active}}"></text>
+                      <view class='border-top'></view>
+                    </view>
+                  </view>
+                </scroll-view>
+              </swiper-item>
+            </block>
+          </swiper>
+        </view>
+        <!--按钮  -->
+        <view class='next-btn-wrap' style='padding-top: 60rpx;'>
+          <view class="child-btn {{nextSwite?'active':''}}" bindtap='gotNext'>下一步</view>
+        </view>
+        <!-- <view class='login-link-wrap' wx:if="{{loginLink}}">
+          <navigator url=''>已有账号，立即登录 <text class='iconfont icon-arrow'></text></navigator>
+        </view> -->
+      </view>
+    </view>
+  </view>
+</view>
+

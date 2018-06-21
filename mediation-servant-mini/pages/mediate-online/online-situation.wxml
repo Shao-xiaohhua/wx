@@ -1,0 +1,53 @@
+<!--pages/mediate-online/online-situation.wxml-->
+<view class='on-line-stu'>
+  <form>
+    <view class='input-wrap'>
+      <view class='list'>
+        <navigator url='online-type' class="clearfix">
+          <view class='name pull-left'>
+            案由
+          </view>
+          <view class='pull-right input-wrap'>
+            <input class='input1' disabled="true" type='text' placeholder='请选择案由'></input>
+          </view>
+          <view class='arrow'></view>
+        </navigator>
+      </view>
+      <view class='list'>
+        <navigator url='online-type' class="clearfix">
+          <view class='name pull-left'>
+            所在人群
+          </view>
+          <view class='pull-right input-wrap'>
+            <input class='input1' disabled="true" type='text' placeholder='请选择所在人群由'></input>
+          </view>
+          <view class='arrow'></view>
+        </navigator>
+      </view>
+      <view class='list'>
+        <navigator url='online-type' class="clearfix">
+          <view class='name pull-left'>
+            处置情况
+          </view>
+          <view class='pull-right input-wrap'>
+            <input class='input1' disabled="true" type='text' placeholder='请选择处置情况'></input>
+          </view>
+          <view class='arrow'></view>
+        </navigator>
+      </view>
+      <view class='list'>
+        <view url='' class="clearfix">
+          <view class='name pull-left' style='width: 300rpx'>
+            是否有调委会管辖
+          </view>
+          <view class="body-view pull-right">
+            <switch bindchange="switch2Change"/>
+          </view>
+        </view>
+      </view>
+    </view>
+  </form>
+</view>
+<view class='btn-bottom'>
+  完成
+</view>

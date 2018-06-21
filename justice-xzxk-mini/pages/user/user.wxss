@@ -1,0 +1,148 @@
+/* pages/user/user.wxss */
+page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 240rpx;
+}
+.user-png {
+  width: 218rpx;
+  height: 200rpx;
+  margin: 0 auto 0 auto;
+}
+.fed-text {
+  margin-top: 37rpx;
+  text-align: center;
+  line-height: 100%;
+  color: #999;
+  font-size: 16px;
+}
+.link-warp {
+  width: 590rpx;
+  height: auto;
+  margin: 80rpx auto 0 auto;
+}
+.link-warp navigator {
+  width: calc(50% - 20rpx);
+  height: auto;
+  padding-bottom: 30rpx;
+  padding-top: 30rpx;
+  line-height: 100%;
+  text-align: center;
+  color: #5297fd;
+  border-radius: 30px;
+  border: 1px solid #5297fd;
+}
+.link-warp navigator.active {
+  color: #fff;
+  background: #5297fd;
+}
+.wx-login {
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  margin: auto;
+  bottom: 70rpx;
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+}
+.wx-login .iconfont {
+  margin-right: 20rpx;
+  color: #04be02;
+  font-size: 20px;
+}
+.shadowWrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  z-index: 888;
+  display: none;
+}
+.shadowWrap.active {
+  display: block;
+}
+.closeSearch {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+.closeSearch .clearLine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 30px;
+  height: 1px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+.closeSearch .clearLine.active {
+  transform: rotate(-45deg);
+}
+.shadoClear {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding-top: 57rpx;
+  width: 550rpx;
+  height: 340rpx;
+  text-align: center;
+  border-radius: 4px;
+  background: #fff;
+}
+.shadoClear text {
+  width: 100%;
+  line-height: 100%;
+  display: block;
+}
+.shadoClear .name {
+  font-size: 18px;
+  color: #333;
+}
+.shadoClear .prompt {
+  padding-top: 20rpx;
+  font-size: 15px;
+  color: #999;
+}
+.shadoClear .clear-btn {
+  margin-top: 40rpx;
+  width: 90%;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  line-height: 100%;
+  font-size: 16px;
+  color: #fff;
+  display: inline-block;
+}
+.shadoClear .clear-btn .yes-btn {
+  width: 45%;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  border-radius: 6px;
+  background: #ff753f;
+}
+.shadoClear .clear-btn .yes-btn.active {
+  background: #5297fd;
+}
+.back-to-index {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 20rpx;
+  padding-left: 30rpx;
+  font-size: 16px;
+  color: #333; 
+}
+.back-to-index .iconfont {
+  display: inline-block;
+  transform: rotate(180deg);
+}

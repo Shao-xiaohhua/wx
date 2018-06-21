@@ -1,0 +1,11 @@
+<!--pages/myTabComponent/myTabComponent.wxml-->
+<view class='tab-wrap clearfix'>
+  <view class='tab-list {{item.now}} {{item.pas}}' wx:for="{{tabArr}}" wx:key="{{index}}" style="width:{{item.width}}">
+    <view>{{item.name}}</view>
+    <view class="{{item.nameBH}}">{{item.nameB}}</view>
+    <view class='bg-right'>
+      <view class='bg-box'></view>
+    </view>
+    <!-- <navigator open-type="redirect" url='{{item.url}}'></navigator> -->
+  </view>
+</view>

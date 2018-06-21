@@ -1,0 +1,25 @@
+<!--pages/my-query/my-query.wxml-->
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<view class='bold-title'>
+  我要查询
+</view>
+<view class='list-wrap'>
+  <view class="input-list {{item.error?'error':''}} clearfix" wx:for="{{listArr.baseFields}}" wx:key="{{index}}" wx:if="{{listArr.baseFields.length}}">
+    <view class='input-name pull-left'><text class="required-text {{item.required?'active':''}}">*</text>{{item.displayName}}</view>
+    <view class='input-wrap pull-right'>
+      <!--普通文本  -->
+      <input disabled='{{item.disabled}}' bindfocus='clearInput' bindinput='inputVal' data-parent="baseFields" data-index="{{index}}" value="{{item.val}}" name="{{item.name}}" type='text' placeholder="请输入{{item.displayName}}" class="item-error" wx:if="{{item.type === 'text'}}"></input>
+      <!--number  -->
+      <input disabled='{{item.disabled}}' bindfocus='clearInput' bindinput='inputVal' data-parent="baseFields" data-index="{{index}}" value="{{item.val}}" name="{{item.name}}" type='number' placeholder="请输入{{item.displayName}}" class="item-error" wx:if="{{item.type === 'number'}}"></input>
+      <!--code  -->
+      <input disabled='{{item.disabled}}' bindfocus='clearInput' bindinput='inputVal' data-parent="baseFields" data-index="{{index}}" value="{{item.val}}" name="{{item.name}}" type='text' placeholder="请输入{{item.displayName}}" class="item-error {{item.type === 'code'?'input-code':''}}" wx:if="{{item.type === 'code'}}"></input>
+      <view class='code-img-wrap' wx:if="{{item.type === 'code'}}" bindtap='getImageCode'>
+        <image style='width: 100%;height:100%' src='{{item.imgUrl}}'></image>
+      </view>
+    </view>
+    <view class='border-bottom'></view>
+  </view>
+</view>
+<view class='btn-box' bindtap='getNext'>
+  <view class='btn'>开始查询</view>
+</view>

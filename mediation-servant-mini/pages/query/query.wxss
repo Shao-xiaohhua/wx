@@ -1,0 +1,65 @@
+/* pages/query/query.wxss */
+.query-link-wrap {
+  width: 100%;
+  height: auto;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+}
+.query-link-wrap .title {
+  padding-bottom: 40rpx;
+  padding-top: 40rpx;
+  font-size: 15px;
+  line-height: 100%; 
+}
+.query-link-wrap navigator:first-child {
+  margin-left: 0;
+}
+.query-link-wrap navigator:nth-child(3n + 1) {
+  margin-left: 0;
+}
+.query-link-wrap navigator {
+  width: calc(100% / 3 - 15rpx);
+  margin-left: 20rpx;
+  margin-bottom: 18rpx;
+  float: left;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  padding-left: 17rpx;
+  padding-right: 17rpx;
+  text-align: left;
+  line-height: 100%;
+  font-size: 15px;
+  color: #333;
+  border-radius: 4px;
+  box-shadow: 0 0 15px 2px #e0e0e0;
+  background: #fff;
+}
+.query-link-wrap navigator .iconfont {
+  width: 70rpx;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 24px;
+  color: #fff;
+  display: inline-block;
+  border-radius: 4px;
+  background: #999;
+}
+.query-link-wrap navigator .iconfont.blue {
+  background: #40a4f4;
+}
+.query-link-wrap navigator .iconfont.zi {
+  background: #ae8df5;
+}
+.query-link-wrap navigator .iconfont.green {
+  background: #78c21d;
+}
+.query-link-wrap navigator .iconfont.orang {
+  background: #f47f58;
+}
+.query-link-wrap navigator .iconfont.yellow {
+  background: #ffb165;
+}
+.query-link-wrap navigator .name {
+  margin-left: 30rpx;
+}

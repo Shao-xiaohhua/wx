@@ -1,0 +1,32 @@
+<!--pages/consultation-done/consultation-done.wxml-->
+<my-component-tab tab-arr="{{tabArr}}"></my-component-tab>
+<view class='done-wrap'>
+    <view class='bg-right'>
+        <view class='bg-box'></view>
+    </view>
+    <view class='done-text'>案件录入完成</view>
+</view>
+<view class='message-wrap'>
+    <!-- <view class='new-message clearfix'>
+        <navigator url=''>
+            <text class='iconfont icon-tort'></text>
+            <text>您有新的回复</text>
+            <text class='number'>1</text>
+        </navigator>
+    </view> -->
+    <view class='number-list-wrap clearfix'>
+        <view class='number-list clearfix' wx:for="{{numberArr}}" wx:key="{{index}}">
+            <text>{{item.name}}</text>
+            <text class='number'>{{item.number}}</text>
+            <!-- <navigator url='../consultation-mediate/consultation-mediate'></navigator> -->
+            <view class='border'></view>
+        </view>
+    </view>
+    <text class='notes'>
+    您咨询的问题已被答复，查询历史答复信息请前往个人中心查看答复内容！
+  </text>
+</view>
+<view class='button-box clearfix'>
+    <button class='r' bindtap='goIndex'>返回首页</button>
+    <button class='n' bindtap='goUrl'>咨询参谋</button>
+</view>

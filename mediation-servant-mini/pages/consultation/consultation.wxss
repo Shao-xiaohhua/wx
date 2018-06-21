@@ -1,0 +1,4 @@
+/* pages/consultation/consultation.wxss */
+page {
+  background: #fff;
+}

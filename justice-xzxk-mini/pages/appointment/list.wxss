@@ -1,0 +1,52 @@
+/* pages/appointment/list.wxss */
+.list-wrap {
+  width: 100%;
+  height: auto;
+}
+.list-wrap .list {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 30rpx;
+  margin-top: 20rpx;
+  background: #fff;
+}
+.list-wrap .list .img-wrap {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 4px;
+  overflow: hidden
+}
+.list-wrap .list .img-wrap image {
+  width: 100%;
+  height: 100%;
+}
+.mess-wrap {
+  width: calc(100% - 160rpx);
+  padding-left: 30rpx;
+}
+.mess-wrap .name {
+  position: relative;
+  widows: 100%;
+  font-size: 16px;
+  color: #333;
+  line-height: 100%;
+  padding-bottom: 30rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.address, .number {
+  width: 100%;
+  height: auto;
+  padding-top: 20rpx;
+  line-height: 100%;
+  font-size: 13px;
+  color: #999;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.address .iconfont, .number .iconfont {
+  margin-right: 10rpx;
+}

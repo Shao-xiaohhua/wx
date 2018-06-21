@@ -1,0 +1,158 @@
+@import "../../weui.wxss";
+/**index.wxss**/
+.index-wrap-box {
+  position:relative;
+  overflow-x: hidden;
+}
+.bd-bg {
+  position: relative;
+  width: 100%;
+  height: 179px;
+  padding-top: 30px;
+  background: #00cc99;
+  box-sizing: border-box;
+}
+.bd-inner-img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 159px;
+}
+.header-banner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 360rpx;
+    background: url('//static.homolo.net/prototype/12348-app-new/static/images/zx-banner.png') center bottom no-repeat; 
+    background-size: 100% auto; 
+  }
+.bd-bg .cont-number {
+  display: inline-block;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 100%;
+}
+.iner-number {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.bd-bg .cont-text {
+  display: inline-block;
+  width: 100%;
+  margin-top: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 100%;
+}
+.consultation-wrap {
+  width: 100%;
+  height: auto;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.clearboth {
+  clear: both;
+}
+.consultation-wrap .list {
+  width: calc(100% / 3 - 15px);
+  height: auto;
+  float: left;
+  text-align: center;
+  margin-left: 11px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  background: #fff;
+  overflow: hidden;
+}
+.consultation-wrap:after {
+  clear: both;
+}
+.consultation-wrap .list .list-a {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.consultation-wrap .list .icon-wrap {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  color: #fff;
+  background: #00cc99;
+  display: inline-block;
+}
+.consultation-wrap .list .icon-wrap .iconfont {
+  display: block;
+  font-size: 20px;
+}
+.consultation-wrap .list .name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  font-size: 17px;
+  color: #333;
+}
+.consultation-wrap .list .number {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  font-size: 15px;
+    color: #8798af;
+}
+.hotline {
+  margin-bottom: 10px;
+  padding: 0 11px;
+}
+.hotline .banner-inner {
+  overflow: hidden;
+  display: block;
+  padding-top: 20rpx;
+  padding-right: 40rpx;
+  width: 100%;
+  height: 210rpx;
+  border-radius: 5px;
+  text-align: right;
+  color: #fff;
+  background: url('//static.homolo.net/prototype/12348-app-new/static/images/banner_hotline_bg.png') center no-repeat;
+  background-size: cover;
+}
+.hotline .title {
+  display: block;
+  margin: 0;
+  font-weight: 500;
+  font-size: 40rpx;
+}
+.hotline .desc {
+  display: block;
+  font-size: 30rpx;
+  font-weight: 300;
+}
+.hotline .number {
+  padding: 0 5px;
+}
+.hotline .more {
+  display: inline-block;
+  padding: 3px 6px;
+  margin-top: 5rpx;
+  border-radius: 4px;
+  font-size: 26rpx;
+  color: #3bb276;
+  background-color: rgba(255,255,255, .8);
+}
+

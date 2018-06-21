@@ -1,0 +1,280 @@
+/* pages/toChaRecord/toChaRecord.wxss */
+.chatBox {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  list-style: none;
+  background: 0 0;
+  box-sizing: border-box;
+}
+audio {
+  height: 5px;
+}
+.chatBox .li {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 18rpx 32rpx;
+  box-sizing: border-box;
+}
+.chatBox .goTo .head {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  float: right;
+  background-size: cover;
+}
+.chatBox .goTo .name {
+  position: absolute;
+  right: 150rpx;
+  color: #333;
+}
+.chatBox .goTo .content {
+  position: relative;
+  min-width: 50rpx;
+  max-width: 500rpx;
+  min-height: .8rem;
+  float: right;
+  margin-right: 25rpx;
+  margin-top: 50rpx;
+  padding: 20rpx 25rpx;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background: #478ae5;
+  color: #fff;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.chatBox .goTo .content:after {
+  position: absolute;
+  right: -10rpx;
+  top: 30rpx;
+  width: 23rpx;
+  height: 23rpx;
+  background: #478ae5;
+  content: "";
+  border-radius: 3px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.chatBox .goTo .content .audio-pic {
+  width: 16px;
+  height: 16px;
+  float: right;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+}
+.chatBox .goTo.audioGo.audio-active .audio-pic {
+  animation: out-play 2s steps(3) infinite;
+}
+.chatBox .goTo .content .file-box {
+  width: 450rpx;
+  height: 50px;
+}
+.chatBox .goTo .content .file-box .iconfont-wrap {
+  width: 50px;
+  height: 100%;
+  padding-top: 3px;
+  text-align: center;
+  line-height: 50px;
+  float: left;
+}
+.chatBox .goTo .content .file-box .iconfont {
+  font-size: 50px;
+}
+.chatBox .goTo .content .file-box .cont-box {
+  position: relative;
+  width: calc(100% - 50px);
+  height: 100%;
+  text-align: left;
+  float: right;
+}
+.chatBox .goTo .content .file-box .name {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  padding-left: 10px;
+  line-height: 1.3;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #fff;
+  display: block;
+}
+.chatBox .goTo .content .file-box .size {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding-left: 10px;
+  line-height: 1.3;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #fff;
+  display: block;
+}
+.chatBox .goTo .content .file-box navigator {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding-left: 10px;
+  line-height: 1.3;
+  overflow: hidden;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #fff;
+  display: block;
+}
+.chatBox .goTo.imgGo .content {
+  padding: 0;
+}
+.chatBox .goTo.imgGo .content:after {
+  display: none;
+}
+.chatBox .goTo .content image {
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+/*对方的  */
+.chatBox .goIn .head {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  float: left;
+  background-size: cover;
+}
+.chatBox .goIn .name {
+  position: absolute;
+  left: 150rpx;
+  color: #333;
+}
+.chatBox .goIn .content {
+  position: relative;
+  min-width: 50rpx;
+  max-width: 500rpx;
+  min-height: .8rem;
+  float: left;
+  margin-left: 25rpx;
+  margin-top: 50rpx;
+  padding: 20rpx 25rpx;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background: #fff;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.chatBox .goIn .content:after {
+  position: absolute;
+  left: -10rpx;
+  top: 30rpx;
+  width: 23rpx;
+  height: 23rpx;
+  background: #fff;
+  content: "";
+  border-radius: 3px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.chatBox .goIn .content .audio-pic {
+  width: 16px;
+  height: 16px;
+  float: left;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+}
+.chatBox .goIn.audioGo.audio-active .audio-pic {
+  animation: out-play 2s steps(3) infinite;
+}
+.chatBox .goIn .content .file-box {
+  width: 450rpx;
+  height: 50px;
+}
+.chatBox .goIn .content .file-box .iconfont-wrap {
+  width: 50px;
+  height: 100%;
+  padding-top: 3px;
+  text-align: center;
+  line-height: 50px;
+  float: right;
+}
+.chatBox .goIn .content .file-box .iconfont {
+  font-size: 50px;
+}
+.chatBox .goIn .content .file-box .cont-box {
+  position: relative;
+  width: calc(100% - 50px);
+  height: 100%;
+  text-align: right;
+  float: left;
+}
+.chatBox .goIn .content .file-box .cont-box .name {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+  padding-right: 10px;
+  line-height: 1.3;
+  overflow: hidden;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333;
+  display: block;
+}
+.chatBox .goIn .content .file-box .size {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding-right: 10px;
+  line-height: 1.3;
+  overflow: hidden;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333;
+  display: block;
+}
+.chatBox .goIn .content .file-box navigator {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding-right: 10px;
+  line-height: 1.3;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333;
+  display: block;
+}
+
+.chatBox .goIn.imgGo .content {
+  padding: 0;
+}
+.chatBox .goIn.imgGo .content:after {
+  display: none;
+}
+.chatBox .goIn .content image {
+  display: block;
+  width: 200px;
+  height: 200px;
+}

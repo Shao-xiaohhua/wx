@@ -1,0 +1,2 @@
+<!--pages/study-of-law-web-view/o2o.wxml-->
+<web-view src="https://12348.justice.gov.cn/m/miniApps/index/index.jsp?category=lpa.Interview"></web-view>

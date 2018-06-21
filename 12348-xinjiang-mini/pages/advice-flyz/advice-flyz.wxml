@@ -1,0 +1,31 @@
+<!--pages/advice-flyz/advice-flyz.wxml-->
+<view class='banner-advice'></view>
+<view class='advice-wrap'>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class='wrap'>
+      <view class='title'>选择问题分类</view>
+      <view class='input-wrap'>
+        <input placeholder-class="plaColor" class='is-input' name="input1" type='text' placeholder='请选择咨讯类别' value='{{typeVal}}'></input>
+        <view class='icon-wrap'>
+          <text class='iconfont icon-icon-to-right'></text>
+        </view>
+        <navigator url='law-type'></navigator>
+      </view>
+      <view class='title'>填写问题</view>
+      <view class='input-wrap'>
+        <input placeholder-class="plaColor" class='is-input' name="input2" type='text' placeholder='请简要描述您想要咨询的问题'></input>
+      </view>
+      <view class='title'>填写问题描述</view>
+      <view class='input-wrap'>
+        <textarea placeholder-class="plaColor" bindinput="textNumber" name="textarea1" maxlength="100" placeholder="请详细描述问题经过"></textarea>
+        <view class='numberWrap'>
+          <text class='num'>{{textNumbers}}</text> / 100
+        </view>
+      </view>
+      <checkbox-group name="checkbox">
+        <label class='advice-label'><checkbox value="checkbox1"/>公开信息《隐私策略协议》</label>
+      </checkbox-group>
+      <button formType="submit">提交留言</button>
+    </view>
+  </form>
+</view>

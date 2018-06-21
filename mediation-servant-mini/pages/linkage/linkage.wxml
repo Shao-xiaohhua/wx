@@ -1,0 +1,42 @@
+<!--pages/linkage/linkage.wxml-->
+<view class='top-tab clearfix'>
+    <view class='list {{item.cl}}' wx:for="{{tabArr}}" wx:key="{{index}}" bindtap="ck" data-index="{{index}}">
+        <text>{{item.name}} ({{item.number}})</text>
+    </view>
+</view>
+<view class='card-wrap'>
+    <loading hidden="{{hidden}}">加载中...</loading>
+    <!-- <view class='card {{item.overdue}}' wx:for="{{contArr}}" wx:key="{{index}}">
+        <navigator url='{{item.url}}'>
+            <view class='list head'>
+                <text class='tp'>案件时间: {{item.time}}</text>
+                <text class='ct'>{{item.active}}</text>
+            </view>
+            <view class='list' wx:for="{{item.list}}" wx:key="{{index}}">
+                <text class='tp'>{{item.tp}}</text>
+                <text class='ct'>{{item.ct}}</text>
+            </view>
+        </navigator>
+    </view> -->
+    <view class='search-child-list-wrap'>
+        <view class='list' wx:for="{{listArr}}" wx:key="{{index}}">
+            <view class='title'>
+                <view class='name'>{{item.title}}</view>
+                <view class='time'>{{item.time}}</view>
+                <view class='border'></view>
+            </view>
+            <view class='list-wrap'>
+                <view class='inner-wrap'>
+                    <view class='inner-list clearfix'>
+                        <text>姓名：{{item.name}}</text>
+                    </view>
+                    <view class='inner-list clearfix'>
+                        <text>联系方式：{{item.phone}}</text>
+                    </view>
+                    <view class='tag {{item.tagSwite}}' wx:if="{{item.tag}}">{{item.tag}}</view>
+                </view>
+            </view>
+            <navigator url='{{item.url}}'></navigator>
+        </view>
+    </view>
+</view>

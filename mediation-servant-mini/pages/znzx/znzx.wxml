@@ -1,0 +1,2 @@
+<!--pages/znzx/znzx.wxml-->
+<web-view src="{{thisSrc}}"></web-view>

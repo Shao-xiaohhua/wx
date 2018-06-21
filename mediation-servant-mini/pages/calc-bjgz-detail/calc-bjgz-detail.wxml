@@ -1,0 +1,19 @@
+<!--pages/calc-bjgz-detail/calc-bjgz-detail.wxml-->
+<view class='calc-res-title clearfix'>
+  <view class='icon-wrap'>
+    <text class='iconfont icon-v'></text>
+    <text>注:</text>
+  </view>
+  <view class='text'>预估结果仅参考，实际费用以当地实际情况为准！计算单位：百分制</view>
+</view>
+<view class='calc-res-list'>
+  <view class='list clearfix' wx:for="{{resArr}}" wx:key="{{index}}">
+    <view class='name'>{{item.name}}</view>
+    <view class='number {{item.full}}'>{{item.number}}</view>
+    <view class='border'></view>
+  </view>
+</view>
+<view class='btn-box clearfix'>
+  <button class='rep' bindtap='backOne'>重置</button>
+  <button class='back' bindtap='backIndex'>返回首页</button>
+</view>

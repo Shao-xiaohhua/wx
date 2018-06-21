@@ -1,0 +1,28 @@
+<!--pages/investigation-done/investigation-done.wxml-->
+<my-component-tab tab-arr="{{tabArr}}"></my-component-tab>
+<view class='done-wrap'>
+    <view class='bg-right'>
+        <view class='bg-box'></view>
+    </view>
+    <view class='done-text'>案件录入完成</view>
+</view>
+<view class='inv-done-number clearfix'>
+    <view class='inner-box' wx:for="{{invNumber}}" wx:key="{{index}}">
+        <view class='name'>{{item.name}}（{{item.y}}）</view>
+        <view class='number'>{{item.number}}</view>
+        <navigator url='../investigation-mediate/investigation-mediate'></navigator>
+    </view>
+</view>
+<!-- <view class='message-wrap'>
+  <view class='number-list-wrap clearfix'>
+    <view class='number-list clearfix' wx:for="{{numberArr}}" wx:key="{{index}}">
+      <text>{{item.name}}</text>
+      <text class='number'>{{item.number}}</text>
+      <view class='border'></view>
+    </view>
+  </view>
+</view> -->
+<view class='button-box clearfix'>
+    <button class='r' bindtap='goIndex'>返回首页</button>
+    <button class='n' bindtap='goUrl'>前往个人中心</button>
+</view>

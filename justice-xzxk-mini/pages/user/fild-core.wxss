@@ -1,0 +1,117 @@
+/* pages/user/fild-core.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  background: #fff;
+}
+.core-title  {
+  padding-top: 50rpx;
+}
+.core-title .name {
+  font-size: 28px;
+  color: #333;
+}
+.core-title .bj {
+  padding-top: 30rpx;
+  font-size: 16px;
+  color: #333;
+}
+.filed-wrap {
+  width: 100%;
+  height: auto;
+  margin-top: 50rpx;
+}
+.filed-wrap.active .fild-box .actice {
+  display: block;
+}
+.fild-box {
+  position: relative;
+  width: calc(100% / 2 - 15rpx);
+  height: 194rpx;
+  margin-right: 30rpx;
+  margin-bottom: 60rpx;
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+.fild-box .actice {
+  position: absolute;
+  top: -11px;
+  right: -11px;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  line-height: 22px;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 50%;
+  background: #cccccc;
+  display: none;
+}
+.fild-box .actice.ch {
+  background: #5297fd;
+}
+.fild-box .tit {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color: #fff;
+  background: rgba(0, 0, 0, .6);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.fild-box image {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+.fild-box:nth-child(2n) {
+  margin-right: 0;
+}
+.down-filed {
+  width: 100%;
+  height: auto;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  line-height: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+}
+.img-preview {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  display: none;
+}
+.img-preview .title {
+  width: 100%;
+  height: auto;
+  padding-top: 20rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  color: #fff;
+}
+.img-preview .title .iconfont {
+  margin-right: 10rpx;
+  display: inline-block;
+  transform: rotate(180deg);
+}
+.img-preview.active {
+  display: block;
+}
+.img-preview image {
+  width: 100%;
+  height: 100%;
+}
